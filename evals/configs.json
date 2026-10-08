@@ -1,0 +1,6 @@
+[
+  { "name": "mini-plain", "model": "claude-haiku-4-5", "prompt": "plain", "inputMode": "text", "temperature": 0 },
+  { "name": "mini-fewshot", "model": "claude-haiku-4-5", "prompt": "fewshot", "inputMode": "text", "temperature": 0 },
+  { "name": "mini-plain-ocr", "model": "claude-haiku-4-5", "prompt": "plain", "inputMode": "ocr", "temperature": 0 },
+  { "name": "strong-plain", "model": "claude-sonnet-5-5", "prompt": "plain", "inputMode": "text", "temperature": null, "disableThinking": true }
+]

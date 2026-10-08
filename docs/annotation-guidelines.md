@@ -107,3 +107,14 @@ All 30 vendors are distinct and carry legal suffixes or abbreviations (`GmbH & C
 `K.K.`, `Pty Ltd`, ...). Dates use four printed formats (`2024-03-15`, `15 Mar 2024`, `March 15, 2024`, `15.03.2024`).
 Multi-page images are `<id>-p1.png`, `<id>-p2.png`; `documentPath` points to page 1. The text layer is generated from
 the record in reading order (no OCR); synthetic documents have no separate OCR layer, so "ocr" mode uses the same text.
+
+## Prompt variants and few-shot examples
+
+Prompts live in [`prompts/`](../prompts/), each with a `version` and `description` header. `plain` is the field
+schema plus the extraction rules; `fewshot` is `plain` plus two solved examples, both from the dev pool and in text
+mode:
+
+- `Template25_Instance126`: five GST lines summed into `tax`; the printed total does not reconcile and is kept as printed.
+- `Template28_Instance115`: no vendor name or invoice number printed, so both are `null`.
+
+No golden-set document was read while writing either prompt.

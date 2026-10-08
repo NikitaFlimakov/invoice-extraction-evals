@@ -1,5 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
+    <PackageReference Include="Anthropic" />
+    <PackageReference Include="Microsoft.Extensions.AI" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\InvoiceEvals.Core\InvoiceEvals.Core.csproj" />
   </ItemGroup>
 </Project>

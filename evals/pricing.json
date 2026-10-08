@@ -1,0 +1,5 @@
+{
+  "_comment": "USD per million tokens, Anthropic first-party API list prices, checked 2026-10-08. Thinking tokens bill as output.",
+  "claude-haiku-4-5": { "inputPerMTok": 1.00, "outputPerMTok": 5.00 },
+  "claude-sonnet-5-5": { "inputPerMTok": 2.00, "outputPerMTok": 10.00 }
+}
