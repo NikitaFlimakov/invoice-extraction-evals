@@ -485,3 +485,6 @@ $RECYCLE.BIN/
 
 # Local caches
 .cache/
+
+# Raw Reporting result store (prompts + responses, regenerated from evals/cache/ by `evals run`)
+evals/results/store/

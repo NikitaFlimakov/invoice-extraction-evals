@@ -4,6 +4,9 @@ namespace InvoiceEvals.Core;
 public sealed record EvalDocument(GoldenDocument Golden, string Text)
 {
     public string Id => Golden.Id;
+
+    /// <summary>Reporting scenario name: the id with "/" replaced by "." (Reporting rejects path separators).</summary>
+    public string ScenarioName => Id.Replace('/', '.');
 }
 
 /// <summary>The eval set: golden FATURA (evals/annotations.jsonl) plus synthetic (evals/synthetic/annotations.jsonl).</summary>
