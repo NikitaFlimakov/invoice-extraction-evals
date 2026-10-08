@@ -54,7 +54,16 @@ internal static class RunCommand
             return 0;
         }
 
-        var provider = new LatencyStampingChatClient(AnthropicChatClientFactory.Create(config.Model));
+        LatencyStampingChatClient provider;
+        try
+        {
+            provider = new LatencyStampingChatClient(AnthropicChatClientFactory.Create(config.Model));
+        }
+        catch (InvalidOperationException ex)
+        {
+            Console.Error.WriteLine(ex.Message);
+            return 2;
+        }
         var executionName = $"{DateTime.UtcNow:yyyyMMdd'T'HHmmss'Z'}-{GitShortSha()}";
         var reporting = new ReportingConfiguration(
             [new CompositeScoreEvaluator()],
