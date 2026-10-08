@@ -35,6 +35,8 @@ internal static class ReportCommand
             return 1;
         }
         var prices = await ModelPrice.LoadAsync(Path.Combine(evalsDir, "pricing.json"), ct);
+        foreach (var broken in results.Where(r => r[CompositeScoreEvaluator.MetricName] is null).GroupBy(r => (r.Execution, r.Config)))
+            Console.WriteLine($"Warning: {broken.Count()} document(s) in {broken.Key.Execution} ({broken.Key.Config}) failed evaluation and have no scores; rerun that config.");
 
         var rows = results.GroupBy(r => (r.Execution, r.Config))
             .SelectMany(g => Subsets.Select(s => Summarize(g.Key.Execution, g.Key.Config, s, [.. g.Where(r => s == "combined" || r.Source == s)], prices)))
@@ -76,6 +78,7 @@ internal static class ReportCommand
             execution, config, model, docs[0].Prompt, docs[0].InputMode, subset, docs.Count,
             Mean(docs.Select(d => d[SchemaValidityEvaluator.MetricName])),
             [.. fields.Select(f => Mean(docs.Select(d => d[FieldAccuracyEvaluator.MetricName(f)])))],
+            [.. FieldAccuracyEvaluator.JudgedFieldNames.Select(f => Mean(docs.Select(d => d[FieldAccuracyEvaluator.JudgedMetricName(f)])))],
             [.. fields.Select(f => Rate(f, FieldAccuracyEvaluator.Outcome.FalsePositive, FieldAccuracyEvaluator.Outcome.FalsePositive, FieldAccuracyEvaluator.Outcome.CorrectNull))],
             [.. fields.Select(f => Rate(f, FieldAccuracyEvaluator.Outcome.Miss, FieldAccuracyEvaluator.Outcome.Miss, FieldAccuracyEvaluator.Outcome.CorrectValue, FieldAccuracyEvaluator.Outcome.Mismatch))],
             Mean(docs.Select(d => d[RecomputedTotalEvaluator.MetricName])), docs.Count(d => d[RecomputedTotalEvaluator.MetricName] is not null),
@@ -92,7 +95,7 @@ internal static class ReportCommand
 
     private sealed record SummaryRow(
         string Execution, string Config, string Model, string Prompt, string InputMode, string Subset, int Docs,
-        double? SchemaValidity, double?[] FieldAccuracy, double?[] FieldFalsePositiveRate, double?[] FieldMissRate,
+        double? SchemaValidity, double?[] FieldAccuracy, double?[] JudgedAccuracy, double?[] FieldFalsePositiveRate, double?[] FieldMissRate,
         double? RecomputedTotalRate, int RecomputedTotalN,
         double? LineItemsPrecision, double? LineItemsRecall, double? LineItemsF1, int LineItemsCoverage,
         double? Composite, double LatencyMeanMs, double LatencyP50Ms, double LatencyP95Ms,
@@ -102,6 +105,7 @@ internal static class ReportCommand
         [
             "execution", "config", "model", "prompt", "input_mode", "subset", "docs", "schema_validity",
             .. FieldAccuracyEvaluator.FieldNames.Select(f => $"{f}_accuracy"),
+            .. FieldAccuracyEvaluator.JudgedFieldNames.Select(f => $"{f}_judged_accuracy"),
             .. FieldAccuracyEvaluator.FieldNames.Select(f => $"{f}_false_positive_rate"),
             .. FieldAccuracyEvaluator.FieldNames.Select(f => $"{f}_miss_rate"),
             "recomputed_total_rate", "recomputed_total_n",
@@ -113,7 +117,7 @@ internal static class ReportCommand
         public IEnumerable<string> Cells() =>
         [
             Execution, Config, Model, Prompt, InputMode, Subset, Docs.ToString(CultureInfo.InvariantCulture), F(SchemaValidity),
-            .. FieldAccuracy.Select(F), .. FieldFalsePositiveRate.Select(F), .. FieldMissRate.Select(F),
+            .. FieldAccuracy.Select(F), .. JudgedAccuracy.Select(F), .. FieldFalsePositiveRate.Select(F), .. FieldMissRate.Select(F),
             F(RecomputedTotalRate), RecomputedTotalN.ToString(CultureInfo.InvariantCulture),
             F(LineItemsPrecision), F(LineItemsRecall), F(LineItemsF1), LineItemsCoverage.ToString(CultureInfo.InvariantCulture),
             F(Composite), F(LatencyMeanMs, "0"), F(LatencyP50Ms, "0"), F(LatencyP95Ms, "0"),
@@ -121,12 +125,15 @@ internal static class ReportCommand
         ];
 
         public double? Field(string name) => FieldAccuracy[FieldAccuracyEvaluator.FieldNames.ToList().IndexOf(name)];
+
+        public double? Judged(string name) => JudgedAccuracy[FieldAccuracyEvaluator.JudgedFieldNames.ToList().IndexOf(name)];
     }
 
     private static readonly string[] DocumentHeader =
     [
         "execution", "config", "doc_id", "source", "layout", "composite", "schema_validity",
         .. FieldAccuracyEvaluator.FieldNames,
+        .. FieldAccuracyEvaluator.JudgedFieldNames.Select(f => $"{f}_judged"),
         "recomputed_total", "line_items_precision", "line_items_recall", "line_items_f1",
         "latency_ms", "input_tokens", "output_tokens", "thinking_tokens", "cache_hit", "errors",
     ];
@@ -135,6 +142,7 @@ internal static class ReportCommand
     [
         d.Execution, d.Config, d.DocId, d.Source, d.Layout, F(d[CompositeScoreEvaluator.MetricName]), F(d[SchemaValidityEvaluator.MetricName]),
         .. FieldAccuracyEvaluator.FieldNames.Select(f => d.Outcomes.GetValueOrDefault(FieldAccuracyEvaluator.MetricName(f)) ?? ""),
+        .. FieldAccuracyEvaluator.JudgedFieldNames.Select(f => d.Outcomes.GetValueOrDefault(FieldAccuracyEvaluator.JudgedMetricName(f)) ?? ""),
         F(d[RecomputedTotalEvaluator.MetricName]), F(d[LineItemsF1Evaluator.Precision]), F(d[LineItemsF1Evaluator.Recall]), F(d[LineItemsF1Evaluator.F1]),
         F(d.LatencyMs, "0"), I(d.InputTokens), I(d.OutputTokens), I(d.ThinkingTokens), d.CacheHit ? "true" : "false", d.Diagnostics,
     ];
@@ -142,8 +150,8 @@ internal static class ReportCommand
     private static string BaselineMarkdown(List<SummaryRow> rows)
     {
         var sb = new StringBuilder();
-        sb.Append("| Configuration | Subset | Docs | Schema valid | Invoice no. | Dates | Total | Currency | Vendor name | Recomputed total | Line-items F1 | Composite | Thinking tok/doc | $/1k docs | p50 / p95 ms |\n");
-        sb.Append("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n");
+        sb.Append("| Configuration | Subset | Docs | Schema valid | Invoice no. | Dates | Total | Currency | Vendor (strict) | Vendor (judged) | Recomputed total | Line-items F1 | Composite | Thinking tok/doc | $/1k docs | p50 / p95 ms |\n");
+        sb.Append("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n");
         foreach (var r in rows.OrderBy(r => ConfigOrder(r.Config)).ThenBy(r => Array.IndexOf(Subsets, r.Subset)))
         {
             var dates = r.Field("invoice_date") is { } a && r.Field("due_date") is { } b ? (a + b) / 2 : (double?)null;
@@ -153,7 +161,7 @@ internal static class ReportCommand
                 "synthetic" when r.InputMode == "ocr" => "synthetic (text layer)",
                 var s => s,
             };
-            sb.Append(CultureInfo.InvariantCulture, $"| `{r.Config}` | {subset} | {r.Docs} | {P(r.SchemaValidity)} | {P(r.Field("invoice_number"))} | {P(dates)} | {P(r.Field("total"))} | {P(r.Field("currency"))} | {P(r.Field("vendor_name"))} | ");
+            sb.Append(CultureInfo.InvariantCulture, $"| `{r.Config}` | {subset} | {r.Docs} | {P(r.SchemaValidity)} | {P(r.Field("invoice_number"))} | {P(dates)} | {P(r.Field("total"))} | {P(r.Field("currency"))} | {P(r.Field("vendor_name"))} | {P(r.Judged("vendor_name"))} | ");
             sb.Append(CultureInfo.InvariantCulture, $"{(r.RecomputedTotalN == 0 ? "n/a" : $"{P(r.RecomputedTotalRate)} (n={r.RecomputedTotalN})")} | {(r.LineItemsCoverage == 0 ? "n/a" : $"{r.LineItemsF1:0.00} (n={r.LineItemsCoverage})")} | ");
             sb.Append(CultureInfo.InvariantCulture, $"{r.Composite:0.000} | {r.ThinkingTokensMean:0} | {r.UsdPer1kDocs:0.00} | {r.LatencyP50Ms:0} / {r.LatencyP95Ms:0} |\n");
         }

@@ -1,60 +1,165 @@
 using System.CommandLine;
 using System.Globalization;
+using System.Text;
 
 using InvoiceEvals.Evaluation;
 
 namespace InvoiceEvals.Cli;
 
-/// <summary>`evals compare`: per-document composite deltas (b − a) between the latest executions of two configurations.</summary>
+/// <summary>
+/// `evals compare`: per-document deltas (b − a) between the latest executions of two configurations, with a paired
+/// bootstrap 95% CI on the mean delta of the composite and of every scored field metric. Several --b values give
+/// several comparisons against the same --a; --markdown writes them all to one file (evals/results/comparisons.md).
+/// </summary>
 internal static class CompareCommand
 {
+    private static readonly string[] Subsets = ["fatura", "synthetic", "combined"];
+
+    /// <summary>Below this many paired documents a CI is reported but flagged as too small to conclude from.</summary>
+    internal const int SmallN = 30;
+
+    internal static IReadOnlyList<string> Metrics { get; } =
+    [
+        CompositeScoreEvaluator.MetricName,
+        SchemaValidityEvaluator.MetricName,
+        .. FieldAccuracyEvaluator.FieldNames.Select(FieldAccuracyEvaluator.MetricName),
+        .. FieldAccuracyEvaluator.JudgedFieldNames.Select(FieldAccuracyEvaluator.JudgedMetricName),
+        LineItemsF1Evaluator.F1,
+    ];
+
     public static Command Create()
     {
         var a = new Option<string>("--a") { Description = "Baseline configuration.", Required = true };
-        var b = new Option<string>("--b") { Description = "Candidate configuration.", Required = true };
+        var b = new Option<string[]>("--b") { Description = "Candidate configuration; repeat for several comparisons.", Required = true, AllowMultipleArgumentsPerToken = true };
+        var resamples = new Option<int>("--resamples") { Description = "Bootstrap resamples.", DefaultValueFactory = _ => PairedBootstrap.DefaultResamples };
+        var seed = new Option<ulong>("--seed") { Description = "Bootstrap seed.", DefaultValueFactory = _ => PairedBootstrap.DefaultSeed };
+        var markdown = new Option<FileInfo?>("--markdown") { Description = "Also write the comparison tables to this Markdown file." };
         var evalsDir = new Option<DirectoryInfo>("--evals-dir") { DefaultValueFactory = _ => new("evals") };
-        var command = new Command("compare", "Compare composite scores of two configurations document by document.") { a, b, evalsDir };
-        command.SetAction((r, ct) => RunAsync(r.GetValue(a)!, r.GetValue(b)!, r.GetValue(evalsDir)!.FullName, ct));
+        var command = new Command("compare", "Compare two configurations document by document, with paired bootstrap confidence intervals.") { a, b, resamples, seed, markdown, evalsDir };
+        command.SetAction((r, ct) => RunAsync(r.GetValue(a)!, r.GetValue(b)!, r.GetValue(resamples), r.GetValue(seed), r.GetValue(markdown), r.GetValue(evalsDir)!.FullName, ct));
         return command;
     }
 
-    private static async Task<int> RunAsync(string a, string b, string evalsDir, CancellationToken ct)
+    private static async Task<int> RunAsync(string a, string[] bs, int resamples, ulong seed, FileInfo? markdown, string evalsDir, CancellationToken ct)
     {
+        if (resamples < 1)
+        {
+            Console.Error.WriteLine("--resamples must be positive.");
+            return 2;
+        }
         var results = await StoredResults.ReadAsync(Path.Combine(evalsDir, "results", "store"), ct);
-        Dictionary<string, (double? Score, string Source)>? Latest(string config)
+        Dictionary<string, DocResult>? Latest(string config)
         {
             var runs = results.Where(r => r.Config == config).ToList();
             if (runs.Count == 0) return null;
             var execution = runs.Max(r => r.Execution);
-            return runs.Where(r => r.Execution == execution).ToDictionary(r => r.DocId, r => (r[CompositeScoreEvaluator.MetricName], r.Source), StringComparer.Ordinal);
+            return runs.Where(r => r.Execution == execution).ToDictionary(r => r.DocId, StringComparer.Ordinal);
         }
 
-        var (left, right) = (Latest(a), Latest(b));
-        if (left is null || right is null)
+        var left = Latest(a);
+        var sections = new List<string>();
+        foreach (var b in bs)
         {
-            Console.WriteLine($"No stored results for '{(left is null ? a : b)}'. Run `evals run --config ...` first.");
-            return 1;
+            var right = Latest(b);
+            if (left is null || right is null)
+            {
+                Console.Error.WriteLine($"No stored results for '{(left is null ? a : b)}'. Run `evals run --config ...` first.");
+                return 1;
+            }
+            if (bs.Length == 1) PrintDocumentDeltas(a, b, left, right);
+            var section = Section(a, b, left, right, resamples, seed);
+            Console.WriteLine(section);
+            sections.Add(section);
         }
 
+        if (markdown is not null)
+        {
+            var sb = new StringBuilder("# Is the difference real?\n\nGenerated by `evals compare`. ");
+            sb.Append(CultureInfo.InvariantCulture, $"Δ = candidate − baseline per document, paired by document id over the latest execution of each configuration. ");
+            sb.Append(CultureInfo.InvariantCulture, $"95% percentile CI from a paired bootstrap ({resamples:N0} resamples, seed {seed}); **significant** means the CI excludes 0. ");
+            sb.Append(CultureInfo.InvariantCulture, $"Each metric shows the combined row; FATURA and synthetic rows are added when their mean deltas differ in sign. ");
+            sb.Append(CultureInfo.InvariantCulture, $"Rows with n < {SmallN} are marked: the interval is reported but too wide or too coarse to conclude from. Metric definitions: [docs/metrics.md](../../docs/metrics.md).\n\n");
+            foreach (var s in sections) sb.Append(s).Append('\n');
+            await File.WriteAllTextAsync(markdown.FullName, sb.ToString().TrimEnd('\n') + "\n", new UTF8Encoding(encoderShouldEmitUTF8Identifier: false), ct);
+            Console.WriteLine($"Wrote {markdown.FullName}");
+        }
+        return 0;
+    }
+
+    private static void PrintDocumentDeltas(string a, string b, Dictionary<string, DocResult> left, Dictionary<string, DocResult> right)
+    {
         var deltas = left.Keys.Intersect(right.Keys)
-            .Where(id => left[id].Score is not null && right[id].Score is not null)
-            .Select(id => (Id: id, left[id].Source, A: left[id].Score!.Value, B: right[id].Score!.Value, Delta: right[id].Score!.Value - left[id].Score!.Value))
+            .Where(id => left[id][CompositeScoreEvaluator.MetricName] is not null && right[id][CompositeScoreEvaluator.MetricName] is not null)
+            .Select(id => (Id: id, A: left[id][CompositeScoreEvaluator.MetricName]!.Value, B: right[id][CompositeScoreEvaluator.MetricName]!.Value))
+            .Select(d => (d.Id, d.A, d.B, Delta: d.B - d.A))
             .OrderBy(d => d.Delta).ThenBy(d => d.Id, StringComparer.Ordinal)
             .ToList();
-
         Console.WriteLine($"{"document",-42} {a,10} {b,10} {"delta",8}");
         foreach (var d in deltas.Where(d => d.Delta != 0))
             Console.WriteLine(string.Create(CultureInfo.InvariantCulture, $"{d.Id,-42} {d.A,10:0.000} {d.B,10:0.000} {d.Delta,8:+0.000;-0.000}"));
-        Console.WriteLine($"({deltas.Count(d => d.Delta == 0)} documents with zero delta not shown)");
-
-        foreach (var subset in new[] { "fatura", "synthetic", "combined" })
-        {
-            var s = deltas.Where(d => subset == "combined" || d.Source == subset).ToList();
-            if (s.Count == 0) continue;
-            Console.WriteLine(string.Create(CultureInfo.InvariantCulture,
-                $"Mean delta ({b} − {a}), {subset}: {s.Average(d => d.Delta):+0.0000;-0.0000} over {s.Count} documents ({s.Count(d => d.Delta > 0)} better, {s.Count(d => d.Delta < 0)} worse)"));
-        }
-        Console.WriteLine("No confidence interval yet: bootstrap CIs arrive in Phase 3.");
-        return 0;
+        Console.WriteLine($"({deltas.Count(d => d.Delta == 0)} documents with zero composite delta not shown)\n");
     }
+
+    internal sealed record Row(string Metric, string Subset, BootstrapInterval Interval);
+
+    /// <summary>
+    /// Bootstrap rows for one comparison. Per metric: the combined row (or the only subset that has the metric), plus
+    /// FATURA and synthetic rows when their mean deltas have opposite signs.
+    /// </summary>
+    internal static IReadOnlyList<Row> Rows(IReadOnlyDictionary<string, DocResult> left, IReadOnlyDictionary<string, DocResult> right, int resamples, ulong seed)
+    {
+        var paired = left.Keys.Where(right.ContainsKey).Order(StringComparer.Ordinal).Select(id => (Left: left[id], Right: right[id])).ToList();
+        var rows = new List<Row>();
+        foreach (var metric in Metrics)
+        {
+            var bySubset = new Dictionary<string, BootstrapInterval>(StringComparer.Ordinal);
+            foreach (var subset in Subsets)
+            {
+                var deltas = paired
+                    .Where(p => subset == "combined" || p.Left.Source == subset)
+                    .Select(p => p.Right[metric] - p.Left[metric])
+                    .OfType<double>()
+                    .ToArray();
+                if (deltas.Length > 0) bySubset[subset] = PairedBootstrap.MeanInterval(deltas, resamples, seed);
+            }
+            if (!bySubset.TryGetValue("combined", out var combined)) continue;
+
+            var (fatura, synthetic) = (bySubset.GetValueOrDefault("fatura"), bySubset.GetValueOrDefault("synthetic"));
+            if (fatura is null || synthetic is null)
+            {
+                rows.Add(new Row(metric, fatura is null ? "synthetic" : "fatura", combined));
+                continue;
+            }
+            if (Math.Sign(fatura.Mean) * Math.Sign(synthetic.Mean) < 0)
+            {
+                rows.Add(new Row(metric, "fatura", fatura));
+                rows.Add(new Row(metric, "synthetic", synthetic));
+            }
+            rows.Add(new Row(metric, "combined", combined));
+        }
+        return rows;
+    }
+
+    private static string Section(string a, string b, Dictionary<string, DocResult> left, Dictionary<string, DocResult> right, int resamples, ulong seed)
+    {
+        var paired = left.Keys.Count(right.ContainsKey);
+        var unpaired = left.Count + right.Count - (2 * paired);
+        var sb = new StringBuilder();
+        sb.Append(CultureInfo.InvariantCulture, $"## `{a}` → `{b}`\n\n");
+        sb.Append(CultureInfo.InvariantCulture, $"{paired} paired documents ({left.Values.First().Execution} vs {right.Values.First().Execution})");
+        sb.Append(unpaired > 0 ? $"; {unpaired} present in only one run, excluded.\n\n" : ".\n\n");
+        sb.Append("| Metric | Subset | n | Mean Δ | CI low | CI high | Significant |\n|---|---|---|---|---|---|---|\n");
+        foreach (var row in Rows(left, right, resamples, seed))
+        {
+            var i = row.Interval;
+            var verdict = (i.Significant ? "**yes**" : "no") + (i.N < SmallN ? $" (n < {SmallN})" : "") + (i is { Low: 0, High: 0 } ? " (identical)" : "");
+            sb.Append(CultureInfo.InvariantCulture,
+                $"| {Display(row.Metric)} | {Label(row.Subset)} | {i.N} | {i.Mean:+0.000;-0.000;0.000} | {i.Low:+0.000;-0.000;0.000} | {i.High:+0.000;-0.000;0.000} | {verdict} |\n");
+        }
+        return sb.ToString();
+    }
+
+    private static string Display(string metric) => metric.StartsWith("field.", StringComparison.Ordinal) ? metric["field.".Length..] : metric;
+
+    private static string Label(string subset) => subset == "fatura" ? "FATURA" : subset;
 }

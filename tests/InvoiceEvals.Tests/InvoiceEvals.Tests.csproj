@@ -14,6 +14,7 @@
     <ProjectReference Include="..\..\src\InvoiceEvals.Synthetic\InvoiceEvals.Synthetic.csproj" />
     <ProjectReference Include="..\..\src\InvoiceEvals.Extraction\InvoiceEvals.Extraction.csproj" />
     <ProjectReference Include="..\..\src\InvoiceEvals.Evaluation\InvoiceEvals.Evaluation.csproj" />
+    <ProjectReference Include="..\..\src\InvoiceEvals.Cli\InvoiceEvals.Cli.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Include="TestData\**\*" CopyToOutputDirectory="PreserveNewest" />

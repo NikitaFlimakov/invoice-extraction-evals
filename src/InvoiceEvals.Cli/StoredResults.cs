@@ -24,7 +24,8 @@ internal sealed record DocResult(
     long InputTokens,
     long OutputTokens,
     long ThinkingTokens,
-    bool CacheHit)
+    bool CacheHit,
+    string ResponseText)
 {
     public double? this[string metric] => Values.GetValueOrDefault(metric);
 }
@@ -36,6 +37,7 @@ internal static class StoredResults
     public const string InputTag = "input:";
     public const string SourceTag = "source:";
     public const string LayoutTag = "layout:";
+    public const string JudgeTag = "judge:";
 
     public static async Task<IReadOnlyList<DocResult>> ReadAsync(string storePath, CancellationToken ct)
     {
@@ -69,6 +71,7 @@ internal static class StoredResults
             string.Join(" | ", metrics.SelectMany(m => m.Diagnostics ?? []).Where(d => d.Severity == EvaluationDiagnosticSeverity.Error).Select(d => d.Message)),
             (LatencyStampingChatClient.ReadLatency(r.ModelResponse) ?? turn?.Latency ?? TimeSpan.Zero).TotalMilliseconds,
             usage?.InputTokenCount ?? 0, usage?.OutputTokenCount ?? 0, usage?.ReasoningTokenCount ?? 0,
-            turn?.CacheHit == true);
+            turn?.CacheHit == true,
+            r.ModelResponse.Text);
     }
 }
