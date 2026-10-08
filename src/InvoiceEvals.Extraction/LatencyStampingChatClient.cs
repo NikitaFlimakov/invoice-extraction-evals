@@ -7,8 +7,9 @@ using Microsoft.Extensions.AI;
 namespace InvoiceEvals.Extraction;
 
 /// <summary>
-/// Sits below the response cache, so it only sees real network calls. Counts them, and stamps the measured latency
-/// into the response's AdditionalProperties so a cached response still reports the original latency.
+/// Sits below the response cache, so it only sees real network calls. Counts them, marks the current model-call span
+/// as a cache miss, and stamps the measured latency into the response's AdditionalProperties so a cached response
+/// still reports the original latency.
 /// </summary>
 public sealed class LatencyStampingChatClient(IChatClient inner) : DelegatingChatClient(inner)
 {
@@ -20,6 +21,7 @@ public sealed class LatencyStampingChatClient(IChatClient inner) : DelegatingCha
     public override async Task<ChatResponse> GetResponseAsync(IEnumerable<ChatMessage> messages, ChatOptions? options = null, CancellationToken cancellationToken = default)
     {
         Interlocked.Increment(ref networkCalls);
+        Activity.Current?.SetTag(EvalsTelemetry.CacheHitTag, false); // The TracingChatClient span above the cache.
         var stopwatch = Stopwatch.StartNew();
         var response = await base.GetResponseAsync(messages, options, cancellationToken);
         (response.AdditionalProperties ??= [])[Key] = stopwatch.Elapsed.TotalMilliseconds;
