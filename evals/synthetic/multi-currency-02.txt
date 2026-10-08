@@ -1,0 +1,32 @@
+Acme Intl. Ltd.
+8 Rue de Rivoli
+75004 Paris
+France
+VAT ID FR765918495
+
+Invoice
+Inv. ref A-2022-54533
+Date: October 17, 2022
+Due date: November 9, 2022
+
+Bill to:
+Lindqvist Arkitekter AB
+221 Baker Street
+NW1 6XE London
+United Kingdom
+
+Description | Qty | Unit price | Amount
+Spare filter, monthly | 8 | 4,385 JPY | 35,080 JPY
+Office chair, 2 m | 5 | 39,646 JPY | 198,230 JPY
+Shipping pallet, type A | 6 | 26,859 JPY | 161,154 JPY
+Maintenance visit, annual | 3 | 5,143 JPY | 15,429 JPY
+Maintenance visit, standard | 9 | 31,787 JPY | 286,083 JPY
+Design review, premium | 8 | 9,612 JPY | 76,896 JPY
+
+Subtotal: 772,872 JPY
+VAT 16%: 123,660 JPY
+Total due: 896,532 JPY
+
+Payment terms: net 23 days.
+IBAN DE42 3704 0044 0532 0130 4889
+For reference only: total in EUR 5,725.25 at 0.0064 EUR/JPY.

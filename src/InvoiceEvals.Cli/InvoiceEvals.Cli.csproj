@@ -8,5 +8,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\InvoiceEvals.Core\InvoiceEvals.Core.csproj" />
+    <ProjectReference Include="..\InvoiceEvals.Synthetic\InvoiceEvals.Synthetic.csproj" />
   </ItemGroup>
 </Project>

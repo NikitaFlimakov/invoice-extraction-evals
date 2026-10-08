@@ -1,0 +1,34 @@
+Blue Harbor Consulting LLP
+350 Bay Street
+Toronto, ON M5H 2S6
+Canada
+VAT ID GB457668284
+
+Invoice
+Invoice # INV-2021-15478
+Date: 19.10.2021
+Due date: 12.11.2021
+
+Bill to:
+Marco Bianchi
+221 Baker Street
+NW1 6XE London
+United Kingdom
+
+Description | Qty | Unit price | Amount
+Maintenance visit, large | 2 | 365.44 EUR | 730.88 EUR
+LED panel, 2 m | 6 | 25.97 EUR | 155.82 EUR
+Calibration service, annual | 6 | 4.48 EUR | 26.88 EUR
+Consulting hours, M8 | 3 | 361.51 EUR | 1,084.53 EUR
+Network switch, 2 m | 4 | 34.74 EUR | 138.96 EUR
+
+Subtotal: 2,137.07 EUR
+GST 5%: 106.85 EUR
+PST 7%: 149.59 EUR
+City levy 1.5%: 32.06 EUR
+Eco fee 0.5%: 10.69 EUR
+Tourism tax 2%: 42.74 EUR
+Total due: 2,479.00 EUR
+
+Payment terms: net 24 days.
+IBAN DE18 3704 0044 0532 0130 7669

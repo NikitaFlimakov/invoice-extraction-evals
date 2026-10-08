@@ -1,0 +1,84 @@
+Van Dijk Techniek B.V.
+Mannerheimintie 5
+00100 Helsinki
+Finland
+VAT ID FR729894499
+
+TAX INVOICE
+Invoice No. 2021-50152
+Date: 2021-08-08
+Due date: 2021-09-29
+
+Bill to:
+Westbrook Medical Centre
+221 Baker Street
+NW1 6XE London
+United Kingdom
+
+Description | Qty | Unit price | Amount
+Steel bracket, annual | 5 | $220.61 | $1,103.05
+Shipping pallet, standard | 4 | $17.20 | $68.80
+Safety gloves, premium | 6 | $279.14 | $1,674.84
+Spare filter, M8 | 4 | $84.55 | $338.20
+Design review, small | 2 | $288.39 | $576.78
+Maintenance visit, type A | 5 | $9.79 | $48.95
+Copper cable, large | 6 | $214.36 | $1,286.16
+Shipping pallet, monthly | 4 | $455.52 | $1,822.08
+Printer toner, small | 3 | $13.55 | $40.65
+Maintenance visit, monthly | 4 | $140.68 | $562.72
+Maintenance visit, standard | 2 | $182.18 | $364.36
+Safety gloves, standard | 7 | $129.84 | $908.88
+Training session, small | 9 | $114.98 | $1,034.82
+Copper cable, standard | 1 | $479.13 | $479.13
+Maintenance visit, small | 3 | $128.64 | $385.92
+Training session, M8 | 6 | $383.39 | $2,300.34
+Hydraulic pump, premium | 1 | $346.25 | $346.25
+Office chair, large | 4 | $227.70 | $910.80
+Consulting hours, M8 | 9 | $118.62 | $1,067.58
+Training session, annual | 9 | $134.70 | $1,212.30
+Copper cable, standard | 9 | $274.38 | $2,469.42
+Copper cable, 2 m | 5 | $137.81 | $689.05
+Hydraulic pump, 2 m | 7 | $452.24 | $3,165.68
+Cloud storage, monthly | 2 | $128.46 | $256.92
+Consulting hours, large | 2 | $62.34 | $124.68
+Packaging tape, large | 7 | $336.39 | $2,354.73
+Hydraulic pump, premium | 7 | $158.56 | $1,109.92
+Calibration service, premium | 6 | $231.86 | $1,391.16
+Copper cable, large | 7 | $361.66 | $2,531.62
+Steel bracket, 2 m | 5 | $130.21 | $651.05
+Packaging tape, large | 4 | $397.66 | $1,590.64
+Shipping pallet, monthly | 5 | $158.68 | $793.40
+Cloud storage, small | 8 | $362.79 | $2,902.32
+Packaging tape, monthly | 2 | $472.46 | $944.92
+LED panel, standard | 4 | $226.01 | $904.04
+Software licence, standard | 4 | $169.08 | $676.32
+Maintenance visit, monthly | 6 | $464.88 | $2,789.28
+Safety gloves, standard | 4 | $163.53 | $654.12
+Copper cable, monthly | 8 | $149.58 | $1,196.64
+Packaging tape, type B | 3 | $70.26 | $210.78
+Safety gloves, monthly | 4 | $354.63 | $1,418.52
+Software licence, premium | 9 | $450.69 | $4,056.21
+Steel bracket, premium | 7 | $386.86 | $2,708.02
+Packaging tape, monthly | 8 | $486.10 | $3,888.80
+Packaging tape, type A | 8 | $17.18 | $137.44
+Shipping pallet, type B | 7 | $22.52 | $157.64
+Network switch, small | 9 | $234.30 | $2,108.70
+Software licence, 2 m | 2 | $99.61 | $199.22
+Safety gloves, large | 6 | $196.83 | $1,180.98
+Consulting hours, type B | 3 | $400.15 | $1,200.45
+Cloud storage, type B | 2 | $412.30 | $824.60
+Safety gloves, annual | 2 | $356.82 | $713.64
+Network switch, 2 m | 7 | $464.90 | $3,254.30
+Packaging tape, type B | 3 | $170.76 | $512.28
+Cloud storage, 2 m | 2 | $281.49 | $562.98
+Design review, premium | 1 | $23.68 | $23.68
+Hydraulic pump, large | 3 | $457.11 | $1,371.33
+Network switch, small | 9 | $261.81 | $2,356.29
+Calibration service, M8 | 7 | $354.92 | $2,484.44
+
+Subtotal: $73,098.82
+Sales tax 16%: $11,695.81
+Total due: $84,794.63
+
+Payment terms: net 52 days.
+IBAN DE11 3704 0044 0532 0130 3311

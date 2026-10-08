@@ -1,0 +1,29 @@
+Kawasaki Seiki K.K.
+Mannerheimintie 5
+00100 Helsinki
+Finland
+VAT ID GB259747517
+
+TAX INVOICE
+Number 2022-01653
+Date: 06.11.2022
+Due date: 03.12.2022
+
+Bill to:
+Lindqvist Arkitekter AB
+Drottninggatan 7
+111 51 Stockholm
+Sweden
+
+Description | Qty | Unit price | Amount
+Hydraulic pump, annual | 3 | 188.47 EUR | 565.41 EUR
+Consulting hours, small | 2 | 470.06 EUR | 940.12 EUR
+Steel bracket, type A | 6 | 198.09 EUR | 1,188.54 EUR
+
+Subtotal: 2,694.07 EUR
+Discount (11%): -296.35 EUR
+VAT 24%: 575.45 EUR
+Total due: 2,973.17 EUR
+
+Payment terms: net 27 days.
+IBAN DE28 3704 0044 0532 0130 5882

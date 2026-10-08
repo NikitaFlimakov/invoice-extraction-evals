@@ -1,0 +1,36 @@
+Rhein-Main Software GmbH
+Mannerheimintie 5
+00100 Helsinki
+Finland
+VAT ID DE586260044
+
+Invoice
+Number A-2024-88142
+Date: 29 May 2024
+Due date: 13 Jul 2024
+
+Bill to:
+Riverside School District
+12 George Street
+Sydney, NSW 2000
+Australia
+
+Ship to:
+Westbrook Medical Centre
+Drottninggatan 7
+111 51 Stockholm
+Sweden
+
+Description | Qty | Unit price | Amount
+Calibration service, M8 | 9 | $426.34 | $3,837.06
+Network switch, small | 6 | $190.42 | $1,142.52
+Software licence, monthly | 2 | $367.41 | $734.82
+LED panel, type A | 2 | $31.19 | $62.38
+
+Subtotal: $5,776.78
+Discount (9%): -$519.91
+Sales tax 14%: $735.96
+Total due: $5,992.83
+
+Payment terms: net 45 days.
+IBAN DE11 3704 0044 0532 0130 1719

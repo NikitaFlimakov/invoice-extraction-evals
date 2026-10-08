@@ -1,0 +1,78 @@
+Pacific Rim Trading Corp.
+350 Bay Street
+Toronto, ON M5H 2S6
+Canada
+VAT ID FR282151776
+
+INVOICE
+Invoice No. 2024-04468
+Date: 11.05.2024
+Due date: 28.06.2024
+
+Bill to:
+Jane Okafor
+221 Baker Street
+NW1 6XE London
+United Kingdom
+
+Description | Qty | Unit price | Amount
+Spare filter, 2 m | 3 | $466.72 | $1,400.16
+Shipping pallet, type B | 1 | $359.43 | $359.43
+Printer toner, type B | 5 | $293.42 | $1,467.10
+Shipping pallet, 2 m | 4 | $146.20 | $584.80
+Training session, small | 7 | $113.96 | $797.72
+Cloud storage, 2 m | 9 | $30.41 | $273.69
+Office chair, type A | 9 | $246.45 | $2,218.05
+Shipping pallet, monthly | 3 | $247.84 | $743.52
+Steel bracket, small | 4 | $142.34 | $569.36
+Training session, type B | 8 | $278.06 | $2,224.48
+Printer toner, type B | 6 | $324.41 | $1,946.46
+Calibration service, 2 m | 1 | $444.20 | $444.20
+Network switch, M8 | 6 | $22.66 | $135.96
+Packaging tape, type A | 1 | $199.05 | $199.05
+Training session, type A | 9 | $33.15 | $298.35
+Office chair, premium | 1 | $101.47 | $101.47
+Consulting hours, large | 8 | $37.87 | $302.96
+Printer toner, standard | 8 | $221.86 | $1,774.88
+Spare filter, type A | 1 | $416.11 | $416.11
+Consulting hours, monthly | 2 | $265.95 | $531.90
+Cloud storage, annual | 2 | $37.62 | $75.24
+Calibration service, premium | 6 | $402.22 | $2,413.32
+Calibration service, premium | 8 | $184.70 | $1,477.60
+Hydraulic pump, type B | 2 | $300.20 | $600.40
+Safety gloves, 2 m | 4 | $377.90 | $1,511.60
+Software licence, 2 m | 3 | $99.31 | $297.93
+Safety gloves, 2 m | 9 | $171.57 | $1,544.13
+Design review, M8 | 4 | $382.64 | $1,530.56
+Design review, M8 | 1 | $46.75 | $46.75
+Safety gloves, premium | 1 | $378.49 | $378.49
+LED panel, type B | 7 | $401.85 | $2,812.95
+Steel bracket, large | 9 | $485.17 | $4,366.53
+Hydraulic pump, large | 1 | $53.02 | $53.02
+Consulting hours, M8 | 2 | $54.35 | $108.70
+Design review, premium | 7 | $361.73 | $2,532.11
+Consulting hours, premium | 5 | $64.20 | $321.00
+Training session, 2 m | 9 | $56.90 | $512.10
+Network switch, M8 | 7 | $228.83 | $1,601.81
+Cloud storage, premium | 5 | $375.47 | $1,877.35
+Design review, small | 4 | $455.91 | $1,823.64
+Maintenance visit, type B | 1 | $445.47 | $445.47
+Cloud storage, 2 m | 9 | $119.55 | $1,075.95
+Spare filter, standard | 9 | $349.74 | $3,147.66
+Safety gloves, premium | 8 | $47.09 | $376.72
+Shipping pallet, large | 6 | $248.88 | $1,493.28
+Design review, 2 m | 1 | $292.77 | $292.77
+Packaging tape, monthly | 4 | $386.40 | $1,545.60
+Printer toner, type A | 9 | $340.97 | $3,068.73
+Training session, annual | 5 | $466.65 | $2,333.25
+Packaging tape, type A | 2 | $28.10 | $56.20
+Calibration service, premium | 4 | $258.47 | $1,033.88
+Steel bracket, annual | 6 | $260.90 | $1,565.40
+Cloud storage, M8 | 9 | $430.31 | $3,872.79
+
+Subtotal: $62,982.58
+Sales tax 10%: $6,298.26
+Total due: $69,280.84
+
+Payment terms: net 48 days.
+IBAN DE12 3704 0044 0532 0130 4473

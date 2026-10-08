@@ -1,0 +1,29 @@
+Järvinen Tekniikka Oy
+350 Bay Street
+Toronto, ON M5H 2S6
+Canada
+VAT ID DE321277672
+
+CREDIT NOTE
+Credit note no. CN-8569
+Date: November 11, 2022
+Due date: December 10, 2022
+
+Bill to:
+Oakridge Dental Clinic
+Mannerheimintie 5
+00100 Helsinki
+Finland
+
+Description | Qty | Unit price | Amount
+Consulting hours, type B | 2 | -318.26 EUR | -636.52 EUR
+Maintenance visit, annual | 2 | -109.23 EUR | -218.46 EUR
+Office chair, small | 8 | -45.43 EUR | -363.44 EUR
+
+Subtotal: -1,218.42 EUR
+VAT 11%: -134.03 EUR
+Total credit: -1,352.45 EUR
+
+Payment terms: net 29 days.
+IBAN DE32 3704 0044 0532 0130 6056
+Credits invoice INV-88112 in full.

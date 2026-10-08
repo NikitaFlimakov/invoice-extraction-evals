@@ -1,0 +1,29 @@
+Société Lumière S.A.
+Via Roma 18
+20121 Milano
+Italy
+VAT ID CH492418656
+
+TAX INVOICE
+Inv. ref 2021-13089
+Date: 2021-12-31
+Due date: 2022-02-19
+
+Bill to:
+Priya Raman
+1-2-3 Marunouchi
+100-0005 Tokyo
+Japan
+
+Description | Qty | Unit price | Amount
+Copper cable, small | 5 | $316.01 | $1,580.05
+Spare filter, premium | 1 | $20.18 | $20.18
+Cloud storage, premium | 2 | $342.17 | $684.34
+
+Subtotal: $2,284.57
+Discount (2%): -$45.69
+Sales tax 7%: $156.72
+Total due: $2,395.60
+
+Payment terms: net 50 days.
+IBAN DE99 3704 0044 0532 0130 9852

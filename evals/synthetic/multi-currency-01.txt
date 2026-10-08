@@ -1,0 +1,36 @@
+Nordwind Logistik GmbH
+221 Baker Street
+NW1 6XE London
+United Kingdom
+VAT ID CH356036833
+
+TAX INVOICE
+Number A-2021-45514
+Date: 23.04.2021
+Due date: 10.05.2021
+
+Bill to:
+Marco Bianchi
+350 Bay Street
+Toronto, ON M5H 2S6
+Canada
+
+Ship to:
+Fenwick & Partners
+Bahnhofstrasse 45
+8001 Zürich
+Switzerland
+
+Description | Qty | Unit price | Amount
+Consulting hours, premium | 6 | £440.63 | £2,643.78
+Hydraulic pump, standard | 9 | £295.69 | £2,661.21
+Shipping pallet, premium | 8 | £26.89 | £215.12
+Shipping pallet, M8 | 6 | £494.18 | £2,965.08
+
+Subtotal: £8,485.19
+VAT 22%: £1,866.74
+Total due: £10,351.93
+
+Payment terms: net 17 days.
+IBAN DE91 3704 0044 0532 0130 1128
+For reference only: total in EUR 12,353.99 at 1.1934 EUR/GBP.

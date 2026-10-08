@@ -1,0 +1,28 @@
+Summit Analytics, Inc.
+1600 Pine Avenue
+Denver, CO 80202
+United States
+VAT ID DE183388607
+
+INVOICE
+Invoice No. A-2023-89818
+Date: 8 May 2023
+Due date: 30 Mar 2023
+
+Bill to:
+Riverside School District
+12 George Street
+Sydney, NSW 2000
+Australia
+
+Description | Qty | Unit price | Amount
+Shipping pallet, type B | 3 | $142.86 | $428.58
+Safety gloves, 2 m | 4 | $28.01 | $112.04
+Consulting hours, large | 4 | $364.84 | $1,459.36
+
+Subtotal: $1,999.98
+Sales tax 21%: $420.00
+Total due: $2,419.98
+
+Payment due on receipt.
+IBAN DE87 3704 0044 0532 0130 8130

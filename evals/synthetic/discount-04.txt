@@ -1,0 +1,34 @@
+Fratelli Rossi S.p.A.
+221 Baker Street
+NW1 6XE London
+United Kingdom
+VAT ID SE734151678
+
+INVOICE
+Number 2023-37474
+Date: October 17, 2023
+Due date: December 13, 2023
+
+Bill to:
+Hotel Belvedere
+Hafenstraße 12
+20457 Hamburg
+Germany
+
+Ship to:
+Oakridge Dental Clinic
+1600 Pine Avenue
+Denver, CO 80202
+United States
+
+Description | Qty | Unit price | Amount
+Shipping pallet, small | 2 | $364.74 | $729.48
+Cloud storage, standard | 8 | $140.10 | $1,120.80
+
+Subtotal: $1,850.28
+Discount (11%): -$203.53
+Sales tax 22%: $362.29
+Total due: $2,009.04
+
+Payment terms: net 57 days.
+IBAN DE48 3704 0044 0532 0130 3883

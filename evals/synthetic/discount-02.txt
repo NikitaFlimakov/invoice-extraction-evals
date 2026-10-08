@@ -1,0 +1,29 @@
+Hartmann Bros. AG
+350 Bay Street
+Toronto, ON M5H 2S6
+Canada
+VAT ID FR994882196
+
+INVOICE
+Invoice # A-2021-14678
+Date: July 25, 2021
+Due date: August 9, 2021
+
+Bill to:
+Marco Bianchi
+221 Baker Street
+NW1 6XE London
+United Kingdom
+
+Description | Qty | Unit price | Amount
+Office chair, standard | 9 | $117.85 | $1,060.65
+Printer toner, annual | 1 | $385.10 | $385.10
+Training session, large | 7 | $148.96 | $1,042.72
+
+Subtotal: $2,488.47
+Discount (7%): -$174.19
+Sales tax 8%: $185.14
+Total due: $2,499.42
+
+Payment terms: net 15 days.
+IBAN DE36 3704 0044 0532 0130 6541

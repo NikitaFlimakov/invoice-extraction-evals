@@ -1,0 +1,28 @@
+Koala Supplies Pty Ltd
+8 Rue de Rivoli
+75004 Paris
+France
+VAT ID FR320979346
+
+CREDIT NOTE
+Credit note no. CN-9415
+Date: 2022-02-11
+Due date: 2022-03-10
+
+Bill to:
+Jane Okafor
+Bahnhofstrasse 45
+8001 Zürich
+Switzerland
+
+Description | Qty | Unit price | Amount
+Packaging tape, 2 m | 9 | -$141.13 | -$1,270.17
+Spare filter, large | 9 | -$292.76 | -$2,634.84
+
+Subtotal: -$3,905.01
+Sales tax 9%: -$351.45
+Total credit: -$4,256.46
+
+Payment terms: net 27 days.
+IBAN DE77 3704 0044 0532 0130 6443
+Credits invoice INV-59051 in full.

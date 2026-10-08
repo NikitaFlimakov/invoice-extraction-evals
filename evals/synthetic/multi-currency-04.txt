@@ -1,0 +1,32 @@
+O'Neill & Sons, LLC
+1-2-3 Marunouchi
+100-0005 Tokyo
+Japan
+VAT ID DE378841203
+
+TAX INVOICE
+Invoice # 2021-00068
+Date: 07.01.2021
+Due date: 05.03.2021
+
+Bill to:
+Jane Okafor
+1600 Pine Avenue
+Denver, CO 80202
+United States
+
+Description | Qty | Unit price | Amount
+Spare filter, large | 9 | CA$8.48 | CA$76.32
+Printer toner, monthly | 1 | CA$396.02 | CA$396.02
+Training session, 2 m | 8 | CA$204.38 | CA$1,635.04
+Hydraulic pump, monthly | 2 | CA$179.26 | CA$358.52
+Maintenance visit, large | 4 | CA$222.44 | CA$889.76
+Office chair, large | 8 | CA$70.62 | CA$564.96
+
+Subtotal: CA$3,920.62
+VAT 11%: CA$431.27
+Total due: CA$4,351.89
+
+Payment terms: net 57 days.
+IBAN DE82 3704 0044 0532 0130 1114
+For reference only: total in EUR 2,900.10 at 0.6664 EUR/CAD.

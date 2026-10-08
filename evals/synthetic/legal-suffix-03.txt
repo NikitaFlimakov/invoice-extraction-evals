@@ -1,0 +1,36 @@
+St. Clair Hardware Co.
+Via Roma 18
+20121 Milano
+Italy
+VAT ID SE730235578
+
+Invoice
+Inv. ref INV-2023-11346
+Date: March 19, 2023
+Due date: April 19, 2023
+
+Bill to:
+Marco Bianchi
+350 Bay Street
+Toronto, ON M5H 2S6
+Canada
+
+Ship to:
+Fenwick & Partners
+Hafenstraße 12
+20457 Hamburg
+Germany
+
+Description | Qty | Unit price | Amount
+Calibration service, type A | 3 | $206.47 | $619.41
+Copper cable, type B | 3 | $352.98 | $1,058.94
+Printer toner, annual | 9 | $254.20 | $2,287.80
+Software licence, type B | 7 | $99.55 | $696.85
+LED panel, type A | 3 | $25.39 | $76.17
+
+Subtotal: $4,739.17
+Sales tax 7%: $331.74
+Total due: $5,070.91
+
+Payment terms: net 31 days.
+IBAN DE26 3704 0044 0532 0130 6429

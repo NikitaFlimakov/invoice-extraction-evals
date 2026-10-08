@@ -1,0 +1,76 @@
+Northgate Holdings PLC
+Mannerheimintie 5
+00100 Helsinki
+Finland
+VAT ID DE822961462
+
+TAX INVOICE
+Invoice # 2021-54636
+Date: September 16, 2021
+Due date: October 22, 2021
+
+Bill to:
+Hotel Belvedere
+1600 Pine Avenue
+Denver, CO 80202
+United States
+
+Description | Qty | Unit price | Amount
+Spare filter, standard | 3 | $162.10 | $486.30
+Packaging tape, type B | 2 | $27.96 | $55.92
+Cloud storage, type B | 3 | $286.90 | $860.70
+Calibration service, large | 7 | $62.13 | $434.91
+Maintenance visit, type A | 4 | $187.07 | $748.28
+Safety gloves, monthly | 4 | $0.99 | $3.96
+Copper cable, annual | 7 | $464.87 | $3,254.09
+Software licence, premium | 8 | $359.96 | $2,879.68
+Copper cable, type B | 6 | $193.46 | $1,160.76
+Shipping pallet, standard | 4 | $330.73 | $1,322.92
+Cloud storage, standard | 4 | $100.31 | $401.24
+Network switch, M8 | 3 | $385.17 | $1,155.51
+Network switch, type A | 9 | $47.02 | $423.18
+LED panel, 2 m | 3 | $99.19 | $297.57
+LED panel, premium | 7 | $450.75 | $3,155.25
+Hydraulic pump, monthly | 6 | $382.38 | $2,294.28
+Calibration service, small | 9 | $287.62 | $2,588.58
+Steel bracket, premium | 2 | $180.58 | $361.16
+Steel bracket, 2 m | 2 | $406.48 | $812.96
+Office chair, small | 2 | $90.53 | $181.06
+Calibration service, premium | 3 | $293.94 | $881.82
+Design review, type B | 3 | $256.08 | $768.24
+LED panel, small | 3 | $262.63 | $787.89
+Software licence, M8 | 5 | $139.13 | $695.65
+Design review, 2 m | 3 | $9.53 | $28.59
+Training session, standard | 6 | $255.21 | $1,531.26
+Cloud storage, annual | 7 | $371.24 | $2,598.68
+Spare filter, annual | 4 | $476.31 | $1,905.24
+Shipping pallet, small | 1 | $29.48 | $29.48
+Steel bracket, premium | 5 | $272.98 | $1,364.90
+Consulting hours, small | 3 | $47.89 | $143.67
+Maintenance visit, type B | 6 | $360.11 | $2,160.66
+Consulting hours, type A | 3 | $165.65 | $496.95
+Consulting hours, type B | 1 | $243.41 | $243.41
+Shipping pallet, standard | 7 | $209.70 | $1,467.90
+Safety gloves, small | 6 | $139.78 | $838.68
+Safety gloves, standard | 7 | $149.09 | $1,043.63
+Safety gloves, 2 m | 5 | $200.74 | $1,003.70
+Office chair, premium | 8 | $233.78 | $1,870.24
+Copper cable, large | 8 | $132.35 | $1,058.80
+Calibration service, premium | 1 | $482.74 | $482.74
+Packaging tape, standard | 1 | $387.71 | $387.71
+Software licence, monthly | 8 | $460.23 | $3,681.84
+Consulting hours, 2 m | 1 | $427.79 | $427.79
+Cloud storage, M8 | 2 | $432.91 | $865.82
+Hydraulic pump, premium | 1 | $434.22 | $434.22
+Spare filter, small | 7 | $114.39 | $800.73
+Consulting hours, M8 | 6 | $492.50 | $2,955.00
+Calibration service, standard | 7 | $465.86 | $3,261.02
+Shipping pallet, monthly | 2 | $68.35 | $136.70
+Software licence, monthly | 6 | $393.54 | $2,361.24
+
+Subtotal: $59,592.51
+Sales tax 14%: $8,342.95
+Total due: $67,935.46
+
+Payment terms: net 36 days.
+IBAN DE87 3704 0044 0532 0130 4942

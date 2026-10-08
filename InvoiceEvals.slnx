@@ -9,6 +9,7 @@
     <Project Path="src/InvoiceEvals.Core/InvoiceEvals.Core.csproj" />
     <Project Path="src/InvoiceEvals.Evaluation/InvoiceEvals.Evaluation.csproj" />
     <Project Path="src/InvoiceEvals.Extraction/InvoiceEvals.Extraction.csproj" />
+    <Project Path="src/InvoiceEvals.Synthetic/InvoiceEvals.Synthetic.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/InvoiceEvals.Tests/InvoiceEvals.Tests.csproj" />

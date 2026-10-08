@@ -1,0 +1,34 @@
+Yamada Shoji Co., Ltd.
+12 George Street
+Sydney, NSW 2000
+Australia
+VAT ID DE938600744
+
+TAX INVOICE
+Inv. ref A-2022-49467
+Date: 2022-05-18
+Due date: 2022-06-25
+
+Bill to:
+Oakridge Dental Clinic
+350 Bay Street
+Toronto, ON M5H 2S6
+Canada
+
+Ship to:
+Westbrook Medical Centre
+350 Bay Street
+Toronto, ON M5H 2S6
+Canada
+
+Description | Qty | Unit price | Amount
+Printer toner, type A | 5 | $422.98 | $2,114.90
+Consulting hours, M8 | 3 | $279.02 | $837.06
+
+Subtotal: $2,951.96
+Discount (14%): -$413.27
+Sales tax 19%: $482.35
+Total due: $3,021.04
+
+Payment terms: net 38 days.
+IBAN DE66 3704 0044 0532 0130 2567

@@ -1,0 +1,36 @@
+Brightwater Mfg. Co.
+221 Baker Street
+NW1 6XE London
+United Kingdom
+VAT ID CH266159146
+
+TAX INVOICE
+Invoice No. INV-2022-32525
+Date: 20 Dec 2022
+Due date: 31 Jan 2023
+
+Bill to:
+Marco Bianchi
+Bahnhofstrasse 45
+8001 Zürich
+Switzerland
+
+Ship to:
+Priya Raman
+1-2-3 Marunouchi
+100-0005 Tokyo
+Japan
+
+Description | Qty | Unit price | Amount
+Consulting hours, large | 3 | CHF 291.44 | CHF 874.32
+Network switch, type B | 9 | CHF 302.32 | CHF 2'720.88
+Hydraulic pump, standard | 3 | CHF 212.83 | CHF 638.49
+Copper cable, monthly | 8 | CHF 412.47 | CHF 3'299.76
+
+Subtotal: CHF 7'533.45
+VAT 17%: CHF 1'280.69
+Total due: CHF 8'814.14
+
+Payment terms: net 42 days.
+IBAN DE87 3704 0044 0532 0130 8972
+For reference only: total in EUR 8,792.10 at 0.9975 EUR/CHF.

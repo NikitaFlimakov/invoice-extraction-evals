@@ -1,0 +1,42 @@
+Carter-Hughes Inc.
+Mannerheimintie 5
+00100 Helsinki
+Finland
+VAT ID GB860288535
+
+Invoice
+Inv. ref 2022-42528
+Date: 15 Aug 2022
+Due date: 1 Sep 2022
+
+Bill to:
+Studio Kagami
+Drottninggatan 7
+111 51 Stockholm
+Sweden
+
+Ship to:
+Lindqvist Arkitekter AB
+Bahnhofstrasse 45
+8001 Zürich
+Switzerland
+
+Description | Qty | Unit price | Amount
+Consulting hours, 2 m | 3 | 258.69 EUR | 776.07 EUR
+LED panel, M8 | 9 | 474.40 EUR | 4,269.60 EUR
+Steel bracket, large | 4 | 407.33 EUR | 1,629.32 EUR
+Safety gloves, type B | 2 | 154.75 EUR | 309.50 EUR
+Copper cable, 2 m | 2 | 92.94 EUR | 185.88 EUR
+
+Subtotal: 7,170.37 EUR
+Discount (4%): -286.81 EUR
+GST 5%: 344.18 EUR
+PST 7%: 481.85 EUR
+City levy 1.5%: 103.25 EUR
+Eco fee 0.5%: 34.42 EUR
+Tourism tax 2%: 137.67 EUR
+Excise 3%: 206.51 EUR
+Total due: 8,191.44 EUR
+
+Payment terms: net 17 days.
+IBAN DE28 3704 0044 0532 0130 3898

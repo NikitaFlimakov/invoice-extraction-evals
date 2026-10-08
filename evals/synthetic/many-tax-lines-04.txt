@@ -1,0 +1,36 @@
+Greenfield Agri Co-op
+12 George Street
+Sydney, NSW 2000
+Australia
+VAT ID SE227567109
+
+TAX INVOICE
+Number INV-2024-33299
+Date: January 10, 2024
+Due date: February 19, 2024
+
+Bill to:
+Westbrook Medical Centre
+Keizersgracht 100
+1015 CS Amsterdam
+Netherlands
+
+Description | Qty | Unit price | Amount
+Packaging tape, standard | 3 | $176.15 | $528.45
+Software licence, type A | 3 | $19.16 | $57.48
+Shipping pallet, monthly | 9 | $62.07 | $558.63
+Safety gloves, small | 1 | $74.65 | $74.65
+Office chair, premium | 2 | $38.67 | $77.34
+Shipping pallet, annual | 8 | $94.98 | $759.84
+
+Subtotal: $2,056.39
+GST 5%: $102.82
+PST 7%: $143.95
+City levy 1.5%: $30.85
+Eco fee 0.5%: $10.28
+Tourism tax 2%: $41.13
+Excise 3%: $61.69
+Total due: $2,447.11
+
+Payment terms: net 40 days.
+IBAN DE68 3704 0044 0532 0130 8395

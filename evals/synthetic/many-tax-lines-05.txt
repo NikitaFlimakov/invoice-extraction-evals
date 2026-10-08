@@ -1,0 +1,41 @@
+Larsen Byg ApS
+Via Roma 18
+20121 Milano
+Italy
+VAT ID CH737306043
+
+TAX INVOICE
+Number INV-2021-60459
+Date: 6 Feb 2021
+Due date: 26 Mar 2021
+
+Bill to:
+Jane Okafor
+Hafenstraße 12
+20457 Hamburg
+Germany
+
+Ship to:
+Fenwick & Partners
+350 Bay Street
+Toronto, ON M5H 2S6
+Canada
+
+Description | Qty | Unit price | Amount
+Spare filter, standard | 9 | 235.15 EUR | 2,116.35 EUR
+Copper cable, 2 m | 6 | 97.22 EUR | 583.32 EUR
+Copper cable, M8 | 1 | 32.45 EUR | 32.45 EUR
+Training session, large | 9 | 359.70 EUR | 3,237.30 EUR
+Training session, standard | 7 | 294.23 EUR | 2,059.61 EUR
+
+Subtotal: 8,029.03 EUR
+Discount (10%): -802.90 EUR
+GST 5%: 361.31 EUR
+PST 7%: 505.83 EUR
+City levy 1.5%: 108.39 EUR
+Eco fee 0.5%: 36.13 EUR
+Tourism tax 2%: 144.52 EUR
+Total due: 8,382.31 EUR
+
+Payment terms: net 48 days.
+IBAN DE96 3704 0044 0532 0130 1201

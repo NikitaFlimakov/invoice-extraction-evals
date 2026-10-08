@@ -1,0 +1,28 @@
+Iberia Textil S.L.
+Bahnhofstrasse 45
+8001 Zürich
+Switzerland
+VAT ID DE967512692
+
+Invoice
+Invoice # A-2023-55226
+Date: January 9, 2023
+Due date: November 28, 2022
+
+Bill to:
+Jane Okafor
+1600 Pine Avenue
+Denver, CO 80202
+United States
+
+Description | Qty | Unit price | Amount
+Design review, type A | 7 | 197.66 EUR | 1,383.62 EUR
+Maintenance visit, monthly | 9 | 212.86 EUR | 1,915.74 EUR
+Hydraulic pump, small | 9 | 47.11 EUR | 423.99 EUR
+
+Subtotal: 3,723.35 EUR
+VAT 18%: 670.20 EUR
+Total due: 4,393.55 EUR
+
+Payment due on receipt.
+IBAN DE95 3704 0044 0532 0130 1266

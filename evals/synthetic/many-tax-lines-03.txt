@@ -1,0 +1,35 @@
+Delta Freight Svcs. Ltd
+8 Rue de Rivoli
+75004 Paris
+France
+VAT ID SE104842204
+
+TAX INVOICE
+Inv. ref A-2022-47775
+Date: August 14, 2022
+Due date: October 2, 2022
+
+Bill to:
+Oakridge Dental Clinic
+Via Roma 18
+20121 Milano
+Italy
+
+Description | Qty | Unit price | Amount
+Hydraulic pump, large | 5 | 161.90 EUR | 809.50 EUR
+Software licence, annual | 9 | 76.24 EUR | 686.16 EUR
+Cloud storage, monthly | 2 | 314.45 EUR | 628.90 EUR
+Consulting hours, type B | 5 | 493.87 EUR | 2,469.35 EUR
+Software licence, small | 6 | 63.47 EUR | 380.82 EUR
+Design review, 2 m | 1 | 370.16 EUR | 370.16 EUR
+
+Subtotal: 5,344.89 EUR
+GST 5%: 267.24 EUR
+PST 7%: 374.14 EUR
+City levy 1.5%: 80.17 EUR
+Eco fee 0.5%: 26.72 EUR
+Tourism tax 2%: 106.90 EUR
+Total due: 6,200.06 EUR
+
+Payment terms: net 49 days.
+IBAN DE88 3704 0044 0532 0130 8375

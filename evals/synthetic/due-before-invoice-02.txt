@@ -1,0 +1,37 @@
+Maple Leaf Printing Ltd.
+Drottninggatan 7
+111 51 Stockholm
+Sweden
+VAT ID GB725699843
+
+TAX INVOICE
+Invoice # 2023-39732
+Date: 6 Nov 2023
+Due date: 19 Sep 2023
+
+Bill to:
+Jane Okafor
+1-2-3 Marunouchi
+100-0005 Tokyo
+Japan
+
+Ship to:
+Westbrook Medical Centre
+Via Roma 18
+20121 Milano
+Italy
+
+Description | Qty | Unit price | Amount
+LED panel, premium | 1 | $175.73 | $175.73
+Maintenance visit, M8 | 6 | $231.88 | $1,391.28
+Safety gloves, 2 m | 8 | $461.82 | $3,694.56
+Consulting hours, annual | 5 | $390.79 | $1,953.95
+LED panel, 2 m | 1 | $348.08 | $348.08
+
+Subtotal: $7,563.60
+Discount (12%): -$907.63
+Sales tax 18%: $1,198.07
+Total due: $7,854.04
+
+Payment due on receipt.
+IBAN DE32 3704 0044 0532 0130 2687

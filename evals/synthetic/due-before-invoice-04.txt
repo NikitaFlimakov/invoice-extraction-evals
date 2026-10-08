@@ -1,0 +1,29 @@
+Old Mill Bakery
+221 Baker Street
+NW1 6XE London
+United Kingdom
+VAT ID CH951069357
+
+INVOICE
+Invoice No. 2022-48464
+Date: 15.07.2022
+Due date: 30.06.2022
+
+Bill to:
+Lindqvist Arkitekter AB
+Drottninggatan 7
+111 51 Stockholm
+Sweden
+
+Description | Qty | Unit price | Amount
+Safety gloves, M8 | 3 | 98.37 EUR | 295.11 EUR
+Cloud storage, monthly | 5 | 298.96 EUR | 1,494.80 EUR
+Consulting hours, standard | 1 | 247.84 EUR | 247.84 EUR
+Copper cable, premium | 1 | 247.56 EUR | 247.56 EUR
+
+Subtotal: 2,285.31 EUR
+VAT 10%: 228.53 EUR
+Total due: 2,513.84 EUR
+
+Payment due on receipt.
+IBAN DE18 3704 0044 0532 0130 5848

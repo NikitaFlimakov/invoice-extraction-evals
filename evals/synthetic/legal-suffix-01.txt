@@ -1,0 +1,33 @@
+Quantum Dynamics Intl. Corp.
+1-2-3 Marunouchi
+100-0005 Tokyo
+Japan
+VAT ID CH214907833
+
+Invoice
+Inv. ref A-2024-77214
+Date: 2024-02-19
+Due date: 2024-03-27
+
+Bill to:
+Hotel Belvedere
+221 Baker Street
+NW1 6XE London
+United Kingdom
+
+Ship to:
+Oakridge Dental Clinic
+350 Bay Street
+Toronto, ON M5H 2S6
+Canada
+
+Description | Qty | Unit price | Amount
+Cloud storage, annual | 2 | 486.03 EUR | 972.06 EUR
+Software licence, monthly | 5 | 468.62 EUR | 2,343.10 EUR
+
+Subtotal: 3,315.16 EUR
+VAT 17%: 563.58 EUR
+Total due: 3,878.74 EUR
+
+Payment terms: net 37 days.
+IBAN DE81 3704 0044 0532 0130 1166
