@@ -5,6 +5,9 @@ public sealed record EvalDocument(GoldenDocument Golden, string Text)
 {
     public string Id => Golden.Id;
 
+    /// <summary>The "text" layer (<see cref="GoldenDocument.TextPath"/>) whatever the input mode; what the name judge reads.</summary>
+    public string TextLayer { get; init; } = Text;
+
     /// <summary>Reporting scenario name: the id with "/" replaced by "." (Reporting rejects path separators).</summary>
     public string ScenarioName => Id.Replace('/', '.');
 }
@@ -25,8 +28,9 @@ public static class EvalSet
         foreach (var g in golden.Concat(synthetic).OrderBy(g => g.Id, StringComparer.Ordinal))
         {
             // Synthetic documents have no OCR layer; ocr mode falls back to their generated text.
-            var path = inputMode == OcrMode && g.OcrTextPath is not null ? g.OcrTextPath : g.TextPath;
-            docs.Add(new EvalDocument(g, await File.ReadAllTextAsync(Path.Combine(evalsDir, path), ct)));
+            var textLayer = await File.ReadAllTextAsync(Path.Combine(evalsDir, g.TextPath), ct);
+            var text = inputMode == OcrMode && g.OcrTextPath is not null ? await File.ReadAllTextAsync(Path.Combine(evalsDir, g.OcrTextPath), ct) : textLayer;
+            docs.Add(new EvalDocument(g, text) { TextLayer = textLayer });
         }
         return docs;
     }

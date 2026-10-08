@@ -124,12 +124,11 @@ public sealed class EvaluatorTests
     }
 
     [Fact]
-    public async Task Fields_VendorMatcher_IsInjectable()
+    public async Task Fields_WithoutJudge_EmitNoJudgedMetrics()
     {
-        var result = await Evaluate(new FieldAccuracyEvaluator((_, _) => false), Json(Golden));
+        var result = await Evaluate(new FieldAccuracyEvaluator(), Json(Golden));
 
-        Assert.Equal(0, Field(result, "vendor_name").Value);
-        Assert.Equal(1, Field(result, "customer_name").Value);
+        Assert.DoesNotContain(FieldAccuracyEvaluator.JudgedMetricName("vendor_name"), result.Metrics.Keys);
     }
 
     [Theory]

@@ -6,9 +6,11 @@ namespace InvoiceEvals.Evaluation;
 /// <summary>
 /// Runs the four deterministic evaluators and adds <c>composite</c>, their weighted mean. A component that is not
 /// applicable to a document (line items on FATURA, recomputed total when amounts reconcile) is dropped and the
-/// remaining weights are rescaled to sum to 1. Weights are documented in docs/metrics.md.
+/// remaining weights are rescaled to sum to 1. Weights are documented in docs/metrics.md. The composite always uses the
+/// strict name metrics, so it stays deterministic; with a <paramref name="judge"/> the judged name metrics are emitted
+/// alongside.
 /// </summary>
-public sealed class CompositeScoreEvaluator(Func<string, string, bool>? vendorNameMatch = null) : IEvaluator
+public sealed class CompositeScoreEvaluator(NameJudge? judge = null) : IEvaluator
 {
     public const string MetricName = "composite";
 
@@ -18,12 +20,26 @@ public sealed class CompositeScoreEvaluator(Func<string, string, bool>? vendorNa
     private readonly IEvaluator[] parts =
     [
         new SchemaValidityEvaluator(),
-        new FieldAccuracyEvaluator(vendorNameMatch),
+        new FieldAccuracyEvaluator(judge),
         new RecomputedTotalEvaluator(),
         new LineItemsF1Evaluator(),
     ];
 
     public IReadOnlyCollection<string> EvaluationMetricNames => [.. parts.SelectMany(p => p.EvaluationMetricNames), MetricName];
+
+    /// <summary>
+    /// Reporting's ScenarioRun catches an evaluator exception (a judge call that failed or missed the cache) and returns
+    /// every metric as a value-less <see cref="EvaluationMetric"/> with the exception text as an error diagnostic. The
+    /// composite always has a value otherwise, so a missing value means "evaluation failed": returns that error text,
+    /// or null when evaluation succeeded.
+    /// </summary>
+    public static string? FailureOf(EvaluationResult result)
+    {
+        result.Metrics.TryGetValue(MetricName, out var metric);
+        return metric is NumericMetric { Value: not null }
+            ? null
+            : metric?.Diagnostics?.FirstOrDefault(d => d.Severity == EvaluationDiagnosticSeverity.Error)?.Message ?? "Evaluation produced no composite score.";
+    }
 
     public async ValueTask<EvaluationResult> EvaluateAsync(
         IEnumerable<ChatMessage> messages, ChatResponse modelResponse, ChatConfiguration? chatConfiguration = null,

@@ -13,12 +13,29 @@ namespace InvoiceEvals.Evaluation;
 /// positive. Each metric carries <c>Metadata["outcome"]</c> so reports can compute false-positive and miss rates.
 /// Comparison rules are in docs/metrics.md.
 /// </summary>
-/// <param name="vendorNameMatch">
-/// Extension point for the Phase 3 vendor-name judge: (golden, predicted) → match. Defaults to <see cref="NamesMatch"/>.
+/// <param name="judge">
+/// Judge-assisted mode: also emits <c>field.vendor_name_judged</c> and <c>field.customer_name_judged</c>, which equal
+/// the strict metric except in the gray zone (strict mismatch, both names non-null), where <paramref name="judge"/>
+/// decides. Requires a <see cref="DocumentTextContext"/> and a chat configuration. Strict metrics are unchanged.
 /// </param>
-public sealed class FieldAccuracyEvaluator(Func<string, string, bool>? vendorNameMatch = null) : IEvaluator
+public sealed class FieldAccuracyEvaluator(NameJudge? judge = null) : IEvaluator
 {
     public const string OutcomeKey = "outcome";
+
+    /// <summary>Metadata key on judged metrics: how the judged score was reached, one of <see cref="JudgeOutcome"/>.</summary>
+    public const string JudgeKey = "judge";
+
+    public static class JudgeOutcome
+    {
+        /// <summary>Not in the gray zone; the judged score is the strict score.</summary>
+        public const string NotNeeded = "not_needed";
+        public const string Equivalent = "equivalent";
+        public const string NotEquivalent = "not_equivalent";
+        /// <summary>The judge response did not parse; scored as a mismatch.</summary>
+        public const string Unparsed = "unparsed";
+        /// <summary>The vendor name is not in the model's input (FATURA ocr mode); the judge is not asked, scored as a mismatch.</summary>
+        public const string NotInModelInput = "not_in_model_input";
+    }
 
     public static class Outcome
     {
@@ -30,7 +47,7 @@ public sealed class FieldAccuracyEvaluator(Func<string, string, bool>? vendorNam
         public const string Unparsed = "unparsed";
     }
 
-    private static (string Name, Func<InvoiceDto, object?> Get, Func<object, object, bool> Equal)[] Fields(Func<string, string, bool> vendorNameMatch) =>
+    private static readonly (string Name, Func<InvoiceDto, object?> Get, Func<object, object, bool> Equal)[] Fields =
     [
         ("invoice_number", d => d.InvoiceNumber, (a, b) => Fold((string)a) == Fold((string)b)),
         ("invoice_date", d => d.InvoiceDate, (a, b) => (DateOnly)a == (DateOnly)b),
@@ -40,22 +57,30 @@ public sealed class FieldAccuracyEvaluator(Func<string, string, bool>? vendorNam
         ("discount", d => d.Discount, AmountsMatch),
         ("tax", d => d.Tax, AmountsMatch),
         ("total", d => d.Total, AmountsMatch),
-        ("vendor_name", d => d.Vendor?.Name, (a, b) => vendorNameMatch((string)a, (string)b)),
+        ("vendor_name", d => d.Vendor?.Name, (a, b) => NamesMatch((string)a, (string)b)),
         ("customer_name", d => d.Customer?.Name, (a, b) => NamesMatch((string)a, (string)b)),
     ];
 
-    public static IReadOnlyList<string> FieldNames { get; } = [.. Fields(NamesMatch).Select(f => f.Name)];
+    public static IReadOnlyList<string> FieldNames { get; } = [.. Fields.Select(f => f.Name)];
 
-    public IReadOnlyCollection<string> EvaluationMetricNames => [.. FieldNames.Select(MetricName)];
+    /// <summary>Fields that get a judged metric in judge-assisted mode.</summary>
+    public static IReadOnlyList<string> JudgedFieldNames { get; } = ["vendor_name", "customer_name"];
+
+    public IReadOnlyCollection<string> EvaluationMetricNames =>
+        judge is null ? [.. FieldNames.Select(MetricName)] : [.. FieldNames.Select(MetricName), .. JudgedFieldNames.Select(JudgedMetricName)];
 
     public static string MetricName(string field) => $"field.{field}";
 
-    public ValueTask<EvaluationResult> EvaluateAsync(
+    public static string JudgedMetricName(string field) => $"field.{field}_judged";
+
+    public async ValueTask<EvaluationResult> EvaluateAsync(
         IEnumerable<ChatMessage> messages, ChatResponse modelResponse, ChatConfiguration? chatConfiguration = null,
         IEnumerable<EvaluationContext>? additionalContext = null, CancellationToken cancellationToken = default)
     {
         var (golden, predicted, _) = EvaluationInputs.From(modelResponse, additionalContext);
-        var metrics = Fields(vendorNameMatch ?? NamesMatch).Select(f =>
+        var metrics = new List<EvaluationMetric>(Fields.Length + JudgedFieldNames.Count);
+        var strict = new Dictionary<string, (string Outcome, object? Expected, object? Actual)>(StringComparer.Ordinal);
+        foreach (var f in Fields)
         {
             var expected = f.Get(golden);
             var actual = predicted is null ? null : f.Get(predicted);
@@ -67,12 +92,49 @@ public sealed class FieldAccuracyEvaluator(Func<string, string, bool>? vendorNam
                 (_, _, null) => Outcome.Miss,
                 _ => f.Equal(expected!, actual!) ? Outcome.CorrectValue : Outcome.Mismatch,
             };
-            var correct = outcome is Outcome.CorrectValue or Outcome.CorrectNull;
-            var metric = Metrics.Score(MetricName(f.Name), correct ? 1 : 0, $"{outcome}: expected {Show(expected)}, got {Show(actual)}");
-            metric.Metadata = new Dictionary<string, string>(StringComparer.Ordinal) { [OutcomeKey] = outcome };
-            return metric;
-        });
-        return ValueTask.FromResult(new EvaluationResult(metrics));
+            strict[f.Name] = (outcome, expected, actual);
+            metrics.Add(FieldMetric(MetricName(f.Name), outcome, $"{outcome}: expected {Show(expected)}, got {Show(actual)}"));
+        }
+
+        if (judge is not null)
+        {
+            var text = additionalContext?.OfType<DocumentTextContext>().SingleOrDefault()
+                ?? throw new InvalidOperationException($"Judge-assisted evaluation requires a {nameof(DocumentTextContext)}.");
+            var chat = chatConfiguration?.ChatClient
+                ?? throw new InvalidOperationException("Judge-assisted evaluation requires a chat configuration.");
+            metrics.AddRange(await Task.WhenAll(JudgedFieldNames.Select(f => JudgedAsync(judge, chat, f, strict[f], text, cancellationToken))));
+        }
+        return new EvaluationResult(metrics);
+    }
+
+    private static async Task<EvaluationMetric> JudgedAsync(
+        NameJudge judge, IChatClient chat, string field, (string Outcome, object? Expected, object? Actual) strict, DocumentTextContext text, CancellationToken ct)
+    {
+        var name = JudgedMetricName(field);
+        var shown = $"expected {Show(strict.Expected)}, got {Show(strict.Actual)}";
+        if (strict.Outcome != Outcome.Mismatch)
+            return FieldMetric(name, strict.Outcome, $"{strict.Outcome}: {shown}", JudgeOutcome.NotNeeded);
+        if (field == "vendor_name" && !text.VendorNameInModelInput)
+            return FieldMetric(name, Outcome.Mismatch, $"{Outcome.Mismatch}: {shown}; vendor name is not in the model input, judge not asked", JudgeOutcome.NotInModelInput);
+
+        var verdict = await judge.JudgeAsync(chat, field, (string)strict.Expected!, (string)strict.Actual!, text.TextLayer, ct);
+        var (outcome, how) = verdict.Equivalent switch
+        {
+            true => (Outcome.CorrectValue, JudgeOutcome.Equivalent),
+            false => (Outcome.Mismatch, JudgeOutcome.NotEquivalent),
+            null => (Outcome.Mismatch, JudgeOutcome.Unparsed),
+        };
+        var metric = FieldMetric(name, outcome, $"{how}: {shown}. Judge: {verdict.Reason}", how);
+        if (how == JudgeOutcome.Unparsed) metric.AddDiagnostics(EvaluationDiagnostic.Warning($"Judge response did not parse ({verdict.Reason}); scored as mismatch."));
+        return metric;
+    }
+
+    private static NumericMetric FieldMetric(string name, string outcome, string reason, string? judgeOutcome = null)
+    {
+        var metric = Metrics.Score(name, outcome is Outcome.CorrectValue or Outcome.CorrectNull ? 1 : 0, reason);
+        metric.Metadata = new Dictionary<string, string>(StringComparer.Ordinal) { [OutcomeKey] = outcome };
+        if (judgeOutcome is not null) metric.Metadata[JudgeKey] = judgeOutcome;
+        return metric;
     }
 
     /// <summary>Amounts match within 0.01 inclusive.</summary>
