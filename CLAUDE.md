@@ -1,0 +1,30 @@
+# CLAUDE.md
+
+## Commands
+
+- Build: `dotnet build` (warnings are errors)
+- Test: `dotnet test` (xUnit v3 on Microsoft.Testing.Platform, configured in `global.json`)
+- Rebuild golden set: `dotnet run --project src/InvoiceEvals.Cli -- download [--count 150] [--seed 42]`
+  - Archive is cached in `.cache/fatura/` (gitignored, ~690 MB). Output must be byte-identical across runs.
+
+## Layout
+
+- `src/InvoiceEvals.Core`: `InvoiceDto`, `GoldenDocument`, `GoldenSet` (JSONL I/O), `Fatura/FaturaConverter`, `StratifiedSampler`
+- `src/InvoiceEvals.Cli`: System.CommandLine entry point, assembly name `evals`
+- `src/InvoiceEvals.Extraction`, `src/InvoiceEvals.Evaluation`: empty until Phase 2
+- `evals/annotations.jsonl`: ground truth, one `GoldenDocument` per line, sorted by id. Generated; never hand-edit FATURA rows.
+- `docs/annotation-guidelines.md`: normalization rules. **Change it together with `FaturaConverter`.**
+
+## Conventions
+
+- .NET 10 / C# 14. Primary constructors, records for immutable data, file-scoped namespaces.
+- `internal sealed` by default; `public` only for types used across assemblies.
+- `DateOnly` for calendar dates, `DateTimeOffset` for instants, `decimal` for money.
+- Async APIs take a `CancellationToken`.
+- Package versions live in `Directory.Packages.props` only. Package source is pinned to nuget.org in `nuget.config`.
+- No speculative abstractions: one extractor interface, no plugin system.
+- Determinism: order by `StringComparer.Ordinal`, write `\n` line endings, never use `System.Random` for sampling.
+- Ground truth is what is printed on the document, not what is arithmetically correct (FATURA totals don't reconcile).
+- Test names use `Subject_Condition_Result` (CA1707 is suppressed in the test project).
+- Commit messages: imperative, short, one logical step per commit.
+- Every phase ends with real numbers in the README results table or an explicit "pending".
