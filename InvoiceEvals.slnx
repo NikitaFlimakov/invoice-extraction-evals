@@ -1,0 +1,16 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/src/">
+    <Project Path="src/InvoiceEvals.Cli/InvoiceEvals.Cli.csproj" />
+    <Project Path="src/InvoiceEvals.Core/InvoiceEvals.Core.csproj" />
+    <Project Path="src/InvoiceEvals.Evaluation/InvoiceEvals.Evaluation.csproj" />
+    <Project Path="src/InvoiceEvals.Extraction/InvoiceEvals.Extraction.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/InvoiceEvals.Tests/InvoiceEvals.Tests.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\InvoiceEvals.Core\InvoiceEvals.Core.csproj" />
+  </ItemGroup>
+</Project>
