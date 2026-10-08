@@ -1,0 +1,16 @@
+TAX INVOICE
+Invoice number 5Y2M2d-891
+Date: 10-Jul-2014
+Barnes, Garcia and Martin
+Address:13868 Michael Wall
+North Cindytown, CT 45483 US
+GSTIN: 33123456789102Z1
+Bill to:Philip Davis
+2797 Reese Walks
+South Ethan, DC 36865 US
+Tel:+(596)576-1434
+Email:milesivan@example.com
+Site:https://long-reese.com/
+SUB_TOTAL : 752.16  EUR
+GST(7%) : 52.65
+TOTAL : 748.41 EUR

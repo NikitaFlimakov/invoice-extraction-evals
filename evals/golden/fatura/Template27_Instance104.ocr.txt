@@ -1,0 +1,35 @@
+BILL_TO:
+
+Paul Sexton
+
+2692 Timothy Turnpike Suite 074
+Lake Eric, AL 13229 US
+Tel:+(252)991-4316
+Email:oscar61@example.net
+Site:http://www.walter.com/
+
+GSTIN Code
+T2ABCDEI24322E4
+
+Sort others from citizen.
+List old.
+
+Should us.
+Box who.
+Around authority we.
+
+INVOICE
+
+Date: 15-Dec-2019
+
+Invoice number 1Y5M2d-794
+
+SHIP_TO:
+
+Larry Weeks
+
+7035 Collins Burgs Apt. 676
+Kevinshire, MP 98421 US
+Tel:+(133)673-8039
+Email:whiterachel@example.org
+Site:https://www.johnson.org/

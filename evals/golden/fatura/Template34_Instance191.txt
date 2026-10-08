@@ -1,0 +1,17 @@
+COMMERCIAL INVOICE
+Address:66636 Hernandez Loaf Suite 714
+Lisafurt, LA 33980 US
+INVOICE ID 2Y5M8d-477
+Date: 23-Aug-1993
+SHIP_TO:
+Rebecca Tyler
+6073 Bell Rest Suite 932
+Port John, MH 40949 US
+Tel:+(361)610-8770
+Email:lisasweeney@example.com
+Site:https://shaffer.com/
+TOTAL : 2034.96 $
+Total in words:  two thousand and thir-
+ty-four point nine six
+Note:
+This order is shipped through blue dart courier

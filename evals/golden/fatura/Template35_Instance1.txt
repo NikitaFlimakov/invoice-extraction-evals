@@ -1,0 +1,24 @@
+COMMERCIAL INVOICE
+INVOICE ID 7Y4M3d-572
+Address:61959 Fernando Island Apt. 694
+South Jessica, CT 86255 US
+Date: 19-Nov-1997
+GSTIN: 20QX0C0C9424D1Z5
+Buyer :Gail Lopez
+242 Susan Drive Apt. 344
+South Christopher, MO 53634 US
+Tel:+(288)071-9392
+Email:jared81@example.net
+Site:http://wright.com/
+SHIP_TO:
+Deanna Sanchez
+2185 Martinez Gardens Apt. 568
+New Triciastad, SD 40609 US
+Tel:+(011)175-6626
+Email:kristiavery@example.net
+Site:https://wilson.info/
+TOTAL : 783.13 $
+Total in words:  seven hundred and eight-
+y-three point one three
+Note: All payments to be made in cash.
+Contact us for queries on these quotations.

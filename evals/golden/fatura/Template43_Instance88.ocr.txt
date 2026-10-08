@@ -1,0 +1,38 @@
+TAX INVOICE
+
+Address:938 Gonzalez Key Suite 573
+New Anitaport, MN 04941 US
+Email:susan62@example.com
+
+craigslandscaping.com
+
+BILL_TO:
+
+Alex Strickland
+
+14838 Edwards Villages
+
+Bergerhaven, NM 98475 US Invoice number 4Y6M2d-888
+Tel:+(824)866-9154
+
+Email:wgonzalez@example.com
+
+Site:http://www.olsen-robinson.com/ ;
+Invoice Date: 09-May-1998
+
+Due Date : 07-Oct-2021
+
+175328 Local director.
+879013 | Growth including.
+
+966608 | Individual strong certainly.
+040893 ‘| Then far.
+048126 Partner former.
+
+SUB_TOTAL : 871.31 $
+
+DISCOUNT(4.2%): (-) 36.6
+
+TAX:VAT (6.97%): 60.71 $
+
+TOTAL : 914.25 $

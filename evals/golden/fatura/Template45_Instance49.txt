@@ -1,0 +1,19 @@
+TAX INVOICE
+Patton, Ortiz and Moore
+Invoice number 0137-508
+Address:07924 Daniel View
+North Austinhaven, AK 96663 US
+Invoice Date: 03-Dec-2009
+Bill to:Andrea Henderson
+1744 Hill Alley Apt. 165
+Rhodeshaven, MN 97061 US
+Tel:+(595)365-7819
+Email:preston33@example.net
+Site:http://brown-johnson.com/
+Email:wilsonadrienne@example.net
+www.PattonOrtizandMoore.org
+TOTAL : 456.31 USD
+Bank Name           State Bank of Texas
+Branch Name          Raf CAMP
+Bank Account Number  15351539
+Bank Swift Code      SBININBB250

@@ -1,0 +1,15 @@
+INVOICE
+Invoice number INV/00-48/564
+Patel-Reid
+Address:223 Kristen Mission Suite 986
+Hernandezport, DE 40016 US
+Thank you for your business!
+Date: 20-May-1994
+Email:rivassarah@example.org
+Bill to:Malik Mann
+5718 Howard Locks Suite 733
+New Ianfurt, ME 79887 US
+Tel:+(342)433-0916
+Email:copelandbrandy@example.org
+Site:https://www.mejia.com/
+SUB_TOTAL : 199.32  USD

@@ -1,0 +1,20 @@
+Invoice Date: 29-May-2014
+INVOICE # INV98001120
+PO Number :22
+Bill to:Michael Houston
+9612 Adrienne Land Suite 996
+West Cherylview, GU 46977 US
+Tel:+(663)378-4024
+Email:mbrown@example.com
+Site:http://hunt-davis.com/
+SUB_TOTAL : 726.31  EUR
+TAX:VAT (5.81%):  42.23 EUR
+BALANCE DUE : 757.50 EUR
+Total in words:  seven hundred and fi-
+fty-seven point five
+Note:
+This order is shipped through blue dart courier
+Address:233 Foster Gardens
+Johnburgh, ID 41900 US
+Bailey Group
+Email:paul73@example.com

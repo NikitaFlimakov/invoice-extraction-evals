@@ -1,0 +1,18 @@
+INVOICE
+Kirk, Murphy and Daniels
+Invoice Date: 04-Aug-2007
+INVOICE ID INV/01-62/982
+PO Number :63
+BILL_TO:
+Austin Allen
+479 Kenneth Spring
+Jacobport, FL 21911 US
+Tel:+(540)523-0937
+Email:pprice@example.org
+Site:https://www.williams.com/
+Due Date : 15-Jan-2001
+TAX:VAT (4.45%):  5.57 $
+Note:Total payment due in 14 days.
+TOTAL : 127.75 $
+Total in words:  one hundred and twenty-
+-seven point seven five

@@ -1,0 +1,34 @@
+Chargebee
+
+Address:13868 Michael Wall
+North Cindytown, CT 45483 US
+
+GSTIN: 33123456789102Z1
+
+Bill to:Philip Davis
+
+2797 Reese Walks
+
+South Ethan, DC 36865 US
+Tel:+(596)576-1434
+Email:milesivan@example.com
+Site:https://long-reese.com/
+
+TAX INVOICE
+
+Invoice number 5Y2M2d-891
+Date: 10-Jul-2014
+
+Description QUANTITY PRICE
+Pick sort attention. 1.00 $14.58
+Important notice. 1.00 $9.79
+
+Step more also. 6.00 $87.39
+Often outside have medical. 1.00 $36.95
+Public shoulder real. 3.00 $55.50
+
+SUB_TOTAL : 752.16 EUR
+
+GST(7%) : 52.65
+
+TOTAL : 748.41 EUR

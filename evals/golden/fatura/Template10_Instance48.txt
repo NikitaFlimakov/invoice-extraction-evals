@@ -1,0 +1,20 @@
+Address:4894 Melanie Pass Apt. 742
+Tammyland, SD 42587 US
+Invoice Date: 28-Sep-2022
+Invoice number INV/46-62/785
+Mclean-Cochran
+Due Date : 09-Mar-2013
+Bill to:Selena Hubbard
+12056 Katherine Key Apt. 616
+Wendyborough, NE 28651 US
+Tel:+(400)310-2063
+Email:valentinekeith@example.net
+Site:http://www.murphy-payne.com/
+DISCOUNT(2.26%): (-)  15.98
+TOTAL : 708.34 $
+Terms & Conditions
+1. Please send payment within 8 days of receiving this invoice.
+There will be a 2.5% interest charge per month on late invoices.
+2. Please include the Invoice number in your payment notes.
+Thank you for choosing us!
+Email:cjames@example.com

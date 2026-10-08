@@ -1,0 +1,15 @@
+TAX INVOICE
+INVOICE ID INV/50-62/993
+King, Richards and Roy
+Note:Total payment due in 14 days.
+Email:smithjeffrey@example.net
+Bill to:Cory Valdez
+263 Miles Crescent Apt. 998
+Taylorborough, MP 16533 US
+Tel:+(057)958-3582
+Email:obrown@example.com
+Site:https://reynolds.biz/
+Invoice Date: 17-Nov-2021
+TOTAL : 839.28 $
+Total in words:  eight hundred and thir-
+ty-nine point two eight

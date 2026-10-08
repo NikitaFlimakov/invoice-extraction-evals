@@ -1,0 +1,26 @@
+INVOICE
+
+Max Electronics INVOICE ID INV85616768
+
+Email:smithjeffrey@example.net Note:Total payment due in 14 days.
+
+Bill to:Nathan Davis
+
+4953 Timothy Lock
+
+South Vanessa, GU 33386 US
+
+Tel:+(712)904-8988 Date: 09-May-2000
+Email:samanthagray@example.org
+
+Site:http://www.young.info/
+
+Item Price Quantity Amount
+Source best shoulder purpose. 91.14 1.00 91.14
+Last best. 21.09 5.00 105.45
+Ok play. 57.23 2.00 114.46
+
+TOTAL : 321.51 EUR
+
+Total in words: three hundred and twe-
+nty-one point five one

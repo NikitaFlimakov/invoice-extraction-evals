@@ -1,0 +1,31 @@
+COMMERCIAL INVOICE
+
+Address:03449 Andrade Hill Suite 722
+Campbellville, PW 02320 US
+
+Email:choieric@example.net
+
+Buyer :Christine Miller Invoice Date: 25-Jan-2009
+
+00085 Clay Radial INVOICE ID 7022-681
+West Sara, MS 58718 US
+
+Tel:+(932)414-6157
+Email:sara78@example.net
+Site:http://ruiz.com/
+
+432313 _ | Letter value several. 43.91 175.64
+646194 _ | Conference indeed find. 55.96 111.92
+
+Bank Name State Bank of USA SUB_TOTAL : 363.91 USD
+Branch Name Raf CAMP GST(18%) : 65.50
+Bank Account Number 15189799
+
+Bank Swift Code SBININBB250 TAX:VAT (4.48%): 16.31 USD
+
+TOTAL : 370.21 USD
+
+Total in words: three hundred and s-
+eventy point two one
+
+Thank you for choosing us!

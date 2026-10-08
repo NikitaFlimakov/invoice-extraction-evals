@@ -1,0 +1,18 @@
+COMMERCIAL INVOICE
+Jensen Group
+Address:496 Buck Rest Suite 598
+Jenningsburgh, UT 95460 US
+INVOICE ID INV/00-59/705
+Date: 09-Mar-2015
+Due Date : 02-May-1999
+SHIP_TO:
+Nicole Edwards
+2571 Raymond Crossroad Suite 482
+New Christineberg, AS 96008 US
+Tel:+(823)752-6298
+Email:jessica32@example.org
+Site:https://www.mckinney.org/
+Terms & Conditions
+1. Please send payment within 8 days of receiving this invoice.
+There will be a 2.5% interest charge per month on late invoices.
+2. Please include the Invoice number in your payment notes.

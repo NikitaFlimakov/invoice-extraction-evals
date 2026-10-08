@@ -1,0 +1,36 @@
+INVOICE ID INV31189524
+Date: 04-Jun-2011
+
+Catalystk Company
+
+Address:831 Harrison Manors Suite 420
+
+New Pamela, MO 75723 US
+Email:lewisjames@example.com
+
+Web: www.catalystkkk.com |
+
+GSTIN : 34AABCBSS76GIZX
+
+Buyer :Darryl Hobbs
+
+4759 Alyssa Isle
+
+Paulland, MH 25854 US
+Tel:+(192)587-7227
+Email:mmartin@example.com
+Site:http://www.waters.com/
+
+Qty Description Unit Price Amount
+5.00 Medical minute. 96.27 481.35
+2.00 Of guy industry. 79.33 158.66
+
+Total in words: six hundred and fifty-
+-three point nine nine
+
+Terms and Conditions
+will be charged if payment is not made within the due date.
+
+SUB_TOTAL : 640.01 EUR
+
+TOTAL : 653.99 EUR

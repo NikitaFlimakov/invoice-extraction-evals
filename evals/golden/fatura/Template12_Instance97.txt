@@ -1,0 +1,26 @@
+INVOICE
+Invoice number INV64378005
+Date: 18-Oct-1996
+Due Date : 25-May-2012
+Buyer :Daniel Wilcox
+122 Sara Lock
+Pruittmouth, CT 54173 US
+Tel:+(128)776-5915
+Email:nmyers@example.org
+Site:https://schwartz-macdonald.com/
+Richardson-Davis
+Address:6479 Smith Causeway
+East Camerontown, AS 38212 US
+SUB_TOTAL : 536.26  EUR
+Bank Name           State Bank of USA
+Branch Name          Raf CAMP
+Bank Account Number  10123116
+Bank Swift Code      SBININBB250
+DISCOUNT(1.46%): (-)  7.83
+TAX:VAT (3.48%):  18.67 EUR
+TOTAL : 544.63 EUR
+Total in words:  five hundred and fort-
+y-four point six three
+Thank you for your business!
+Terms and Conditions
+will be charged if payment is not made within the due date.

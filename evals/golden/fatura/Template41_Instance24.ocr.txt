@@ -1,0 +1,38 @@
+Invoice number INV98469540
+Invoice Date: 26-May-2008
+
+Catalystk Company
+
+Address:831 Harrison Manors Suite 420
+
+New Pamela, MO 75723 US
+Email:lewisjames@example.com
+
+Web: www.catalystkkk.com |
+
+GSTIN : 34AABCBSS76GIZX
+
+Buyer :Mr. Marcus Hughes
+51887 Lance Junction Suite 974
+West Davidside, VT 25301 US
+Tel:+(173)638-1563
+Email:wlong@example.net
+Site:http://wilson.com/
+
+| Oty Description Unit Price Amount
+5.00 Authority such. 28.22 141.10
+6.00 Student some upon compare. 11.20 67.20
+4.00 Ok else must. 17.51 70.04
+1.00 Accept positive. 70.70 70.70
+3.00 Successful their fire. 17.17 51.51
+Total in words: four hundred and t- SUB_TOTAL : 400.55 USD
+
+welve point six one
+
+TOTAL : 412.61 USD
+
+Terms & Conditions
+
+1. Please send payment within 8 days of receiving this invoice.
+There will be a 2.5% interest charge per month on late invoices.
+2. Please include the Invoice number in your payment notes.

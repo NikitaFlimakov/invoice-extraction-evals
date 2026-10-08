@@ -1,0 +1,24 @@
+INVOICE ID 9208-021
+Date: 28-May-2016
+Due Date : 12-Nov-1995
+Brooks LLC
+Address:9950 Santos Squares
+Garzafurt, MH 31937 US
+Email:ospencer@example.com
+www.BrooksLLC.com
+Bill to:Christina Johnson
+4828 Cesar Ranch
+Tracybury, OK 50770 US
+Tel:+(138)560-8816
+Email:angelacamacho@example.com
+Site:https://www.alvarez.com/
+SUB_TOTAL : 493.51  $
+Bank Name           State Bank of Texas
+Branch Name          Raf CAMP
+Bank Account Number  14738000
+Bank Swift Code      SBININBB250
+GST(9%) : 44.42
+BALANCE DUE : 510.77 $
+Total in words:  five hundred and te-
+n point seven seven
+Thank you for your business!

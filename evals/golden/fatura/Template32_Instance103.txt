@@ -1,0 +1,15 @@
+INVOICE ID 8923-595
+Date: 04-Jan-1997
+Buyer :Larry Henderson
+304 Donald Summit Apt. 021
+North Amber, NV 07146 US
+Tel:+(874)327-2578
+Email:prestonmarie@example.com
+Site:https://aguilar-blevins.net/
+Miller Inc
+Address:5190 Perry Passage
+Kellyburgh, RI 60615 US
+Email:marymoore@example.org
+Thank you for your business!
+SUB_TOTAL : 560.31  $
+TOTAL : 559.94 $

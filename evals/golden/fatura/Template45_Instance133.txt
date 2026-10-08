@@ -1,0 +1,19 @@
+TAX INVOICE
+Patton, Ortiz and Moore
+INVOICE ID INV72413348
+Address:07924 Daniel View
+North Austinhaven, AK 96663 US
+Date: 28-Jan-2007
+Bill to:Felicia Baker
+817 Crystal Circles Suite 422
+Port Kevin, AR 07554 US
+Tel:+(615)367-1382
+Email:robinsondeanna@example.net
+Site:https://www.henry.com/
+Email:wilsonadrienne@example.net
+www.PattonOrtizandMoore.org
+TOTAL : 383.55 EUR
+Bank Name           Central Bank of California
+Branch Name          Raf CAMP
+Bank Account Number  17324224
+Bank Swift Code      SBININBB250

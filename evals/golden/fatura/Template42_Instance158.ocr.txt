@@ -1,0 +1,23 @@
+INVOICE
+
+‘Energy Efficiency Center
+
+Address:84945 Watson Greens Suite 097
+Maryshire, TX 73257 US
+
+Email:milleramanda@example.com
+PO Number :32
+
+BILL_TO: Invoice number 5205-914
+David Montes
+16750 Bradley Ways Suite 259
+Leechester, VT 23706 US Invoice Date: 05-Feb-2012
+Tel:+(307)441-8816
+Email:jwise@example.org
+Site:http:/www.church.com/
+Due Date : 23-Dec-2001
+
+Qty Description Unit Price Amount
+1.00 End gas dinner. 28.48 28.48
+
+4.00 Answer another wall. 7.19 28.76

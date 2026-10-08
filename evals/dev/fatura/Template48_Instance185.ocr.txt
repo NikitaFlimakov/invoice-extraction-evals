@@ -1,0 +1,41 @@
+INVOICE ID 2966-647
+Date: 16-Jun-2011
+
+Due Date : 30-Jan-1999
+
+CatalystK Company
+
+Address:9950 Santos Squares
+
+Garzafurt, MH 31937 US
+Email:ospencer@example.com
+
+Web: www.catalystkkk.cor
+
+Bill to:Micheal Collins
+
+642 Alan Trace
+
+New Sheila, MT 18364 US
+Tel:+(416)715-2961
+Email:kblankenship@example.net
+Site:https://www.brown.com/
+
+025901 Likely decision.
+
+106305 | Center accept wonder.
+
+SUB_TOTAL : 690.16 EUR
+
+Bank Name State Bank of England
+Branch Name Raf CAMP
+Bank Account Number 15470392 GST(9%) : 62.11
+
+Bank Swift Code SBININBB250
+BALANCE DUE : 700.46 EUR
+
+Total in words: seven hundred -
+point four six
+
+Note:
+This order is shipped through blue dart courier

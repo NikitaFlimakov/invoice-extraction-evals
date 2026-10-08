@@ -1,0 +1,24 @@
+COMMERCIAL INVOICE
+AXFORD PAINT PREMIERS PRIVATE LIMITED —_ INVOICE ID 2Y6M5d-055
+
+Address:223 Kristen Mission Suite 986 Thank you for choosing us!
+Hernandezport, DE 40016 US
+
+Invoice Date: 14-Jul-2008
+
+Email:rivassarah@example.org
+
+Bill to:Paula Perez
+
+009 Williams Isle
+
+East Maryberg, CT 20873 US
+Tel:+(270)280-5905
+Email:dylan22@example.net
+Site:https://www.rich.com/
+
+# ID Item name Quantity Unit price | Amount
+1 188468 Law some. 3.00 | $46.19 $138.57
+2 225954 Method late body. 2.00 | $86.50 $173.00
+
+SUB_TOTAL : 311.57 USD

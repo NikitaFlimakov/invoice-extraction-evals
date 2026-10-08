@@ -1,0 +1,16 @@
+INVOICE
+Jensen Group
+Address:496 Buck Rest Suite 598
+Jenningsburgh, UT 95460 US
+INVOICE ID INV40798270
+Invoice Date: 14-Dec-2009
+Due Date : 02-Feb-2011
+SHIP_TO:
+Kathy Blair
+49497 Sandoval Cliff Suite 339
+North Victorview, OK 53445 US
+Tel:+(277)235-0847
+Email:tammy79@example.com
+Site:http://fitzgerald.com/
+Terms and Conditions
+will be charged if payment is not made within the due date.

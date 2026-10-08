@@ -1,0 +1,16 @@
+INVOICE
+White-Owens
+Address:84945 Watson Greens Suite 097
+Maryshire, TX 73257 US
+Email:milleramanda@example.com
+PO Number :01
+BILL_TO:
+James Martin
+9640 Krystal Square Suite 524
+Christinamouth, DE 13399 US
+Tel:+(042)534-6775
+Email:ibrown@example.com
+Site:https://monroe.com/
+Invoice number 0525-585
+Invoice Date: 22-Feb-1994
+Due Date : 12-Feb-2003

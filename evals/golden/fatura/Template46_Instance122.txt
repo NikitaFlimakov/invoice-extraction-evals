@@ -1,0 +1,23 @@
+TAX INVOICE
+INVOICE ID INV82202426
+Date: 24-Jul-2003
+Due Date : 24-Aug-2005
+BILL_TO:
+Christine Jones
+65579 Kirk Walks
+Montgomerymouth, WY 87181 US
+Tel:+(725)246-3672
+Email:cynthia64@example.net
+Site:https://www.schneider.biz/
+Morton-Leach
+Address:98324 Espinoza View
+North Olivia, NY 66612 US
+SUB_TOTAL : 866.18  EUR
+TAX:VAT (3.29%):  28.48 EUR
+TOTAL : 882.97 EUR
+Bank Name            State Bank of India
+Branch Name          Raf CAMP
+Bank Account Number  20000004512
+Bank Swift Code      SBININBB250
+Note:
+This order is shipped through blue dart courier

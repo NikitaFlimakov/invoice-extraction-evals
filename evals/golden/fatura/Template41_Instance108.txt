@@ -1,0 +1,22 @@
+INVOICE # 6884-727
+Date: 09-Jan-1997
+Buchanan and Sons
+Address:831 Harrison Manors Suite 420
+New Pamela, MO 75723 US
+Email:lewisjames@example.com
+www.BuchananandSons.com
+GSTIN : 34AABCBSS76GIZX
+Buyer :Justin Romero
+356 Dustin Mews Apt. 225
+New Jaimehaven, ND 16069 US
+Tel:+(347)653-3497
+Email:nortonleslie@example.net
+Site:http://curtis-smith.com/
+SUB_TOTAL : 1122.74  $
+Total in words:  one thousand, one hundred -
+and seventy-one point seven
+TOTAL : 1171.70 $
+Terms & Conditions
+1. Please send payment within 8 days of receiving this invoice.
+There will be a 2.5% interest charge per month on late invoices.
+2. Please include the Invoice number in your payment notes.

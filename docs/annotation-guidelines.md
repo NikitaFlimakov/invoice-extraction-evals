@@ -64,3 +64,24 @@ Measured over all 10,000 annotations:
 - **US-only addresses**, three currencies (USD, EUR, `$`), English only.
 
 The synthetic edge cases (credit notes, multi-currency, multi-page, discounts) are meant to cover what FATURA cannot.
+
+## Dev pool and golden set split
+
+`evals download` holds out 5 of the 50 layouts (ranked first by `SHA-256("<seed>:holdout:<layout>")`; with seed 42:
+Template2, Template25, Template28, Template29, Template48). From those it samples 20 documents into `evals/dev/`;
+the golden set (`evals/annotations.jsonl`, 150 documents) is sampled from the other 45 layouts. Prompt writing and
+few-shot examples use the dev pool only. Template25, the one layout with five GST lines, is therefore dev-only;
+the synthetic set covers that case.
+
+## Model input (text layers)
+
+Each FATURA document gets two text layers next to its image, written by `evals download`:
+
+- `<name>.txt` ("text" input mode, default): the text of every labelled span, ordered top to bottom then left to
+  right by bounding box ([`FaturaText.Spans`](../src/InvoiceEvals.Core/Fatura/FaturaText.cs)). Exact, but the item
+  table is missing (FATURA annotates it only as a box), so line amounts cannot be confused with totals. This makes
+  FATURA easier than a real invoice.
+- `<name>.ocr.txt` ("ocr" input mode): FATURA's full-page OCR text (the `OTHER` key), noise included. Ground truth
+  stays the printed value. **The OCR text never contains the vendor name**: in all 103 golden documents that print
+  one, the name is absent and template text (e.g. `SK DIGITAL`) appears instead. Vendor-name scores in ocr mode
+  measure the dataset, not the model.

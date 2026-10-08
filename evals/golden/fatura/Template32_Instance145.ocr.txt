@@ -1,0 +1,39 @@
+Date: 29-Mar-2010
+
+Luke Bowers
+
+Address:5190 Perry Passage
+Kellyburgh, RI 60615 US
+
+Email:marymoore@example.org
+
+ITEMS
+Including stand.
+
+Provide leave.
+
+Thank you for your business!
+
+QUANTITY
+
+5.00
+
+4.00
+
+INVOICE # INV/21-13/610
+
+Bill to: Thomas Woods
+
+62671 Cummings Landing
+Johnview, MA 54591 US
+Tel:+(197)482-3411
+Email:sanchezscott@example.com
+Site:http://www.taylor.com/
+
+PRICE TAX AMOUNT
+$76.61 $0.00 $383.05
+$97.97 $0.00 $391.88
+
+SUB_TOTAL : 774.93 EUR
+
+TOTAL : 816.58 EUR

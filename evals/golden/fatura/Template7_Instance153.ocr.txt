@@ -1,0 +1,24 @@
+Kimberly Kent
+
+Email:cpetersen@example.com
+
+wwe Napoyscho com
+
+TAX INVOICE
+
+Buyer :Cindy Schmidt INVOICE # INV75465103
+
+2044 Sanders Plains ;
+Michaelshire, MN 95008 US Invoice Date: 22-Apr-1993
+
+Tel:+(340)220-4394 Due Date : 24-Jan-1997
+Email:alisha06@example.org
+Site:https://www.lee.biz/
+
+ITEMS QUANTITY PRICE
+
+SUB_TOTAL : 547.53 $
+
+GST(9%) : 49.28
+
+TOTAL : 573.44 $

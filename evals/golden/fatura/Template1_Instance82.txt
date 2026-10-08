@@ -1,0 +1,28 @@
+COMMERCIAL INVOICE
+Date: 03-Jun-2016
+Due Date : 09-Jun-2006
+PO Number :12
+Bill to:Cody Chang
+1140 Michael Lane Suite 878
+Ashleyberg, PA 38170 US
+Tel:+(055)531-8842
+Email:thomasfigueroa@example.org
+Site:https://hubbard.net/
+Address:16424 Timothy Mission
+Markville, AK 58294 US
+Email:melvin40@example.net
+www.ThompsonandSons.org
+(GSTIN: 12345670 00070007
+GSTIN: OG@AAMFCO376K124
+Total in words:  four hundred and se-
+venty point four two
+SUB_TOTAL : 460.41  USD
+DISCOUNT(2.2%): (-)  10.13
+Bank Name           State Bank of California
+Branch Name          Raf CAMP
+Bank Account Number  13890915
+Bank Swift Code      SBININBB250
+TAX:VAT (4.78%):  22.03 USD
+TOTAL : 470.42 USD
+Note: All payments to be made in cash.
+Contact us for queries on these quotations.

@@ -1,0 +1,52 @@
+Address:047 Jackson Meadows Apt. 391
+Pearsonmouth, OH 83042 US
+
+GSTIN No. 24AADCP1453)/AZZ
+
+COMMERCIAL INVOICE
+
+Item
+
+Fly turn.
+
+Catch my.
+
+Show phone local.
+Well public.
+Purpose since.
+
+Note:Total payment due in 14 days.
+
+Price
+7.51
+
+45.77
+29.04
+60.31
+43.87
+
+Buyer :Sarah Patel
+
+085 Boone Keys
+
+Sethstad, OH 41175 US
+Tel:+(391)220-5201
+Email:meredithcollins@example.org
+Site:http://wong.biz/
+
+Invoice number 5770-100
+Date: 09-May-2004
+
+Quantity Amount
+3.00 22.53
+5.00 228.85
+5.00 145.20
+1.00 60.31
+1.00 43.87
+
+AMOUNT_DUE : 512.41 $
+
+Total in words: five hundred and tw-
+elve point four one
+
+SUB_TOTAL : 500.76 $

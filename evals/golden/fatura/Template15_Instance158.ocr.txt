@@ -1,0 +1,31 @@
+Address:744 Hernandez Hollow Apt. 459
+Rossville, UT 53295 US
+
+TAX INVOICE
+
+Invoice Date: 19-Dec-2007
+Invoice number INV79121663
+
+Due Date : 24-Feb-2017
+
+Buyer :John Copeland
+
+69853 Katherine Shore Suite 820
+New Timothychester, LA 17242 US
+
+Tel:+(256)693-3137
+
+Email:jlivingston@example.net
+Site:http://www.proctor-davis.com/
+
+Qty Description Unit Price Amount
+1.00 Young scientist purpose church. 68.70 68.70
+
+3.00 You free subject. 33.42 100.26
+4.00 Past. 45.28 181.12
+
+SUB_TOTAL : 350.08 USD
+
+DISCOUNT(3.43%): (-) 12.04
+
+Email:stephenfoster@example.net

@@ -1,0 +1,19 @@
+TAX INVOICE
+Invoice number 3Y8M2d-846
+Invoice Date: 05-Dec-2004
+Due Date : 05-Dec-1995
+Montgomery, Harrison and Vaughan
+DUE_AMOUNT : 861.80 USD
+Address:840 Anderson Locks
+Mariatown, AL 01838 US
+SHIP_TO:
+Tammy Dean
+18980 Megan Port Apt. 908
+West Allisonmouth, UT 28043 US
+Tel:+(427)247-8022
+Email:hansenelizabeth@example.com
+Site:https://proctor-black.com/
+SUB_TOTAL : 843.59  USD
+DISCOUNT(2.8%): (-)  23.62
+TAX:VAT (6.68%):  56.34 USD
+TOTAL : 861.80 USD

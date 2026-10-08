@@ -1,0 +1,16 @@
+INVOICE ID 1Y9M7d-359
+Navarro, Ford and Bryan
+Date: 14-Mar-1998
+GSTIN/UIN: 09AABCS142961ZS
+Email:rclark@example.org
+Bill to:Madeline Stone
+54525 Robinson Turnpike Suite 720
+East Erica, IL 35231 US
+Tel:+(335)569-8025
+Email:margaret36@example.org
+Site:http://www.stewart.com/
+Total in words:  five hundred and twent-
+y-five point five eight
+TOTAL : 525.58 $
+Note:
+This order is shipped through blue dart courier

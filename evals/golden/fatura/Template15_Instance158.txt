@@ -1,0 +1,15 @@
+TAX INVOICE
+Invoice Date: 19-Dec-2007
+Address:744 Hernandez Hollow Apt. 459
+Rossville, UT 53295 US
+Invoice number INV79121663
+Due Date : 24-Feb-2017
+Buyer :John Copeland
+69853 Katherine Shore Suite 820
+New Timothychester, LA 17242 US
+Tel:+(256)693-3137
+Email:jlivingston@example.net
+Site:http://www.proctor-davis.com/
+SUB_TOTAL : 350.08  USD
+DISCOUNT(3.43%): (-)  12.01
+Email:stephenfoster@example.net

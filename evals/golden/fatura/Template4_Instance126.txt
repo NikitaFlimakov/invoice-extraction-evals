@@ -1,0 +1,17 @@
+Huff-Bryan
+Address:2180 Michael Ridges Apt. 385
+Port Lindsey, MP 98258 US
+TAX INVOICE
+TOTAL : 676.15 USD
+BILL_TO:
+Richard Rice
+95267 Palmer Prairie Apt. 736
+New Marcia, NE 45024 US
+Tel:+(443)131-0717
+Email:carlsoncynthia@example.org
+Site:https://trevino.net/
+Due Date : 09-Mar-2006
+Invoice Date: 12-Aug-2010
+SUB_TOTAL : 671.44  USD
+DISCOUNT(1.97%): (-)  13.23
+Thank you for choosing us!

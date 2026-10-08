@@ -1,0 +1,15 @@
+COMMERCIAL INVOICE
+Phillips, Thomas and Malone
+Bill to:Kelly Griffin
+837 Gonzalez Islands Apt. 926
+Aliciaton, RI 05108 US
+Tel:+(026)842-2388
+Email:dixonkristen@example.net
+Site:https://www.phillips.com/
+INVOICE ID 4Y4M1d-405
+Date: 13-Dec-2016
+PO Number :90
+SUB_TOTAL : 207.74  USD
+TAX:VAT (5.35%):  11.12 USD
+TOTAL : 215.10 USD
+Thank you for choosing us!

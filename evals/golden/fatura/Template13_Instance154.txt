@@ -1,0 +1,17 @@
+INVOICE
+Address:2942 Gary Village Suite 237
+New Yolandaland, IL 18166 US
+Fernandez PLC
+Date: 28-Mar-1998
+Due Date : 30-Apr-1999
+Bank Name           State Bank of England
+Branch Name          Raf CAMP
+Bank Account Number  16153801
+Bank Swift Code      SBININBB250
+Total in words:  four hundred and seven-
+ty-five point two eight
+TOTAL : 475.28 USD
+Terms and Conditions
+will be charged if payment is not made within the due date.
+Note:
+This order is shipped through blue dart courier

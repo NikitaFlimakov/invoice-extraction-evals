@@ -1,0 +1,28 @@
+tere hoover desien
+
+Address:2180 Michael Ridges Apt. 385
+Port Lindsey, MP 98258 US
+
+TAX INVOICE TOTAL : 676.15 USD
+BILL_TO:
+Richard Rice
+95267 Palmer Prairie Apt. 736 Due Date : 09-Mar-2006
+
+New Marcia, NE 45024 US
+Tel:+(443)131-0717
+Email:carlsoncynthia@example.org
+Site:https://trevino.net/
+
+Invoice Date: 12-Aug-2010
+
+Description QUANTITY PRICE
+Medical force key. 3.00 $79.95
+Work simply. 2.00 $42.90
+List. 2.00 $30.94
+Western letter. 1.00 $10.43
+Fire politics face foot. 6.00 $45.58
+
+SUB_TOTAL : 671.44 USD
+DISCOUNT(1.97%): (-) 13.23
+
+Thank you for choosing us!

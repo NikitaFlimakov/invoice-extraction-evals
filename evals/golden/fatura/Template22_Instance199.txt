@@ -1,0 +1,16 @@
+Invoice number INV/84-61/809
+Date: 16-Nov-2002
+Due Date : 07-Jan-2002
+SHIP_TO:
+April Rice
+10786 Ashley Landing Suite 379
+New Robert, IN 48757 US
+Tel:+(321)274-0309
+Email:ashley95@example.com
+Site:https://booth.com/
+DISCOUNT(4.01%): (-)  31.82
+TAX:VAT (4.99%):  39.56 $
+TOTAL : 801.14 $
+Note: All payments to be made in cash.
+Contact us for queries on these quotations.
+Email:scottoconnor@example.org

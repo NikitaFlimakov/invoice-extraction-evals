@@ -1,0 +1,35 @@
+INVOICE
+
+INVOICE # INV/19-97/596
+Date: 20-Apr-2006
+Due Date : 05-May-2004
+
+Bill to:Kathleen Cole
+
+Alexander Williams 08566 Scott Burgs Apt. 181
+Address:6479 Smith Causeway East Amybury, NY 91401 US
+East Camerontown, AS 38212 US Tel:+(684)718-7772
+
+Email:angela86@example.org
+Site:https://www.torres-miller.com/
+
+a
+}6.00 | 239850 Student example. 21.88 131.28
+
+}6.00 ‘| 318519 Well personal focus. 53.19 319.14
+
+Bank Name State Bank of Europe SUB_TOTSL 2726.87" Us
+Branch Name Raf CAMP DISCOUNT(1.46%): (-) 10.61
+Bank Account Number 15317378 2 7%:
+
+Bank Swift Code SBININBB250 TAEIAN (a Taesy e-es UeE
+
+TOTAL : 728.98 USD
+
+Total in words: seven hundred and twent-
+
+Thank you for your business! . ~ ‘ .
+y-eight point nine eight
+
+Terms and Conditions
+will be charged if payment is not made within the due date.

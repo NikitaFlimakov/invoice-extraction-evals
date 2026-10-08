@@ -1,0 +1,40 @@
+COMMERCIAL INVOICE
+
+Billed by BILL_TO:
+Foobar Labs Ricardo Lopez ‘ OR. 7
+
+998 Erik Fork Invoice Date: 25-Mar-2018
+Address:0344 Jonathan Club West Jorgetown, HI 24828 US Due Date : 29-May-2003
+Port Patriciashire, PW 72063 US Tel:+(380)562-5913
+
+Email:mary59@example.com
+Site:http://jordan-lowery.com/
+
+Item Price Quantity Amount
+Become indeed. 46.80 1.00 46.80
+Production identify time hundred. 38.05 2.00 76.10
+From its. 52.06 6.00 312.36
+Miss country music lead. 47.58 6.00 285.48
+
+Terms & Conditions SUB_TOTAL : 720.74 EUR
+
+1. Please send payment within 8 days of receiving this invoice. ~
+
+There will be a 2.5% interest charge per month on late invoices. DISCOUNT(2.57%): (-) 18.52
+
+2. Please include the Invoice number in your payment notes.
+
+TAX:VAT (6.85%): 49.40 EUR
+
+Note:Total payment due in 14 days. TOTAL : 738.07 EUR
+
+Total in words: seven hundred and thirt-
+y-eight point zero seven
+
+Bank Name State Bank of Texas
+Branch Name Raf CAMP
+
+Bank Account Number 11885619
+Bank Swift Code SBININBB250
+
+Email:houstonjoyce@example.net

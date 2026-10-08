@@ -1,0 +1,15 @@
+TAX INVOICE
+Phillips, Thomas and Malone
+Buyer :Mary Henry
+8243 Hunter Divide Apt. 240
+Raymondmouth, WY 96587 US
+Tel:+(221)691-9752
+Email:rebeccadurham@example.com
+Site:https://fitzgerald.org/
+INVOICE # INV69243822
+Invoice Date: 04-Aug-2010
+PO Number :13
+SUB_TOTAL : 261.61  $
+TAX:VAT (6.74%):  17.63 $
+TOTAL : 267.18 $
+Thank you for your business!

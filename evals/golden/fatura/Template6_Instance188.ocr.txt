@@ -1,0 +1,22 @@
+COMMERCIAL INVOICE
+
+AFC Enterprises
+
+Bill to:Kelly Griffin
+
+837 Gonzalez Islands Apt. 926 INVOICE ID 4Y4M1d-405
+Aliciaton, RI 05108 US
+
+Tel:+(026)842-2388 Dale: La-Dec-2016
+Email:dixonkristen@example.net PO Number :90
+Site:https://www.phillips.com/
+
+a
+
+SUB_TOTAL : 207.74 USD
+
+TAX:VAT (5.35%): 11.12 USD
+
+TOTAL : 215.10 USD
+
+Thank you for choosing us!

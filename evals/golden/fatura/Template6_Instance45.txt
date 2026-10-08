@@ -1,0 +1,16 @@
+COMMERCIAL INVOICE
+Phillips, Thomas and Malone
+Bill to:Crystal Gilbert
+8143 Joseph Spur Apt. 399
+South Randallstad, AL 31798 US
+Tel:+(152)859-3861
+Email:martinezcrystal@example.net
+Site:http://white.org/
+INVOICE ID 2Y9M6d-879
+Date: 20-Jun-1995
+PO Number :85
+SUB_TOTAL : 806.89  USD
+TAX:VAT (3.05%):  24.61 USD
+TOTAL : 818.35 USD
+Note:
+This order is shipped through blue dart courier

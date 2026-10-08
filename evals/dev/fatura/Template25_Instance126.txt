@@ -1,0 +1,20 @@
+Bill to:Pamela Harris
+0999 Antonio Rapids Apt. 810
+Hubbardstad, TN 60201 US
+Tel:+(563)518-3900
+Email:mirandagray@example.com
+Site:http://garcia.info/
+Kelly-Moss
+Address:6030 Willie Shores Suite 354
+Guerraton, TX 60058 US
+Email:meghan88@example.net
+INVOICE ID 4411-929
+Due Date : 31-Aug-2020
+Invoice Date: 27-Jan-2012
+SUB_TOTAL : 600.02  USD
+GST(5%) : 30.00
+GST(12%) : 72.00
+GST(18%) : 108.00
+GST(20%) : 120.00
+GST(1%) : 6.00
+TOTAL : 616.52 USD

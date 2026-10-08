@@ -1,0 +1,18 @@
+Duran, Morgan and Lopez
+COMMERCIAL INVOICE
+Address:4901 Long Wall Apt. 620
+Joshuaville, CT 95783 US
+INVOICE ID 8Y5M6d-379
+GSTIN 336SPTNO37LG120
+Bill to:Julie Butler
+633 White Crossroad Apt. 852
+East Taylor, AR 71943 US
+Tel:+(419)542-6491
+Email:matthewhickman@example.net
+Site:https://www.hancock.org/
+GSTIN 22AAAAAD000A125,
+Invoice Date: 13-Dec-2018
+Due Date : 27-Jun-2000
+SUB_TOTAL : 306.93  EUR
+GST(18%) : 55.25
+BALANCE DUE : 311.28 EUR

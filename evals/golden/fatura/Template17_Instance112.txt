@@ -1,0 +1,20 @@
+INVOICE
+Bill to:Kristopher Moran
+06179 Patel Causeway
+West Stephaniefurt, MA 47041 US
+Tel:+(156)557-1236
+Email:mauricejohnson@example.net
+Site:http://baker.com/
+Berg, Ward and Wright
+Address:5776 Whitney Meadow
+West Adriennebury, ID 40049 US
+Due Date : 19-Mar-2002
+GSTIN O4AROPO98743125,
+GSTINO4ARCPD98743125
+Invoice Date: 14-Apr-2022
+INVOICE # INV/78-64/532
+SUB_TOTAL : 885.25  USD
+TAX:VAT (3.22%):  28.51 USD
+TOTAL : 870.74 USD
+Total in words:  eight hundred and sev-
+enty point seven four

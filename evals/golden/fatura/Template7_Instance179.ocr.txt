@@ -1,0 +1,26 @@
+Kimberly Kent
+
+Email:cpetersen@example.com
+
+wwe Napoyscho com
+
+COMMERCIAL INVOICE
+
+Buyer :Christina Brown INVOICE ID INV/26-57/190
+
+203 Carol Points Suite 345
+East Dana, GU 17919 US Date: 18-Jan-1997
+Tel:+(739)677-0276 Due Date : 09-Apr-2012
+
+Email:carol53@example.net
+Site:https://mann.net/
+
+ITEMS QUANTITY PRICE
+
+96.19
+
+SUB_TOTAL : 44.47 EUR
+
+GST(9%) : 4.00
+
+TOTAL : 46.21 EUR

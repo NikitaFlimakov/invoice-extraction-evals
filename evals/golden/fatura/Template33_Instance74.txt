@@ -1,0 +1,18 @@
+Duran, Morgan and Lopez
+TAX INVOICE
+Address:4901 Long Wall Apt. 620
+Joshuaville, CT 95783 US
+INVOICE # INV/61-78/737
+GSTIN 336SPTNO37LG120
+Buyer :Brian Dean
+99425 Kemp Crossroad Apt. 098
+Davisstad, TN 17731 US
+Tel:+(888)846-1587
+Email:yjoyce@example.net
+Site:https://pham-strong.com/
+GSTIN 22AAAAAD000A125,
+Invoice Date: 28-Jun-2010
+Due Date : 19-Apr-2021
+SUB_TOTAL : 684.79  $
+GST(18%) : 123.26
+BALANCE DUE : 695.63 $

@@ -1,0 +1,19 @@
+COMMERCIAL INVOICE
+Invoice Date: 21-Aug-1998
+INVOICE ID 8500-654
+BILL_TO:
+Micheal Lewis
+83560 Gary Landing Apt. 949
+Michaelport, NM 18845 US
+Tel:+(606)755-8839
+Email:meganallen@example.org
+Site:http://alvarez-holder.org/
+SHIP_TO:
+Jacqueline Mata
+414 Thomas Valley Suite 076
+Michelletown, HI 31574 US
+Tel:+(167)922-2804
+Email:petersonwilliam@example.net
+Site:https://www.vega-guzman.com/
+GSTIN Code
+T2ABCDEI24322E4

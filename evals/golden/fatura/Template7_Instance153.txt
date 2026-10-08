@@ -1,0 +1,16 @@
+White and Sons
+Email:cpetersen@example.com
+www.WhiteandSons.org
+TAX INVOICE
+INVOICE # INV75465103
+Buyer :Cindy Schmidt
+2044 Sanders Plains
+Michaelshire, MN 95008 US
+Tel:+(340)220-4394
+Email:alisha06@example.org
+Site:https://www.lee.biz/
+Invoice Date: 22-Apr-1993
+Due Date : 24-Jan-1997
+SUB_TOTAL : 547.53  $
+GST(9%) : 49.28
+TOTAL : 573.44 $

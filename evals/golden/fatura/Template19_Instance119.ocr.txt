@@ -1,0 +1,56 @@
+INVOICE # 2076-265
+
+Date: 06-Nov-2006
+Due Date : 11-Apr-2015
+
+Bill to:Ana Estrada
+
+4707 Harrell Forges Suite 280
+Davidsonfurt, MP 67129 US
+Tel:+(345)625-6114
+Email:morganaguirre@example.org
+Site:https://www.griffith.biz/
+
+Item
+Reach form short.
+
+Generation allow.
+Smile eye.
+
+Draw decade.
+Spend local recent.
+
+Note: All payments to be made in cash.
+
+Contact us for queries on these quotations.
+
+Price
+86.73
+
+37.94
+79.13
+79.75
+95.87
+
+WHMCS GLOBAL SERVICES
+GSTIN: GSTIN4321AAD22
+
+Address:010 Jeffrey Glens
+
+Port Toddport, DC 16594 US
+
+Quantity
+4.00
+
+6.00
+2.00
+2.00
+5.00
+
+Amount
+346.92
+
+227.64
+158.26
+159.50
+479.35

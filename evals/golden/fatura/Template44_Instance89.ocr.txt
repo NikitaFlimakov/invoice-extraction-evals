@@ -1,0 +1,28 @@
+TAX INVOICE
+
+Mr. HandyMan
+Services
+
+Email:andrewcowan@example.com INVOICE # INV42677397
+
+Invoice Date: 07-Aug-2007
+
+DESCRIPTION QUANTITY PRICE AMOUNT
+Goal over. 6.00 64.38 386.28
+Enjoy daughter finally state. 4.00 15.28 61.12
+Guess recently person. 2.00 58.14 116.28
+Wrong suddenly blood lose. 1.00 87.00 87.00
+Democrat large arm. 1.00 12.45 12.45
+
+SUB_TOTAL : 663.13 USD
+TAX:VAT (6.46%): 42.87 USD
+TOTAL : 677.88 USD
+
+Bank Name State Bank of Texas
+Branch Name Raf CAMP
+
+Bank Account Number 18847309
+Bank Swift Code SBININBB250
+
+Address:087 Michael Lodge
+Kristiborough, IN 63843 US

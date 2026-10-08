@@ -1,0 +1,12 @@
+COMMERCIAL INVOICE
+Invoice number INV69412570
+Date: 26-Jan-2008
+Due Date : 02-Sep-2013
+DISCOUNT(2.5%): (-)  6.48
+SUB_TOTAL : 259.25  EUR
+TAX:VAT (6.88%):  17.83 EUR
+TOTAL : 267.90 EUR
+Terms and Conditions
+will be charged if payment is not made within the due date.
+Thank you for your business!
+Email:lisa97@example.org

@@ -1,0 +1,26 @@
+INVOICE
+INVOICE # INV/19-97/596
+Date: 20-Apr-2006
+Due Date : 05-May-2004
+Bill to:Kathleen Cole
+08566 Scott Burgs Apt. 181
+East Amybury, NY 91401 US
+Tel:+(684)718-7772
+Email:angela86@example.org
+Site:https://www.torres-miller.com/
+Richardson-Davis
+Address:6479 Smith Causeway
+East Camerontown, AS 38212 US
+SUB_TOTAL : 726.87  USD
+Bank Name           State Bank of Europe
+Branch Name          Raf CAMP
+Bank Account Number  15317378
+Bank Swift Code      SBININBB250
+DISCOUNT(1.46%): (-)  10.61
+TAX:VAT (5.18%):  37.65 USD
+TOTAL : 728.98 USD
+Total in words:  seven hundred and twent-
+y-eight point nine eight
+Thank you for your business!
+Terms and Conditions
+will be charged if payment is not made within the due date.

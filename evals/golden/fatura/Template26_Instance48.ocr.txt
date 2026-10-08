@@ -1,0 +1,34 @@
+Gerald Wolf
+
+INVOICE
+
+Address:496 Buck Rest Suite 598
+Jenningsburgh, UT 95460 US
+
+SHIP_TO:
+Kathy Blair
+
+49497 Sandoval Cliff Suite 339
+North Victorview, OK 53445 US
+
+Tel:+(277)235-0847
+
+Email:tammy79@example.com
+
+Site:http://fitzgerald.com/
+
+INVOICE ID INV40798270
+
+Invoice Date: 14-Dec-2009
+Due Date : 02-Feb-2011
+
+Description QUANTITY PRICE
+Day painting with professional. 5.00 $1.54
+
+Sure in trial. 5.00 $88.61
+Strategy bring choice. 3.00 $29.10
+Difference camera. 4.00 $22.86
+
+Terms and Conditions
+
+will be charged if payment is not made within the due date.

@@ -1,0 +1,16 @@
+White and Sons
+Email:cpetersen@example.com
+www.WhiteandSons.org
+TAX INVOICE
+INVOICE ID 2Y1M9d-606
+Buyer :Judy Jackson
+77151 Autumn Crescent Apt. 634
+Jennifershire, ME 35273 US
+Tel:+(270)195-5080
+Email:nathan25@example.net
+Site:http://bond.com/
+Invoice Date: 12-Dec-2006
+Due Date : 30-Sep-2013
+SUB_TOTAL : 1273.95  $
+GST(9%) : 114.66
+TOTAL : 1310.69 $

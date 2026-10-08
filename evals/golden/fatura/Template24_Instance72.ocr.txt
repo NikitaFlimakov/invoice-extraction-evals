@@ -1,0 +1,29 @@
+TAX INVOICE
+INVOICE ID 5661-323
+
+Thank you for your business!
+
+AXFORD PAINT PREMIERS PRIVATE LIMITED
+
+Address:223 Kristen Mission Suite 986
+Hernandezport, DE 40016 US
+
+Email:rivassarah@example.org
+
+Bill to:Juan Allison
+
+7034 Brooks Extensions Suite 294
+Grantborough, LA 13251 US
+Tel:+(410)518-6179
+Email:ronniewest@example.com
+Site:https://boyd.com/
+
+Date: 03-Aug-1997
+
+# ID Item name Quantity Unit price Amount
+1 | 227352 | Reach rich no. 1.00 $23.88 $23.88
+
+2 | 926253 Hard fill degree response. 5.00 $87.84 $439.20
+3 442778 | Thus political Republican. 3.00 $91.32 $273.96
+
+SUB_TOTAL : 737.04 USD

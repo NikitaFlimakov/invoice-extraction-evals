@@ -1,0 +1,19 @@
+COMMERCIAL INVOICE
+Address:938 Gonzalez Key Suite 573
+New Anitaport, MN 04941 US
+Email:susan62@example.com
+www.PaulGibsonandAnderson.com
+BILL_TO:
+Latoya Watson
+32422 Collins Expressway
+East Jonathanview, IA 63091 US
+Tel:+(976)639-1719
+Email:sandrabarber@example.net
+Site:https://johnson-wagner.biz/
+Invoice number 5Y5M4d-820
+Invoice Date: 15-Apr-2022
+Due Date : 16-Aug-1998
+SUB_TOTAL : 218.22  $
+DISCOUNT(4.98%): (-)  10.87
+TAX:VAT (6.36%):  13.89 $
+TOTAL : 229.12 $

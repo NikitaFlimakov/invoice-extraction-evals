@@ -1,0 +1,30 @@
+COMMERCIAL INVOICE
+Stein-Fernandez
+BILL_TO:
+Brandon Andersen
+277 Tapia Summit
+Michaelfort, ND 53159 US
+Tel:+(005)130-0034
+Email:loriwilliams@example.com
+Site:http://www.anthony.biz/
+Invoice Date: 14-Jan-2004
+Address:0344 Jonathan Club
+Port Patriciashire, PW 72063 US
+Due Date : 29-Jul-1994
+Terms & Conditions
+1. Please send payment within 8 days of receiving this invoice.
+There will be a 2.5% interest charge per month on late invoices.
+2. Please include the Invoice number in your payment notes.
+SUB_TOTAL : 738.83  EUR
+DISCOUNT(1.29%): (-)  9.53
+TAX:VAT (4.29%):  31.72 EUR
+TOTAL : 757.99 EUR
+Note:
+This order is shipped through blue dart courier
+Total in words:  seven hundred and fift-
+y-seven point nine nine
+Bank Name           Central Bank of Texas
+Branch Name          Raf CAMP
+Bank Account Number  10197462
+Bank Swift Code      SBININBB250
+Email:houstonjoyce@example.net

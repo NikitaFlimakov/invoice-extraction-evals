@@ -1,0 +1,32 @@
+TAX INVOICE
+
+Date: 14-May-1996
+
+Bill to:Priscilla Tran
+
+030 Diaz Circle Apt. 174
+Smithchester, TN 17946 US
+Tel:+(244)963-2685
+Email:ryanjones@example.net
+Site:https://www.thomas.com/
+
+Bank Name Central Bank of USA
+Branch Name Raf CAMP
+
+Bank Account Number 13580158
+Bank Swift Code SBININBB250
+
+Description QUANTITY PRICE
+Though when force. 3.00 $60.84
+Smile mean. 3.00 $21.97
+Wind involve step. 6.00 $91.38
+Process painting. 6.00 $82.45
+Young company old. 5.00 $80.01
+
+SUB_TOTAL : 1691.46 $
+TAX:VAT (3.79%): 64.14 $
+
+TOTAL : 1698.26 $
+
+Address:86143 Ruth Isle Apt. 608
+Ashleyshire, TN 12593 US

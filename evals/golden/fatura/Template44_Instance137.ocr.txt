@@ -1,0 +1,25 @@
+COMMERCIAL INVOICE
+
+Mr. HandyMan
+Services
+
+Email:andrewcowan@example.com INVOICE # 7606-634
+
+Date: 06-Jan-2013
+
+DESCRIPTION QUANTITY PRICE AMOUNT
+Wide artist street. 2.00 79.09 158.18
+Environment responsibility special. 4.00 3.62 14.48
+
+SUB_TOTAL : 172.66 $
+TAX:VAT (5.47%): 9.45 $
+TOTAL : 177.19 $
+
+Bank Name Central Bank of USA
+Branch Name Raf CAMP
+
+Bank Account Number 12984983
+Bank Swift Code SBININBB250
+
+Address:087 Michael Lodge
+Kristiborough, IN 63843 US

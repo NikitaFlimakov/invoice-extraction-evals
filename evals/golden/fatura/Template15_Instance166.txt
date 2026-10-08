@@ -1,0 +1,15 @@
+COMMERCIAL INVOICE
+Invoice Date: 01-Oct-1995
+Address:744 Hernandez Hollow Apt. 459
+Rossville, UT 53295 US
+Invoice number 8Y3M3d-290
+Due Date : 19-Aug-2004
+Buyer :Jennifer Maddox
+43604 Holmes Forges
+Lake Jamie, MI 82076 US
+Tel:+(588)322-9736
+Email:paul03@example.net
+Site:http://coleman-oliver.com/
+SUB_TOTAL : 740.01  USD
+DISCOUNT(1.04%): (-)  7.7
+Email:stephenfoster@example.net

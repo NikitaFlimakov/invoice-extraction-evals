@@ -1,0 +1,51 @@
+GUJARAT FREIGHT TOOLS
+
+Address:8110 Lee Haven
+West Michele, IN 23979 US Web: wwwugftools.com
+
+Email:ghodges@example.org
+GSTIN : 24HDE7487RESRT4
+
+INVOICE ID INV45281228 Invoice Date: 28-Nov-2015
+Bill to:Joshua Bradley
+
+7878 Jamie Freeway
+
+Lake Heidi, MS 27565 US
+
+Tel:+(113)910-7275 Due Date : 10-Oct-2008
+Email:laura17@example.com
+
+Site:http://potter-joseph.com/
+
+SHIP_TO:
+
+Jack Pierce
+
+2373 Martin Flats
+Sherryborough, AS 97174 US
+Tel:+(790)419-7681
+Email:samuelmejia@example.net
+Site:http://baxter.com/
+
+ITEMS QUANTITY PRICE
+Strong care compare power. $27.25
+
+S081
+
+SUB_TOTAL : 667.75 USD
+
+TOTAL : 678.64 USD
+
+Total in words: six hundred and sevent-
+y-eight point six four
+
+Bank Name Central Bank of California
+Branch Name Raf CAMP
+
+Bank Account Number 18596725
+
+Bank Swift Code SBININBB250
+
+Terms and Conditions
+will be charged if payment is not made within the due date.

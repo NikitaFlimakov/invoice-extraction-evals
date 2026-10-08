@@ -1,0 +1,15 @@
+TAX INVOICE
+Date: 28-Feb-1995
+Address:05866 Velazquez Mount
+North Diane, NJ 20651 US
+PO Number :82
+Due Date : 24-Oct-1993
+Buyer :Steven Caldwell MD
+277 Yates Forge
+South Steveshire, NH 71497 US
+Tel:+(362)795-5850
+Email:anna79@example.net
+Site:http://www.edwards.biz/
+SUB_TOTAL : 457.48  $
+TAX:VAT (3.31%):  15.14 $
+DUE_AMOUNT : 461.14 $

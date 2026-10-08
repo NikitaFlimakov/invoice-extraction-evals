@@ -1,0 +1,13 @@
+TAX INVOICE
+INVOICE # 1927-908
+Date: 15-Mar-2018
+Due Date : 31-Jan-2013
+DISCOUNT(3.47%): (-)  25.34
+SUB_TOTAL : 730.40  USD
+TAX:VAT (6.32%):  46.15 USD
+TOTAL : 766.91 USD
+Terms and Conditions
+will be charged if payment is not made within the due date.
+Note:
+This order is shipped through blue dart courier
+Email:lisa97@example.org

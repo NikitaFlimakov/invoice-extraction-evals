@@ -1,0 +1,20 @@
+TAX INVOICE
+Invoice number 2640-588
+Murphy-Gallegos
+Address:045 David Walk Suite 362
+East Robert, NV 70596 US
+Note: All payments to be made in cash.
+Contact us for queries on these quotations.
+SHIP_TO:
+Troy Nolan
+24516 Cheryl Ranch
+Hernandezton, NE 23107 US
+Tel:+(793)072-7451
+Email:morganmendoza@example.com
+Site:http://jones-williams.biz/
+Due Date : 17-Feb-2004
+Date: 19-Jan-2004
+TAX:VAT (6.00%):  33.76 $
+Total in words:  five hundred and eight-
+y-seven point six four
+TOTAL : 587.64 $

@@ -1,0 +1,16 @@
+TAX INVOICE
+Invoice number INV25554164
+Date: 14-May-2022
+Barnes, Garcia and Martin
+Address:13868 Michael Wall
+North Cindytown, CT 45483 US
+GSTIN: 33123456789102Z1
+Bill to:Jessica Barnes
+6899 Sue Shoals Apt. 466
+Reyesmouth, WA 35804 US
+Tel:+(908)480-8604
+Email:johnsontracy@example.net
+Site:http://www.webb.com/
+SUB_TOTAL : 423.45  EUR
+GST(7%) : 29.64
+TOTAL : 426.56 EUR

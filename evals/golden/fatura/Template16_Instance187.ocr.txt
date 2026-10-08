@@ -1,0 +1,26 @@
+INVOICE
+BLUE SKY INDIA LIMITED
+
+Address:696 Thompson Forest INVOICE ID INV/01-44/955
+Ashleybury, AR 73994 US Invoice Date: 30-Sep-2021
+
+Email:amanda25@example.org
+
+Bill to:Scott Little
+
+016 Scott Hill Apt. 552
+
+Michelefurt, NE 80581 US
+Tel:+(641)221-1718
+Email:gregorymartin@example.net
+Site:https://www.klein.com/
+
+e Naatelela
+
+a
+Test soldier. 5.00 $54.41 $272.05
+Green between talk. 3.00 $11.97 $35.91
+
+SUB_TOTAL : 307.96 USD
+
+TOTAL : 315.49 USD

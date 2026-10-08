@@ -1,0 +1,23 @@
+COMMERCIAL INVOICE
+Invoice number INV/71-91/350
+Invoice Date: 03-Jun-1994
+Due Date : 05-Mar-2021
+BILL_TO:
+Jenna Phillips
+64879 Vargas Harbors Apt. 449
+East Charlesview, NV 92936 US
+Tel:+(273)714-9981
+Email:josephwilson@example.org
+Site:http://thomas-johnson.info/
+Morton-Leach
+Address:98324 Espinoza View
+North Olivia, NY 66612 US
+SUB_TOTAL : 716.09  EUR
+TAX:VAT (3.97%):  28.43 EUR
+TOTAL : 716.95 EUR
+Bank Name            State Bank of India
+Branch Name          Raf CAMP
+Bank Account Number  20000004512
+Bank Swift Code      SBININBB250
+Note: All payments to be made in cash.
+Contact us for queries on these quotations.

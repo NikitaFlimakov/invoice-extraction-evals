@@ -1,0 +1,15 @@
+COMMERCIAL INVOICE
+Date: 01-Jul-1998
+Address:744 Hernandez Hollow Apt. 459
+Rossville, UT 53295 US
+Invoice number INV03156355
+Due Date : 28-Apr-2007
+Buyer :Laurie Ware
+5319 Spence Turnpike
+West Thomasfurt, WA 02318 US
+Tel:+(195)611-4801
+Email:tracie39@example.org
+Site:https://www.morgan.net/
+SUB_TOTAL : 618.11  USD
+DISCOUNT(1.57%): (-)  9.7
+Email:stephenfoster@example.net

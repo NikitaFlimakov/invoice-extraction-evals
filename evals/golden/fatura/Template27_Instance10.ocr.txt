@@ -1,0 +1,20 @@
+COMMERCIAL INVOICE
+
+Invoice Date: 21-Aug-1998
+
+INVOICE ID 8500-654
+
+BILL_TO: SHIP_TO:
+Micheal Lewis Jacqueline Mata
+83560 Gary Landing Apt. 949 414 Thomas Valley Suite 076
+Michaelport, NM 18845 US Michelletown, HI 31574 US
+Tel:+(606)755-8839 Tel:+(167)922-2804
+Email:meganallen@example.org Email:petersonwilliam@example.net
+Site:http://alvarez-holder.org/ Site:https:/Mwww.vega-guzman.com/
+GSTIN Code
+T2ABCDEI24322E4
+
+laty lin | Deseription | Unit price | Amoun
+
+6.00 046231 | Behind but dark. 18.30 109.80
+1.00 663611 | Arm dog. 71.14 71.14

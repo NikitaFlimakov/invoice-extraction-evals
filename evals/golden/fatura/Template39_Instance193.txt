@@ -1,0 +1,21 @@
+COMMERCIAL INVOICE
+INVOICE # 2921-838
+Bill to:Margaret Ramirez
+242 Manning Prairie Apt. 258
+Zacharyshire, IA 91279 US
+Tel:+(551)285-6443
+Email:jake11@example.org
+Site:http://reynolds.com/
+Address:19021 Christopher Estate
+South Williammouth, NH 22397 US
+Date: 26-Mar-2018
+Due Date : 22-Jan-1995
+SUB_TOTAL : 638.40  USD
+TAX:VAT (6.85%):  43.75 USD
+DISCOUNT(2.33%): (-)  14.87
+Note: All payments to be made in cash.
+Contact us for queries on these quotations.
+Terms & Conditions
+1. Please send payment within 8 days of receiving this invoice.
+There will be a 2.5% interest charge per month on late invoices.
+2. Please include the Invoice number in your payment notes.

@@ -1,0 +1,33 @@
+TAX INVOICE
+
+Kantech Solubons Private Limited
+
+Address:5776 Whitney Meadow
+West Adriennebury, ID 40049 US
+
+Buyer :Joseph Anderson
+63279 Lozano View Suite 042
+Buchananport, ID 44606 US
+Tel:+(209)297-5622
+Email:dorothy60@example.org
+Site: http://www.kim.net/
+
+Due Date : 31-Oct-2020
+
+GSTIN O4AROP098743125, GSTINO4ARCPD98743125
+Date: 15-Dec-1996
+Invoice number INV/36-33/155
+Description QUANTITY PRICE
+Hope upon ever. 3.00 $48.37
+Section serve. 4.00 $46.11
+Any. 2.00 $16.95
+
+Total in words: three hundred and sixt-
+
+y-seven point zero one
+
+SUB_TOTAL : 363.45 $
+
+TAX:VAT (5.44%): 19.77 $
+
+TOTAL : 367.01 $

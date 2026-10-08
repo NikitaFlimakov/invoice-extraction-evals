@@ -1,0 +1,33 @@
+INVOICE
+
+NK.NAG & CO,
+
+Invoice Date: 10-Jul-1996
+INVOICE ID 5Y8M1d-775
+PO Number :54
+
+BILL_TO:
+
+Taylor Santiago
+
+882 Steven Inlet
+
+Port John, TX 22658 US
+Tel:+(349)277-3643
+Email:dbowman@example.org
+Site:http://www.palmer.com/
+
+Due Date : 31-Aug-2011
+
+5.00 | 769159 23.27 116.35
+
+364982 _| Activity say threat. 99.94 99.94
+
+902972 _| Gun single outside professor. 82.78 82.78
+16.00 | 565587 _| Control property aqo. 86.71 520.26
+
+Note: TAX:VAT (6.09%): 49.90 $
+This order is shipped through blue dart courier TOTAL : 844.65 $
+
+Total in words: eight hundred and for-
+ty-four point six five

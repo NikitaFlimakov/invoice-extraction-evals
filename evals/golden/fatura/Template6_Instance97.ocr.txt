@@ -1,0 +1,25 @@
+TAX INVOICE
+
+AFC Enterprises
+
+Buyer :Mary Henry
+
+8243 Hunter Divide Apt. 240 INVOICE # INV69243822
+Raymondmouth, WY 96587 US .
+
+Tel:-+(221)691-9752 Invoice Date: 04-Aug-2010
+Email:rebeccadurham@example.com PO Number :13
+Site:https://fitzgerald.org/
+
+a a co
+525070 Style sure return. 42.06 84.12
+
+}4.00 | 297070 Board start. 43.82 175.28
+
+SUB_TOTAL : 261.61 $
+
+TAX:VAT (6.74%): 17.63 $
+
+TOTAL : 267.18 $
+
+Thank you for your business!

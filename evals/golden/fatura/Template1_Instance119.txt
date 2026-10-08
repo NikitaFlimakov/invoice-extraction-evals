@@ -1,0 +1,28 @@
+TAX INVOICE
+Invoice Date: 06-Apr-2016
+Due Date : 14-Jun-2004
+PO Number :72
+Bill to:Wendy Drake
+756 Claire Inlet Suite 825
+Samanthaview, MT 70815 US
+Tel:+(845)461-8730
+Email:tiffany03@example.net
+Site:https://moore-navarro.biz/
+Address:16424 Timothy Mission
+Markville, AK 58294 US
+Email:melvin40@example.net
+www.ThompsonandSons.org
+(GSTIN: 12345670 00070007
+GSTIN: OG@AAMFCO376K124
+Total in words:  six hundred and forty-
+-nine point six eight
+SUB_TOTAL : 646.73  USD
+DISCOUNT(1.48%): (-)  9.57
+Bank Name           Central Bank of Texas
+Branch Name          Raf CAMP
+Bank Account Number  17045952
+Bank Swift Code      SBININBB250
+TAX:VAT (3.90%):  25.20 USD
+TOTAL : 649.68 USD
+Note: All payments to be made in cash.
+Contact us for queries on these quotations.

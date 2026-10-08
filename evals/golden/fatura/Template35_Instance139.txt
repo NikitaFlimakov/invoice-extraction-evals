@@ -1,0 +1,23 @@
+COMMERCIAL INVOICE
+INVOICE # 2536-614
+Address:61959 Fernando Island Apt. 694
+South Jessica, CT 86255 US
+Date: 07-Jul-2013
+GSTIN: 20QX0C0C9424D1Z5
+Buyer :Richard Brandt
+400 Anderson Rapids
+North Melissa, MS 05540 US
+Tel:+(379)926-7601
+Email:dmayo@example.com
+Site:http://calderon.com/
+SHIP_TO:
+Virginia Hood
+8759 Jennifer Meadow Apt. 407
+Laurachester, PW 66103 US
+Tel:+(088)376-6818
+Email:ryan19@example.com
+Site:http://knight.com/
+TOTAL : 689.00 USD
+Total in words:  six hundred a-
+nd eighty-nine
+Thank you for choosing us!

@@ -1,0 +1,41 @@
+INVOICE
+
+Vijaya Traders Private Limited
+
+Address:2942 Gary Village Suite 237
+
+New Yolandaland, IL 18166 US
+
+Invoice Date: 28-Jul-1997
+
+Bank Name
+Branch Name
+
+Due Date : 13-Apr-2017
+
+State Bank of USA
+Raf CAMP
+Bank Account Number 15063218
+
+Bank Swift Code SBININBB250
+# ID Item name Quantity Unit price Amount
+1 176915 | There single. 1.00 $49.01 $49.01
+2 | 139989 Floor majority. 5.00 $18.89 $94.45
+3 | 792300 Notice drop. 6.00 $96.64 $579.84
+4 | 842295 | Type table. 4.00 $6.99 $27.96
+
+Total in words: seven hundred and fift-
+
+y-eight point four two
+
+Terms & Co
+
+nditions
+
+1. Please send payment within 8 days of receiving this invoice.
+There will be a 2.5% interest charge per month on late invoices.
+2. Please include the Invoice number in your payment notes.
+
+TOTAL : 758.42 USD
+
+Thank you for your business!

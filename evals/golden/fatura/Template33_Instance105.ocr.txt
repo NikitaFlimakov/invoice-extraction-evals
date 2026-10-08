@@ -1,0 +1,26 @@
+‘Lylker India TAX INVOICE
+Address:4901 Long Wall Apt. 620
+Joshuaville, CT 95783 US
+
+INVOICE # INV65761388
+GSTIN 336SPTNO37LG120
+
+Bill to:Christian Kennedy
+0124 Ashley Mount Apt. 186
+Port Tristan, ND 50507 US
+Tel:+(892)754-8463
+Email:daniel94@example.com
+Site:https://carter.com/
+
+GSTIN 22AAAAAD000A125,
+
+Invoice Date: 19-Apr-2022 Due Date : 22-Apr-2013
+
+ITEMS QUANTITY PRICE
+
+51058
+
+SUB_TOTAL : 283.13 USD
+GST(18%) : 50.96
+
+BALANCE DUE : 288.31 USD

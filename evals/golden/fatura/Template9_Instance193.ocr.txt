@@ -1,0 +1,30 @@
+Ace Mobile Manufacturer Pvt Ltd
+
+GSTIN/UIN: 09AABCS142961ZS
+
+Email:rclark@example.org
+
+Bill to:Madeline Stone
+
+54525 Robinson Turnpike Suite 720
+East Erica, IL 35231 US
+Tel:+(335)569-8025
+Email:margaret36@example.org
+Site:http://www.stewart.com/
+
+INVOICE ID 1Y9M7d-359
+
+Date: 14-Mar-1998
+
+Qty Description Unit Price Amount
+3.00 Third property. 64.39 193.17
+4.00 Maybe report. 18.42 313.68
+
+Total in words: five hundred and twent-
+y-five point five eight
+
+Note:
+
+This order is shipped through blue dart courier
+
+TOTAL : 525.58 $

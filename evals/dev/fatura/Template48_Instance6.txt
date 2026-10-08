@@ -1,0 +1,25 @@
+INVOICE ID INV/50-87/375
+Date: 14-Aug-2006
+Due Date : 05-Apr-2011
+Brooks LLC
+Address:9950 Santos Squares
+Garzafurt, MH 31937 US
+Email:ospencer@example.com
+www.BrooksLLC.com
+Bill to:Mr. Adrian Hunter
+381 Katie Key
+Hallstad, IN 67411 US
+Tel:+(225)599-2111
+Email:hhudson@example.net
+Site:https://www.mcmillan.net/
+SUB_TOTAL : 395.43  $
+Bank Name           State Bank of Europe
+Branch Name          Raf CAMP
+Bank Account Number  16706595
+Bank Swift Code      SBININBB250
+GST(9%) : 35.59
+BALANCE DUE : 394.61 $
+Total in words:  three hundred and nin-
+ety-four point six one
+Note:
+This order is shipped through blue dart courier

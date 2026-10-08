@@ -1,0 +1,16 @@
+INVOICE ID 5913-194
+Navarro, Ford and Bryan
+Date: 12-Feb-1995
+GSTIN/UIN: 09AABCS142961ZS
+Email:rclark@example.org
+Bill to:Christopher Lyons
+5059 Jackson Prairie
+Port Justinbury, MS 88477 US
+Tel:+(974)108-8950
+Email:alicia84@example.org
+Site:http://www.ellison.org/
+Total in words:  four hundred and fort-
+y-five point zero nine
+TOTAL : 445.09 USD
+Note: All payments to be made in cash.
+Contact us for queries on these quotations.

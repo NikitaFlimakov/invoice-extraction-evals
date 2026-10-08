@@ -37,4 +37,16 @@ public sealed class StratifiedSamplerTests
     [Fact]
     public void NoDuplicates() =>
         Assert.Distinct(Sample(Items, 50, seed: 42).Select(x => x.Id));
+
+    [Fact]
+    public void HoldOutStrata_RemovesWholeLayouts_Deterministically()
+    {
+        var (heldOut, remaining) = StratifiedSampler.HoldOutStrata(Items.Reverse(), x => x.Layout, 2, seed: 42);
+        var again = StratifiedSampler.HoldOutStrata(Items, x => x.Layout, 2, seed: 42).HeldOut;
+
+        Assert.Equal(2, heldOut.Select(x => x.Layout).Distinct().Count());
+        Assert.Equal(40, heldOut.Count);
+        Assert.Empty(remaining.Select(x => x.Layout).Intersect(heldOut.Select(x => x.Layout)));
+        Assert.Equal(heldOut.Select(x => x.Id).Order(StringComparer.Ordinal), again.Select(x => x.Id).Order(StringComparer.Ordinal));
+    }
 }

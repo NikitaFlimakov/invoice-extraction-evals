@@ -1,0 +1,23 @@
+INVOICE
+INVOICE ID 8846-258
+Invoice Date: 23-May-2014
+Due Date : 31-Dec-2000
+BILL_TO:
+Karen Peters
+2936 Smith Station Suite 257
+West Aaron, OH 09413 US
+Tel:+(510)161-4130
+Email:daviskaren@example.com
+Site:https://thompson.biz/
+Morton-Leach
+Address:98324 Espinoza View
+North Olivia, NY 66612 US
+SUB_TOTAL : 191.75  $
+TAX:VAT (4.77%):  9.15 $
+TOTAL : 198.12 $
+Bank Name            State Bank of India
+Branch Name          Raf CAMP
+Bank Account Number  20000004512
+Bank Swift Code      SBININBB250
+Note:
+This order is shipped through blue dart courier

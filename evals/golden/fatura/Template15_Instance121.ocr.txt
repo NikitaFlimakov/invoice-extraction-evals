@@ -1,0 +1,23 @@
+INVOICE
+
+Address:744 Hernandez Hollow Apt. 459 Invoice Date: 10-Jan-2017
+Rossville, UT 53295 US Invoice number INV14486583
+
+Due Date : 15-Jan-2002
+
+Buyer :Anna Richmond
+3299 Elizabeth Club
+Johnsonbury, MO 52473 US
+Tel:+(963)545-3273
+Email:vhart@example.com
+Site:https://villanueva.net/
+
+Qty Description Unit Price Amount
+1.00 Free push. 62.74 62.74
+6.00 Husband weight. 26.58 159.48
+
+SUB_TOTAL : 222.22 USD
+
+DISCOUNT(2.52%): (-) 5.6
+
+Email:stephenfoster@example.net

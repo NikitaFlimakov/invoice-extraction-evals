@@ -1,0 +1,16 @@
+White and Sons
+Email:cpetersen@example.com
+www.WhiteandSons.org
+COMMERCIAL INVOICE
+INVOICE ID INV/26-57/190
+Buyer :Christina Brown
+203 Carol Points Suite 345
+East Dana, GU 17919 US
+Tel:+(739)677-0276
+Email:carol53@example.net
+Site:https://mann.net/
+Date: 18-Jan-1997
+Due Date : 09-Apr-2012
+SUB_TOTAL : 44.47  EUR
+GST(9%) : 4.00
+TOTAL : 46.21 EUR

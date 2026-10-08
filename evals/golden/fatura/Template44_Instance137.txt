@@ -1,0 +1,14 @@
+COMMERCIAL INVOICE
+Knight, Huffman and Moore
+INVOICE # 7606-634
+Email:andrewcowan@example.com
+Date: 06-Jan-2013
+SUB_TOTAL : 172.66  $
+TAX:VAT (5.47%):  9.45 $
+TOTAL : 177.19 $
+Bank Name           Central Bank of USA
+Branch Name          Raf CAMP
+Bank Account Number  12984983
+Bank Swift Code      SBININBB250
+Address:087 Michael Lodge
+Kristiborough, IN 63843 US

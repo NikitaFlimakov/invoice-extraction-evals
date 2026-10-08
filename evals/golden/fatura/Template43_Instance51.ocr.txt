@@ -1,0 +1,35 @@
+INVOICE
+
+Address:938 Gonzalez Key Suite 573
+New Anitaport, MN 04941 US
+Email:susan62@example.com
+
+craigslandscaping.com
+
+BILL_TO:
+
+Jason Hicks
+
+531 Buchanan Centers Apt. 863
+
+Kerrytown, MD 55799 US Invoice number INV35381750
+Tel:+(824)313-4926
+
+Email:dalton90@example.org
+
+Site:http://singleton.com/ ;
+Invoice Date: 17-May-2000
+
+Due Date : 14-Dec-2007
+
+laty in | Description | Unit price | Amoun
+
+391759 | Various affect style seek. 14.60 14.60
+1.00 504407 __| Seek table manager. 48.54 48.54
+
+SUB_TOTAL : 63.14 $
+
+DISCOUNT(1.4%): (-) 0.88
+TAX:VAT (5.00%): 3.16 $
+
+TOTAL : 65.25 $

@@ -1,0 +1,16 @@
+White and Sons
+Email:cpetersen@example.com
+www.WhiteandSons.org
+INVOICE
+Invoice number 6Y3M2d-130
+Bill to:Linda Park
+9317 Jones Turnpike Apt. 866
+Meyerberg, AS 43224 US
+Tel:+(101)323-8766
+Email:bryanhill@example.org
+Site:http://www.garcia.com/
+Invoice Date: 28-Jun-2022
+Due Date : 10-Nov-2007
+SUB_TOTAL : 1038.58  $
+GST(9%) : 93.47
+TOTAL : 1077.70 $

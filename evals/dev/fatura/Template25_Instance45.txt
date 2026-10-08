@@ -1,0 +1,20 @@
+Bill to:Christian Flores
+831 Teresa Neck
+Amandafort, OR 64741 US
+Tel:+(978)024-2029
+Email:hmitchell@example.net
+Site:http://www.sanchez-powell.com/
+Kelly-Moss
+Address:6030 Willie Shores Suite 354
+Guerraton, TX 60058 US
+Email:meghan88@example.net
+Invoice number INV/88-96/460
+Due Date : 25-Apr-1993
+Date: 22-Nov-2021
+SUB_TOTAL : 35.86  $
+GST(5%) : 1.79
+GST(12%) : 4.30
+GST(18%) : 6.45
+GST(20%) : 7.17
+GST(1%) : 0.36
+TOTAL : 36.31 $

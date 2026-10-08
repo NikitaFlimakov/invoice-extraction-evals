@@ -1,0 +1,31 @@
+BILL_TO:
+Carrie Nguyen
+
+COMMERCIAL INVOICE
+
+‘Energy Efficiency Center
+
+Address:84945 Watson Greens Suite 097
+Maryshire, TX 73257 US
+
+Email:milleramanda@example.com
+PO Number :72
+
+INVOICE ID 4Y5M8d-697
+
+642 Mike Locks Suite 010
+
+Robertview, FL 63357 US Date: 17-Jan-2021
+Tel:+(815)589-4480
+
+Email:ianjohnson@example.org
+
+Site:https://parker-hamilton.biz/
+
+Due Date : 24-Sep-2013
+
+Qty Description Unit Price Amount
+6.00 Call beautiful. 44.41 266.46
+3.00 While offer central condition. 68.52 205.56
+6.00 Foot within. 66.95 401.70
+3.00 Such gun receive measure. 34.75 104.25

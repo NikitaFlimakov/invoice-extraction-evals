@@ -1,0 +1,16 @@
+INVOICE
+White-Owens
+Address:84945 Watson Greens Suite 097
+Maryshire, TX 73257 US
+Email:milleramanda@example.com
+PO Number :32
+BILL_TO:
+David Montes
+16750 Bradley Ways Suite 259
+Leechester, VT 23706 US
+Tel:+(307)441-8816
+Email:jwise@example.org
+Site:http://www.church.com/
+Invoice number 5205-914
+Invoice Date: 05-Feb-2012
+Due Date : 23-Dec-2001

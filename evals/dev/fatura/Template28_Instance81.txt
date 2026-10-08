@@ -1,0 +1,17 @@
+COMMERCIAL INVOICE
+Date: 24-Apr-1998
+Buyer :Stephanie Scott
+935 Christopher Light
+East Michael, MN 64767 US
+Tel:+(020)192-9430
+Email:robinrodgers@example.org
+Site:http://mcmillan.info/
+Bank Name           Central Bank of England
+Branch Name          Raf CAMP
+Bank Account Number  19110309
+Bank Swift Code      SBININBB250
+SUB_TOTAL : 790.20  USD
+TAX:VAT (4.14%):  32.69 USD
+TOTAL : 785.20 USD
+Address:86143 Ruth Isle Apt. 608
+Ashleyshire, TN 12593 US

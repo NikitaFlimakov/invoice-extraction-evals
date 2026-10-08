@@ -1,0 +1,24 @@
+INVOICE
+AXFORD PAINT PREMIERS PRIVATE LIMITED —_Invoice number INV/00-48/564
+
+Address:223 Kristen Mission Suite 986 Thank you for your business!
+Hernandezport, DE 40016 US
+
+Date: 20-May-1994
+
+Email:rivassarah@example.org
+
+Bill to:Malik Mann
+
+5718 Howard Locks Suite 733
+
+New lanfurt, ME 79887 US
+Tel:+(342)433-0916
+Email:copelandbrandy@example.org
+Site:https://www.mejia.com/
+
+# ID Item name Quantity | Unit price | Amount
+1 | 333933 Network room doctor. 4.00 | $45.71 $182.84
+2 | 078239 | Happen bad. 4.00 | $4.12 $16.48
+
+SUB_TOTAL : 199.32 USD

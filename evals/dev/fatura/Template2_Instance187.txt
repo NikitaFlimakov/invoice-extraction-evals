@@ -1,0 +1,16 @@
+COMMERCIAL INVOICE
+INVOICE # INV07888228
+Date: 09-Sep-2010
+Barnes, Garcia and Martin
+Address:13868 Michael Wall
+North Cindytown, CT 45483 US
+GSTIN: 33123456789102Z1
+Buyer :Danielle Carson
+1037 Robin Underpass
+East Cheryl, NH 94074 US
+Tel:+(839)193-8018
+Email:rodney88@example.org
+Site:https://www.schultz-frye.com/
+SUB_TOTAL : 388.20  USD
+GST(7%) : 27.17
+TOTAL : 395.84 USD

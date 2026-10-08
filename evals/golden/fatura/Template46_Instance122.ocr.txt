@@ -1,0 +1,84 @@
+TAX INVOICE
+
+INVOICE ID INV82202426 Date: 24-Jul-2003
+
+BILL_TO:
+
+Christine Jones
+
+65579 Kirk Walks
+Montgomerymouth, WY 87181 US
+Tel:+(725)246-3672
+Email:cynthia64@example.net
+Site:https://www.schneider.biz/
+
+ITEMS QUANTITY
+
+Lot question spring. 1.00
+
+Option specific. 3.00
+
+Back quickly. 6.00
+
+Election. 3.00
+
+Benefit safe best. 1.00
+Bank Name State Bank of India
+
+Branch Name Raf CAMP
+Bank Account Number 20000004512
+Bank Swift Code SBININBB250
+
+Note:
+This order is shipped through blue dart courier
+
+PRICE
+
+68.32
+
+$29.10
+
+66.93
+
+79.68
+
+$69.94
+
+Name
+
+Due Date : 24-Aug-2005
+
+Company Name
+
+TAX
+
+$0.00
+
+$0.00
+
+$0.00
+
+$0.00
+
+$0.00
+
+SUB_TOTAL : 866.18 EUR
+
+TOTAL : 882.97 EUR
+
+Address:98324 Espinoza View
+North Olivia, NY 66612 US
+
+AMOUNT
+
+$68.32
+
+$87.30
+
+$401.58
+
+$239.04
+
+$69.94
+
+TAX:VAT (3.29%): 28.48 EUR

@@ -1,0 +1,26 @@
+WHMCS GLOBAL SERVICES
+GSTIN: GSTIN4321AAD22
+
+Address:010 Jeffrey Glens
+Port Toddport, DC 16594 US
+
+INVOICE # INV/92-05/672
+
+Invoice Date: 29-Mar-2017
+Due Date : 06-Feb-2002
+
+Buyer :Joshua Parks
+
+80543 Kenneth Brook Apt. 074
+South Kimberly, PW 13790 US
+Tel:+(665)054-0752
+Email:pattersonsusan@example.org
+Site:http://boyer.com/
+
+Item Price Quantity Amount
+Civil own. 60.15 5.00 300.75
+Customer thought. 33.50 6.00 201.00
+It sea. 59.75 4.00 239.00
+
+Note: All payments to be made in cash.
+Contact us for queries on these quotations.

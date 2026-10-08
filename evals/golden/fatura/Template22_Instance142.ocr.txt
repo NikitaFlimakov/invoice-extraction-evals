@@ -1,0 +1,31 @@
+INVOICE # 8Y5M1d-459
+Invoice Date: 13-Nov-2005
+Due Date : 24-Jan-2018
+
+SHIP_TO:
+
+Amy Taylor
+
+4972 Angela Keys
+
+Kellerview, SD 60518 US
+Tel:+(706)846-3601
+Email:heathertaylor@example.net
+Site:https://www.chambers.info/
+
+Description QUANTITY PRICE
+Fire throw. 1.00 $95.21
+Cover research science. 2.00 $45.26
+Staff society. 5.00 $53.31
+White improve. 6.00 $29.67
+Success space. 6.00 $74.32
+
+Note: All payments to be made in cash.
+Contact us for queries on these quotations.
+
+DISCOUNT(3.01%): (-) 32.39
+TAX:VAT (4.41%): 47.41 EUR
+
+TOTAL : 1077.89 EUR
+
+Email:scottoconnor@example.org

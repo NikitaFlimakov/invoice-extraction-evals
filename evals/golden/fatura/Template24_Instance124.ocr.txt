@@ -1,0 +1,24 @@
+COMMERCIAL INVOICE
+AXFORD PAINT PREMIERS PRIVATE LIMITED —_— INVOICE ID 8802-135
+
+Address:223 Kristen Mission Suite 986 Note:Total payment due in 14 days.
+Hernandezport, DE 40016 US
+
+Date: 29-Apr-2011
+
+Email:rivassarah@example.org
+
+Buyer :Michael Ruiz
+
+32021 Mandy Points Suite 781
+Comptonbury, MN 09779 US
+Tel:+(237)156-2803
+Email:jbrown@example.org
+Site:https://wilcox-johnson.net/
+
+# ID Item name Quantity Unit price Amount
+1 | 187746 | Campaign world behind. 4.00 $41.82 $167.28
+2 | 488654 Campaign mind within. 6.00 $99.11 $594.66
+3 196272 Remember threat. 5.00 $57.98 $289.90
+
+SUB_TOTAL : 1051.84 $

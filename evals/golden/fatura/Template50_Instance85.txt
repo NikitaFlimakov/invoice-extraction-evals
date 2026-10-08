@@ -1,0 +1,29 @@
+COMMERCIAL INVOICE
+Stein-Fernandez
+BILL_TO:
+Ricardo Lopez
+998 Erik Fork
+West Jorgetown, HI 24828 US
+Tel:+(380)562-5913
+Email:mary59@example.com
+Site:http://jordan-lowery.com/
+Invoice Date: 25-Mar-2018
+Address:0344 Jonathan Club
+Port Patriciashire, PW 72063 US
+Due Date : 29-May-2003
+Terms & Conditions
+1. Please send payment within 8 days of receiving this invoice.
+There will be a 2.5% interest charge per month on late invoices.
+2. Please include the Invoice number in your payment notes.
+SUB_TOTAL : 720.74  EUR
+DISCOUNT(2.57%): (-)  18.52
+TAX:VAT (6.85%):  49.40 EUR
+TOTAL : 738.07 EUR
+Note:Total payment due in 14 days.
+Total in words:  seven hundred and thirt-
+y-eight point zero seven
+Bank Name           State Bank of Texas
+Branch Name          Raf CAMP
+Bank Account Number  11885619
+Bank Swift Code      SBININBB250
+Email:houstonjoyce@example.net

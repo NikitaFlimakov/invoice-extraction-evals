@@ -1,0 +1,19 @@
+TAX INVOICE
+Date: 10-Jan-2018
+INVOICE # INV/86-34/502
+BILL_TO:
+Edward Watson
+92178 Melissa Gateway Apt. 805
+Wrightview, KY 03063 US
+Tel:+(215)943-0058
+Email:susancarter@example.com
+Site:https://buchanan.com/
+SHIP_TO:
+Sarah Cook
+7548 Lawson Estates Apt. 240
+Joseburgh, MD 03466 US
+Tel:+(482)299-3051
+Email:baldwintyler@example.com
+Site:https://www.melendez.com/
+GSTIN Code
+T2ABCDEI24322E4

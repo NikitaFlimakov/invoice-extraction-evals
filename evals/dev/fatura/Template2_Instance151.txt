@@ -1,0 +1,16 @@
+COMMERCIAL INVOICE
+INVOICE # 6Y2M9d-406
+Invoice Date: 21-Aug-2015
+Barnes, Garcia and Martin
+Address:13868 Michael Wall
+North Cindytown, CT 45483 US
+GSTIN: 33123456789102Z1
+Bill to:Terry Gonzales
+8664 Robert Harbors
+Lake Courtneyside, NV 35213 US
+Tel:+(109)974-6407
+Email:ysantana@example.com
+Site:https://www.peterson.net/
+SUB_TOTAL : 733.53  USD
+GST(7%) : 51.35
+TOTAL : 731.66 USD

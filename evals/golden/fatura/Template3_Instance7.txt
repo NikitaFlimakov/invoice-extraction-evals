@@ -1,0 +1,19 @@
+INVOICE
+Kirk, Murphy and Daniels
+Invoice Date: 10-Jul-1996
+INVOICE ID 5Y8M1d-775
+PO Number :54
+BILL_TO:
+Taylor Santiago
+882 Steven Inlet
+Port John, TX 22658 US
+Tel:+(349)277-3643
+Email:dbowman@example.org
+Site:http://www.palmer.com/
+Due Date : 31-Aug-2011
+TAX:VAT (6.09%):  49.90 $
+Note:
+This order is shipped through blue dart courier
+TOTAL : 844.65 $
+Total in words:  eight hundred and for-
+ty-four point six five

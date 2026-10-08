@@ -1,0 +1,85 @@
+COMMERCIAL INVOICE
+
+Invoice number INV/71-91/350 — Invoice Date: 03-Jun-1994
+
+BILL_TO:
+
+Jenna Phillips
+
+64879 Vargas Harbors Apt. 449
+East Charlesview, NV 92936 US
+Tel:+(273)714-9981
+Email:josephwilson@example.org
+Site:http://thomas-johnson.info/
+
+ITEMS
+
+Teacher final.
+Contain.
+
+Life however project.
+
+Design military travel.
+
+Bank Name State Bank of India
+Branch Name Raf CAMP
+
+Bank Account Number 20000004512
+Bank Swift Code SBININBB250
+
+Note: All payments to be made in cash.
+
+QUANTITY
+
+5.00
+
+5.00
+
+1.00
+
+Contact us for queries on these quotations.
+
+PRICE
+
+$28.20
+
+$82.15
+
+$26.49
+
+$45.95
+
+Due Date : 05-Mar-2021
+
+Name
+
+Company Name
+
+TAX
+
+$0.00
+
+$0.00
+
+$0.00
+
+$0.00
+
+SUB_TOTAL : 716.09 EUR
+
+TOTAL : 716.95 EUR
+
+Address:98324 Espinoza View
+North Olivia, NY 66612 US
+
+AMOUNT
+
+$141.00
+
+$410.75
+
+$26.49
+
+$137.85
+
+TAX:VAT (3.97%): 28.43 EUR

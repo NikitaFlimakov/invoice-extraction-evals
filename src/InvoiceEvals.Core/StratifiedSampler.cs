@@ -23,6 +23,15 @@ public static class StratifiedSampler
             .Take(perStratum + (i < remainder ? 1 : 0)))];
     }
 
+    /// <summary>Removes the <paramref name="strataCount"/> strata ranked first by hash, e.g. to hold layouts out of the golden set.</summary>
+    public static (IReadOnlyList<T> HeldOut, IReadOnlyList<T> Remaining) HoldOutStrata<T>(IEnumerable<T> items, Func<T, string> stratum, int strataCount, int seed)
+    {
+        var list = items.ToList();
+        var heldOut = list.Select(stratum).Distinct().OrderBy(s => Rank(seed, $"holdout:{s}"), StringComparer.Ordinal)
+            .Take(strataCount).ToHashSet(StringComparer.Ordinal);
+        return ([.. list.Where(x => heldOut.Contains(stratum(x)))], [.. list.Where(x => !heldOut.Contains(stratum(x)))]);
+    }
+
     private static string Rank(int seed, string key) =>
         Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes($"{seed}:{key}")));
 }

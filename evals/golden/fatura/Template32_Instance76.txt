@@ -1,0 +1,15 @@
+INVOICE # INV/46-51/367
+Invoice Date: 17-Apr-2004
+Buyer :Nicholas Peterson
+4999 Delacruz Spur Suite 106
+North Matthew, HI 60390 US
+Tel:+(272)567-9980
+Email:collinschristopher@example.net
+Site:https://bennett-mitchell.org/
+Miller Inc
+Address:5190 Perry Passage
+Kellyburgh, RI 60615 US
+Email:marymoore@example.org
+Note:Total payment due in 14 days.
+SUB_TOTAL : 670.52  EUR
+TOTAL : 678.04 EUR

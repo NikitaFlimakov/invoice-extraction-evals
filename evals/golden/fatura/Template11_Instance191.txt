@@ -1,0 +1,14 @@
+TAX INVOICE
+Invoice number 2Y4M5d-666
+Date: 13-Sep-2011
+Due Date : 10-Sep-2007
+DISCOUNT(4.4%): (-)  8.91
+SUB_TOTAL : 202.42  USD
+TAX:VAT (6.20%):  12.56 USD
+TOTAL : 205.81 USD
+Terms & Conditions
+1. Please send payment within 8 days of receiving this invoice.
+There will be a 2.5% interest charge per month on late invoices.
+2. Please include the Invoice number in your payment notes.
+Note:Total payment due in 14 days.
+Email:lisa97@example.org

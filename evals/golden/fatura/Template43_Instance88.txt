@@ -1,0 +1,19 @@
+TAX INVOICE
+Address:938 Gonzalez Key Suite 573
+New Anitaport, MN 04941 US
+Email:susan62@example.com
+www.PaulGibsonandAnderson.com
+BILL_TO:
+Alex Strickland
+14838 Edwards Villages
+Bergerhaven, NM 98475 US
+Tel:+(824)866-9154
+Email:wgonzalez@example.com
+Site:http://www.olsen-robinson.com/
+Invoice number 4Y6M2d-888
+Invoice Date: 09-May-1998
+Due Date : 07-Oct-2021
+SUB_TOTAL : 871.31  $
+DISCOUNT(4.2%): (-)  36.6
+TAX:VAT (6.97%):  60.71 $
+TOTAL : 914.25 $

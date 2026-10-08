@@ -1,0 +1,20 @@
+TAX INVOICE
+
+Date: 10-Jan-2018
+
+INVOICE # INV/86-34/502
+
+BILL_TO: SHIP_TO:
+Edward Watson Sarah Cook
+92178 Melissa Gateway Apt. 805 7548 Lawson Estates Apt. 240
+Wrightview, KY 03063 US Joseburgh, MD 03466 US
+Tel:+(215)943-0058 Tel:+(482)299-3051
+Email:susancarter@example.com Email:baldwintyler@example.com
+Site:https://buchanan.com/ Site:https://www.melendez.com/
+GSTIN Code
+T2ABCDEI24322E4
+
+114705 | Help security.
+061527 Hand wonder.
+
+449165 | Company term go.

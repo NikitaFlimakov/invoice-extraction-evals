@@ -1,0 +1,46 @@
+Billed by BILL_TO:
+
+Foobar Labs Brandi Hernandez
+
+COMMERCIAL INVOICE
+
+Invoice Date: 07-Sep-2001
+
+3011 Taylor Extensions
+Address:0344 Jonathan Club Christineton, CA 94174 US Due Date : 20-Feb-1995
+
+Port Patriciashire, PW 72063 US Tel:+(133)599-6030
+
+Email:ydeleon@example.net
+Site:http://www.castro.com/
+
+Item Price
+Particularly course while. 95.25
+Candidate. 95.14
+
+Terms and Conditions
+will be charged if payment is not made within the due date.
+
+Note:
+This order is shipped through blue dart courier
+
+Bank Name Central Bank of England
+Branch Name Raf CAMP
+
+Bank Account Number 12876697
+
+Bank Swift Code SBININBB250
+
+Quantity Amount
+3.00 285.75
+1.00 95.14
+
+SUB_TOTAL : 380.89 $
+DISCOUNT(1.54%): (-) 5.87
+TAX:VAT (5.76%): 21.95 $
+TOTAL : 390.80 $
+
+Total in words: three hundred and -
+ninety point eight
+
+Email:houstonjoyce@example.net

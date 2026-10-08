@@ -1,0 +1,37 @@
+TAX INVOICE
+
+Address:03449 Andrade Hill Suite 722
+Campbellville, PW 02320 US
+
+Email:choieric@example.net
+
+Invoice Date: 08-Jan-1997
+INVOICE ID 5Y7M5d-154
+
+Bill to:William Diaz
+
+9118 Karen Mountain Suite 015
+North Angelatown, HI 89149 US
+Tel:+(169)962-5064
+Email:avilajason@example.org
+Site:https://garcia.com/
+
+319802 _| Market PM time. 55.23 276.15
+
+565270 48.85 293.10
+[2.00 | 634488 43.17 86.34
+
+868724 _| Fall center lay. 45.44 181.76
+
+Bank Name State Bank of England SUB_TOTAL 897.35 §
+Branch Name Raf CAMP GST(18%) : 150.72
+Bank Account Number 13246373
+
+Bank Swift Code SBININBB250 TAX:VAT (5.57%): 46.62 $
+
+TOTAL : 847.38 $
+
+Total in words: eight hundred and forty-
+-seven point three eight
+
+Note:Total payment due in 14 days.

@@ -1,0 +1,15 @@
+TAX INVOICE
+INVOICE ID 5661-323
+Patel-Reid
+Address:223 Kristen Mission Suite 986
+Hernandezport, DE 40016 US
+Thank you for your business!
+Date: 03-Aug-1997
+Email:rivassarah@example.org
+Bill to:Juan Allison
+7034 Brooks Extensions Suite 294
+Grantborough, LA 13251 US
+Tel:+(410)518-6179
+Email:ronniewest@example.com
+Site:https://boyd.com/
+SUB_TOTAL : 737.04  USD

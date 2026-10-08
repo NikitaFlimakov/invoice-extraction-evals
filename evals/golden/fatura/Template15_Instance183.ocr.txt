@@ -1,0 +1,32 @@
+Address:744 Hernandez Hollow Apt. 459
+
+Rossville, UT 53295 US
+
+COMMERCIAL INVOICE
+
+Date: 01-Jul-1998
+Invoice number INV03156355
+
+Due Date : 28-Apr-2007
+
+Buyer :Laurie Ware
+
+5319 Spence Turnpike
+
+West Thomasfurt, WA 02318 US
+Tel:+(195)611-4801
+Email:tracie39@example.org
+Site:https:/www.morgan.net/
+
+Qty Description Unit Price Amount
+5.00 Write seat risk give. 39.34 196.70
+2.00 Discussion get. 5.53 11.06
+1.00 Republican world book. 56.09 56.09
+4.00 Believe sing any role. 12.89 51.56
+6.00 Must speak ahead. 50.45 302.70
+
+SUB_TOTAL : 618.11 USD
+
+DISCOUNT(1.57%): (-) 9.7
+
+Email:stephenfoster@example.net

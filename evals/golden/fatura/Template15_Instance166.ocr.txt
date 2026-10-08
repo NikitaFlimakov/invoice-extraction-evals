@@ -1,0 +1,31 @@
+Address:744 Hernandez Hollow Apt. 459
+Rossville, UT 53295 US
+
+COMMERCIAL INVOICE
+
+Invoice Date: 01-Oct-1995
+Invoice number 8Y3M3d-290
+
+Due Date : 19-Aug-2004
+
+Buyer :Jennifer Maddox
+
+43604 Holmes Forges
+
+Lake Jamie, MI 82076 US
+Tel:+(588)322-9736
+Email:paul03@example.net
+Site:http://coleman-oliver.com/
+
+Qty Description Unit Price Amount
+4.00 Traditional. 5.23 20.92
+1.00 Least sound bed. 22.54 22.54
+2.00 Statement him. 48.98 97.96
+6.00 Experience model along add. 91.38 548.28
+1.00 College hand. 50.31 50.31
+
+SUB_TOTAL : 740.01 USD
+
+DISCOUNT(1.04%): (-) 7.7
+
+Email:stephenfoster@example.net

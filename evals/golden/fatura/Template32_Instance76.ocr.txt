@@ -1,0 +1,40 @@
+Invoice Date: 17-Apr-2004
+
+Luke Bowers
+
+Address:5190 Perry Passage
+Kellyburgh, RI 60615 US
+
+Email:marymoore@example.org
+
+ITEMS
+
+Director public stay head.
+Already able ago.
+
+Be.
+
+Off worker kitchen.
+
+Note:Total payment due in 14 days.
+
+INVOICE # INV/46-51/367
+
+Buyer :Nicholas Peterson
+
+4999 Delacruz Spur Suite 106
+
+North Matthew, HI 60390 US
+Tel:+(272)567-9980
+Email:collinschristopher@example.net
+Site:https://bennett-mitchell.org/
+
+QUANTITY PRICE TAX AMOUNT
+4.00 $81.65 $0.00 $326.60
+2.00 $16.59 $0.00 $33.18
+4.00 $64.33 $0.00 $257.32
+1.00 $53.42 $0.00 $53.42
+
+SUB_TOTAL : 670.52 EUR
+
+TOTAL : 678.04 EUR

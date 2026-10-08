@@ -1,0 +1,23 @@
+Robinson-Carson
+Date: 18-Dec-2016
+GSTIN 37LTOQASACEIZS
+INVOICE ID 4082-117
+Address:28713 Hart Fort Suite 267
+Stewarttown, MI 55458 US
+Buyer :Daniel Welch
+992 Wright Brooks Apt. 833
+South Todd, MI 34511 US
+Tel:+(782)983-3530
+Email:browntaylor@example.com
+Site:https://www.cox.com/
+BILL_TO:
+Zachary Morgan
+103 Robin Brooks
+Taylorfort, MS 88256 US
+Tel:+(394)194-0118
+Email:ellisnicole@example.net
+Site:https://www.lopez.com/
+SUB_TOTAL : 361.38  EUR
+BALANCE DUE : 374.19 EUR
+Total in words:  three hundred and seve-
+nty-four point one nine

@@ -1,0 +1,22 @@
+Invoice number INV98469540
+Invoice Date: 26-May-2008
+Buchanan and Sons
+Address:831 Harrison Manors Suite 420
+New Pamela, MO 75723 US
+Email:lewisjames@example.com
+www.BuchananandSons.com
+GSTIN : 34AABCBSS76GIZX
+Buyer :Mr. Marcus Hughes
+51887 Lance Junction Suite 974
+West Davidside, VT 25301 US
+Tel:+(173)638-1563
+Email:wlong@example.net
+Site:http://wilson.com/
+SUB_TOTAL : 400.55  USD
+Total in words:  four hundred and t-
+welve point six one
+TOTAL : 412.61 USD
+Terms & Conditions
+1. Please send payment within 8 days of receiving this invoice.
+There will be a 2.5% interest charge per month on late invoices.
+2. Please include the Invoice number in your payment notes.

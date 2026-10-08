@@ -1,0 +1,19 @@
+COMMERCIAL INVOICE
+Address:938 Gonzalez Key Suite 573
+New Anitaport, MN 04941 US
+Email:susan62@example.com
+www.PaulGibsonandAnderson.com
+BILL_TO:
+Megan Lee
+618 Karen Turnpike Suite 627
+Thomasview, DC 75060 US
+Tel:+(345)169-3500
+Email:andreajohnson@example.org
+Site:https://www.collins.biz/
+INVOICE # 5Y8M1d-917
+Invoice Date: 12-Sep-1995
+Due Date : 26-Mar-2009
+SUB_TOTAL : 860.40  USD
+DISCOUNT(1.59%): (-)  13.68
+TAX:VAT (5.00%):  43.06 USD
+TOTAL : 877.91 USD

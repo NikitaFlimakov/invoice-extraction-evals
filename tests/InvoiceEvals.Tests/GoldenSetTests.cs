@@ -44,8 +44,8 @@ public sealed class GoldenSetTests
         var ct = TestContext.Current.CancellationToken;
         GoldenDocument[] docs =
         [
-            new("fatura/B", "fatura", "T2", "golden/fatura/B.jpg", FullInvoice),
-            new("fatura/A", "fatura", "T1", "golden/fatura/A.jpg", FullInvoice with { LineItems = null }),
+            new("fatura/B", "fatura", "T2", "golden/fatura/B.jpg", "golden/fatura/B.txt", "golden/fatura/B.ocr.txt", FullInvoice),
+            new("fatura/A", "fatura", "T1", "golden/fatura/A.jpg", "golden/fatura/A.txt", null, FullInvoice with { LineItems = null }),
         ];
         var path1 = Path.GetTempFileName();
         var path2 = Path.GetTempFileName();

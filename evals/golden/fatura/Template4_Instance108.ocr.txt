@@ -1,0 +1,28 @@
+tere hoover desien
+
+Address:2180 Michael Ridges Apt. 385
+Port Lindsey, MP 98258 US
+
+INVOICE TOTAL : 461.82 $
+BILL_TO:
+David Ballard
+1084 Meyer Mountains Apt. 323 Due Date : 28-Sep-2014
+
+Hernandezchester, WV 87540 US
+Tel:+(442)633-6015
+Email:lvance@example.com
+Site:https://sanchez.net/
+
+Date: 10-Oct-2010
+
+Description QUANTITY PRICE
+Area nearly smile. 6.00 $24.69
+Claim should summer century. 4.00 $54.76
+Develop fact. 3.00 $28.89
+Field fire. 1.00 $7.80
+
+SUB_TOTAL : 461.65 $
+DISCOUNT(3.4%): (-) 15.7
+
+Note:
+This order is shipped through blue dart courier

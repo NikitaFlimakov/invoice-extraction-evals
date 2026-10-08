@@ -1,0 +1,22 @@
+INVOICE
+INVOICE ID INV/49-55/127
+Invoice Date: 13-Jun-2009
+Due Date : 26-Aug-2017
+BILL_TO:
+Ronald Rice MD
+1910 Robbins Viaduct Apt. 057
+South Todd, VI 32906 US
+Tel:+(506)321-9846
+Email:susanconley@example.net
+Site:https://reyes-lee.com/
+Morton-Leach
+Address:98324 Espinoza View
+North Olivia, NY 66612 US
+SUB_TOTAL : 391.26  USD
+TAX:VAT (5.44%):  21.28 USD
+TOTAL : 400.02 USD
+Bank Name            State Bank of India
+Branch Name          Raf CAMP
+Bank Account Number  20000004512
+Bank Swift Code      SBININBB250
+Note:Total payment due in 14 days.

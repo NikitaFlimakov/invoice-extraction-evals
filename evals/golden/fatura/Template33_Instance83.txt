@@ -1,0 +1,18 @@
+Duran, Morgan and Lopez
+INVOICE
+Address:4901 Long Wall Apt. 620
+Joshuaville, CT 95783 US
+INVOICE ID 2Y1M7d-172
+GSTIN 336SPTNO37LG120
+Bill to:Austin Powell
+6268 Ashley Roads Suite 047
+Jonesbury, TN 34493 US
+Tel:+(122)125-0774
+Email:roachmason@example.org
+Site:http://www.thompson-gallegos.com/
+GSTIN 22AAAAAD000A125,
+Date: 25-Apr-2004
+Due Date : 27-Nov-2010
+SUB_TOTAL : 282.56  EUR
+GST(18%) : 50.86
+BALANCE DUE : 295.97 EUR

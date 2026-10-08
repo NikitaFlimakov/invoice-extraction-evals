@@ -1,0 +1,23 @@
+INVOICE
+BLUE SKY INDIA LIMITED
+
+Address:696 Thompson Forest INVOICE ID 5109-017
+Ashleybury, AR 73994 US Date: 09-May-2021
+
+Email:amanda25@example.org
+
+Bill to:Courtney Harris
+
+98763 Matthew Squares Apt. 009
+Cooperchester, NY 48892 US
+Tel:+(424)795-9633
+Email:fadams@example.net
+Site:http://moore-myers.biz/
+
+Sit building. 2.00 $49.41 $98.82
+Result beat. 3.00 $4.23 $12.69
+Blood high. 2.00 $24.97 $49.94
+
+SUB_TOTAL : 161.45 USD
+
+TOTAL : 166.17 USD

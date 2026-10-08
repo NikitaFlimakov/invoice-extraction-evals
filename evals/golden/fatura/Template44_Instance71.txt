@@ -1,0 +1,14 @@
+TAX INVOICE
+Knight, Huffman and Moore
+INVOICE ID 4008-815
+Email:andrewcowan@example.com
+Date: 02-Jul-2006
+SUB_TOTAL : 309.72  $
+TAX:VAT (3.34%):  10.36 $
+TOTAL : 307.32 $
+Bank Name           Central Bank of Texas
+Branch Name          Raf CAMP
+Bank Account Number  11463714
+Bank Swift Code      SBININBB250
+Address:087 Michael Lodge
+Kristiborough, IN 63843 US

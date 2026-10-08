@@ -1,0 +1,42 @@
+WHMCS GLOBAL SERVICES
+
+Address:010 Jeffrey Glens
+Port Toddport, DC 16594 US
+
+INVOICE ID 3946-438
+
+Invoice Date: 23-Aug-2001
+Due Date : 06-Apr-1994
+
+Buyer :Alexis Durham
+
+983 Eric Viaduct Apt. 232
+Harringtonshire, KS 80897 US
+Tel:+(897)439-0637
+Email:danielperez@example.org
+Site:http://www.hendricks.com/
+
+Item Price
+
+Hope cold end. 6.51
+
+Member current. 69.30
+
+Consumer building. 32.33
+Note:
+
+This order is shipped through blue dart courier
+
+GSTIN: GSTIN4321AAD22
+
+Quantity
+3.00
+
+3.00
+3.00
+
+Amount
+19.53
+
+207.90
+96.99

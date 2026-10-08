@@ -1,0 +1,15 @@
+INVOICE
+INVOICE # INV/40-17/640
+Invoice Date: 12-Apr-2011
+SHIP_TO:
+Ryan Wall
+57249 Jasmine Hills Apt. 522
+West Derek, FM 52300 US
+Tel:+(717)727-3473
+Email:jjordan@example.com
+Site:http://www.forbes.com/
+SUB_TOTAL : 91.73  USD
+Total in words:  ninety-four p-
+oint two seven
+Terms and Conditions
+will be charged if payment is not made within the due date.

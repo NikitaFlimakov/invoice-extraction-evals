@@ -1,0 +1,40 @@
+INVOICE
+
+Kantech Solubons Private Limited
+
+Address:5776 Whitney Meadow
+West Adriennebury, ID 40049 US
+
+Buyer :Thomas Williams
+
+5054 Jones Wells
+Christopherside, FM 52263 US
+Tel:+(214)273-4383
+Email:hperry@example.org
+Site:http://www.young.net/
+
+Due Date : 23-Jun-2002
+
+GSTIN O4AROP098743125, GSTINO4ARCPD98743125
+
+Invoice Date: 28-Nov-2003
+INVOICE ID INV/03-88/597
+
+Description QUANTITY PRICE
+
+Some just instead rise. 2.00 $55.97
+
+Source use able. 2.00 $39.54
+
+Bill. 1.00 $66.68
+
+Power anyone summer blue. 2.00 $68.47
+
+Total in words: four hundred and fi-
+ve point five three
+
+SUB_TOTAL : 394.64 $
+
+TAX:VAT (6.15%): 24.27 $
+
+TOTAL : 405.53 $

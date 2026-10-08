@@ -1,0 +1,27 @@
+Buyer :Christopher Edwards
+9570 Thomas Summit Apt. 052
+
+Address:047 Jackson Meadows Apt. 391 .
+Ericamouth, TN 73132 US
+Pearsonmouth, OH 83042 US Tel:+(828)696-2936
+Email:sara65@example.com
+GSTIN No. 24AADCP1453)/AZZ Site:http://www.hoffman.com/
+INVOICE INVOICE # INV54204249
+
+Invoice Date: 01-Sep-2022
+
+Item Price Quantity Amount
+Suffer hundred. 97.01 4.00 388.04
+Report focus. 28.91 1.00 28.91
+Require enjoy score. 18.16 6.00 108.96
+Pick that place. 89.69 3.00 269.07
+
+AMOUNT_DUE : 827.60 EUR
+
+Total in words: eight hundred and tw-
+enty-seven point six
+
+SUB_TOTAL : 794.98 EUR
+
+Note: All payments to be made in cash.
+Contact us for queries on these quotations.

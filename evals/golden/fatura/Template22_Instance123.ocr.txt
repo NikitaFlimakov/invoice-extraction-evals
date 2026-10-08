@@ -1,0 +1,29 @@
+INVOICE # INV/03-83/490
+Invoice Date: 12-Jun-2010
+Due Date : 12-Nov-2017
+
+SHIP_TO:
+
+John White
+
+4294 Terry Ridges Suite 769
+New Williamburgh, SD 35751 US
+Tel:+(533)264-3512
+Email:jeffreydavis@example.net
+Site:https://www.velez.com/
+
+Description QUANTITY PRICE
+Certain over. 5.00 $4.83
+Prepare off item. 1.00 $24.60
+Sell at. 6.00 $7.00
+Travel prevent institution. 4.00 $37.81
+Positive her administration. 5.00 $33.32
+
+Thank you for your business!
+
+DISCOUNT(1.12%): (-) 4.58
+TAX:VAT (5.86%): 23.96 USD
+
+TOTAL : 426.99 USD
+
+Email:scottoconnor@example.org

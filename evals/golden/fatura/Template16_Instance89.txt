@@ -1,0 +1,15 @@
+INVOICE
+Woods-Gibbs
+INVOICE ID 5109-017
+Address:696 Thompson Forest
+Ashleybury, AR 73994 US
+Date: 09-May-2021
+Email:amanda25@example.org
+Bill to:Courtney Harris
+98763 Matthew Squares Apt. 009
+Cooperchester, NY 48892 US
+Tel:+(424)795-9633
+Email:fadams@example.net
+Site:http://moore-myers.biz/
+SUB_TOTAL : 161.45  USD
+TOTAL : 166.17 USD

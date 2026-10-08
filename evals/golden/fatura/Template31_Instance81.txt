@@ -1,0 +1,14 @@
+TAX INVOICE
+INVOICE # INV18047250
+Date: 23-Oct-2000
+Bill to:Christopher Morris
+182 Brenda Plain
+West Yvonne, FM 02971 US
+Tel:+(177)975-3743
+Email:mark74@example.org
+Site:http://grimes-simmons.com/
+Address:785 Kaiser Circles Suite 840
+West Johnny, KS 33272 US
+SUB_TOTAL : 154.30  EUR
+TAX:VAT (4.62%):  7.13 EUR
+TOTAL : 156.38 EUR

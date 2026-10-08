@@ -1,0 +1,15 @@
+INVOICE
+INVOICE ID INV85616768
+King, Richards and Roy
+Note:Total payment due in 14 days.
+Email:smithjeffrey@example.net
+Bill to:Nathan Davis
+4953 Timothy Lock
+South Vanessa, GU 33386 US
+Tel:+(712)904-8988
+Email:samanthagray@example.org
+Site:http://www.young.info/
+Date: 09-May-2000
+TOTAL : 321.51 EUR
+Total in words:  three hundred and twe-
+nty-one point five one

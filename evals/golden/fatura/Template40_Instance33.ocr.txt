@@ -1,0 +1,40 @@
+‘Contoso Entertainment System USA
+
+Address:8508 Morgan Forge Suite 534
+North Michaelchester, VT 71194 US
+
+Bill to: Matthew Dunn
+
+84506 Joseph Field Apt. 090
+
+East Ashleyshire, NM 53750 US
+
+Tel:+(310)579-8964
+
+Email:lisaparsons@example.net
+
+Site:https://www.macias.org/
+INVOICE ID 9003-078
+Invoice Date: 07-Feb-2022
+
+Item Price Quantity
+Money dog. 33.12 6.00
+Car per. 21.63 2.00
+Religious board cut. 54.82 6.00
+Bank Name Central Bank of California
+Branch Name Raf CAMP
+
+Bank Account Number 11893255
+Bank Swift Code SBININBB250
+
+TOTAL : 566.61 EUR
+
+SUB_TOTAL : 570.90 EUR
+
+Due Date : 25-Aug-1999
+
+Amount
+198.72
+
+43.26
+328.92

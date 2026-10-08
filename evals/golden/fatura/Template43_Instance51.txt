@@ -1,0 +1,19 @@
+INVOICE
+Address:938 Gonzalez Key Suite 573
+New Anitaport, MN 04941 US
+Email:susan62@example.com
+www.PaulGibsonandAnderson.com
+BILL_TO:
+Jason Hicks
+531 Buchanan Centers Apt. 863
+Kerrytown, MD 55799 US
+Tel:+(824)313-4926
+Email:dalton90@example.org
+Site:http://singleton.com/
+Invoice number INV35381750
+Invoice Date: 17-May-2000
+Due Date : 14-Dec-2007
+SUB_TOTAL : 63.14  $
+DISCOUNT(1.4%): (-)  0.88
+TAX:VAT (5.00%):  3.16 $
+TOTAL : 65.25 $

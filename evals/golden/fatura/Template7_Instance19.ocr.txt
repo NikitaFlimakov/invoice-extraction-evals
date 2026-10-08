@@ -1,0 +1,28 @@
+Kimberly Kent
+
+Email:cpetersen@example.com
+
+wwe Napoyscho com
+
+INVOICE
+
+Bill to:Linda Park Invoice number 6Y3M2d-130
+9317 Jones Turnpike Apt. 866
+
+Meyerberg, AS 43224 US Invoice Date: 28-Jun-2022
+Telt( 101)523-0766 Due Date : 10-Nov-2007
+
+Email:bryanhill@example.org
+Site:http:/www.garcia.com/
+
+ITEMS QUANTITY PRICE
+e005
+
+a0
+lS 58058
+
+SUB_TOTAL : 1038.58 $
+
+GST(9%) : 93.47
+
+TOTAL : 1077.70 $

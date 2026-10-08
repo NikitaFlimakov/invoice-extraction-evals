@@ -1,0 +1,15 @@
+COMMERCIAL INVOICE
+Invoice number INV/11-18/986
+Date: 19-Jul-2009
+SHIP_TO:
+David Harris
+19799 Haley Mill Suite 023
+South Marissa, IL 51956 US
+Tel:+(669)484-0753
+Email:tarariley@example.com
+Site:https://www.wilson-rich.org/
+SUB_TOTAL : 221.36  USD
+Total in words:  two hundred and twent-
+y-one point eight one
+Terms and Conditions
+will be charged if payment is not made within the due date.

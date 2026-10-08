@@ -1,0 +1,15 @@
+INVOICE
+Woods-Gibbs
+INVOICE ID INV/01-44/955
+Address:696 Thompson Forest
+Ashleybury, AR 73994 US
+Invoice Date: 30-Sep-2021
+Email:amanda25@example.org
+Bill to:Scott Little
+016 Scott Hill Apt. 552
+Michelefurt, NE 80581 US
+Tel:+(641)221-1718
+Email:gregorymartin@example.net
+Site:https://www.klein.com/
+SUB_TOTAL : 307.96  USD
+TOTAL : 315.49 USD

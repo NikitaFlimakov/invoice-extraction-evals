@@ -1,0 +1,42 @@
+COMMERCIAL INVOICE
+
+Billed by BILL_TO:
+Foobar Labs Brandon Andersen : - 44-lan-
+
+277 Tapia Summit Invoice Date: 14-Jan-2004
+Address:0344 Jonathan Club Michaelfort, ND 53159 US Due Date : 29-Jul-1994
+Port Patriciashire, PW 72063 US Tel:+(005)130-0034
+
+Email:loriwilliams@example.com
+Site:http://www.anthony.biz/
+
+Item Price Quantity Amount
+Vote past industry. 10.61 3.00 31.83
+Interview why particular. 49.00 6.00 294.00
+Point face. 82.60 5.00 413.00
+
+Terms & Conditions SUB_TOTAL : 738.83 EUR
+
+1. Please send payment within 8 days of receiving this invoice. ~
+
+There will be a 2.5% interest charge per month on late invoices. DISCOUNT(1.29%): (-) 9.53
+
+2. Please include the Invoice number in your payment notes.
+
+TAX:VAT (4.29%): 31.72 EUR
+
+Note: TOTAL : 757.99 EUR
+
+This order is shipped through blue dart courier . .
+Total in words: seven hundred and fift-
+
+y-seven point nine nine
+
+Bank Name Central Bank of Texas
+Branch Name Raf CAMP
+
+Bank Account Number 10197462
+
+Bank Swift Code SBININBB250
+
+Email:houstonjoyce@example.net

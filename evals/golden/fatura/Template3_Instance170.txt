@@ -1,0 +1,18 @@
+COMMERCIAL INVOICE
+Kirk, Murphy and Daniels
+Date: 04-Nov-2006
+INVOICE # 8Y7M1d-707
+PO Number :07
+BILL_TO:
+Jennifer Erickson
+01257 Timothy Trail Apt. 918
+Andrewsfort, CO 10104 US
+Tel:+(933)618-7105
+Email:chrishernandez@example.org
+Site:https://jackson.info/
+Due Date : 20-Dec-2004
+TAX:VAT (4.26%):  40.12 EUR
+Thank you for your business!
+TOTAL : 945.21 EUR
+Total in words:  nine hundred and for-
+ty-five point two one

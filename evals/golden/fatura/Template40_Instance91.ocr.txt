@@ -1,0 +1,38 @@
+‘Contoso Entertainment System USA
+
+Address:8508 Morgan Forge Suite 534
+North Michaelchester, VT 71194 US
+
+Bill to:Lawrence Taylor
+
+707 Elizabeth Brook
+
+Thomasview, DC 18500 US
+
+Tel:+(629)033-1868
+
+Email:masonronald@example.com
+
+Site:http://perry.com/
+INVOICE # 7Y2M5d-213
+Invoice Date: 18-Mar-2016
+
+Item Price Quantity
+Parent practice throughout. 71.97 5.00
+Key call former. 93.53 5.00
+Bank Name Central Bank of USA
+Branch Name Raf CAMP
+
+Bank Account Number 10925836
+Bank Swift Code SBININBB250
+
+TOTAL : 832.46 $
+
+SUB_TOTAL : 827.50 $
+
+Due Date : 14-Apr-2018
+
+Amount
+359.85
+
+467.65

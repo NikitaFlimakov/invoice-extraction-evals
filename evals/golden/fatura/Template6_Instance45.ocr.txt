@@ -1,0 +1,28 @@
+COMMERCIAL INVOICE
+
+AFC Enterprises
+
+Bill to:Crystal Gilbert
+
+8143 Joseph Spur Apt. 399 INVOICE ID 2Y9M6d-879
+South Randallstad, AL 31798 US
+
+Tel:+(152)859-3861 Dates 20-Jun-1835
+Email:martinezcrystal@example.net PO Number :85
+Site:http://white.org/
+
+a
+817082 Rule factor, 42.33 42.33
+
+550722 Theory officer forward. 27.27 81.81
+531217 Body top see. 54.63 273.15
+}6.00 | 897071 Building question. 61.41 368.46
+
+SUB_TOTAL : 806.89 USD
+
+TAX:VAT (3.05%): 24.61 USD
+
+TOTAL : 818.35 USD
+
+Note:
+This order is shipped through blue dart courier

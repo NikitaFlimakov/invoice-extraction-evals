@@ -1,0 +1,27 @@
+COMMERCIAL INVOICE
+
+Date: 26-Jul-1998 Buyer :Kristin Powell
+86667 Berg Branch
+Lewisfurt, AS 71237 US
+Tel:+(327)001-0250
+Email:carlosjohnson@example.org
+Site:https://duncan.info/
+
+Bank Name Central Bank of Europe
+Branch Name Raf CAMP
+
+Bank Account Number 18534127
+
+Bank Swift Code SBININBB250
+
+Description QUANTITY PRICE
+Picture condition. 5.00 $52.82
+Pattern cause rise. 5.00 $81.60
+
+SUB_TOTAL : 672.10 EUR
+TAX:VAT (4.20%): 28.21 EUR
+
+TOTAL : 675.78 EUR
+
+Address:86143 Ruth Isle Apt. 608
+Ashleyshire, TN 12593 US

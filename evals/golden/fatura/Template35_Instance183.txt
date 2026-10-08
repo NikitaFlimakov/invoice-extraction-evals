@@ -1,0 +1,23 @@
+COMMERCIAL INVOICE
+INVOICE ID INV/94-42/732
+Address:61959 Fernando Island Apt. 694
+South Jessica, CT 86255 US
+Invoice Date: 25-Dec-1994
+GSTIN: 20QX0C0C9424D1Z5
+Buyer :Natalie Rios
+873 James Estates Apt. 344
+Dustinhaven, NV 44954 US
+Tel:+(788)959-2823
+Email:kbush@example.net
+Site:https://www.cross-moore.com/
+SHIP_TO:
+Joseph Rios
+92621 Bennett Orchard
+Amandahaven, ND 21843 US
+Tel:+(360)402-2966
+Email:pamelarobinson@example.net
+Site:https://gonzalez.com/
+TOTAL : 751.41 $
+Total in words:  seven hundred and fif-
+ty-one point four one
+Thank you for choosing us!

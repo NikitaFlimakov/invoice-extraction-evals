@@ -1,0 +1,51 @@
+GUJARAT FREIGHT TOOLS
+Address:8110 Lee Haven
+
+West Michele, IN 23979 US Web: wwwugftools.com
+Email:ghodges@example.org
+
+GSTIN : 24HDE7487RESRT4
+
+INVOICE # INV92797767 Date: 30-Jul-2017
+Bill to:Robert Harris
+0828 Carter Field
+Jacksonhaven, WA 55060 US
+Tel:+(567)348-5599 Due Date : 30-Mar-2014
+
+Email:jaredadams@example.org
+Site:http://ruiz.biz/
+
+SHIP_TO:
+
+Robert Lowery
+
+1462 Ryan Road Suite 060
+Stewartbury, GA 81255 US
+Tel:+(335)041 -9363
+Email:thomas87@example.net
+Site:https://frank-juarez.info/
+
+ITEMS QUANTITY PRICE
+Explain drug themselves. $7.18
+
+51728
+
+SUB_TOTAL : 498.46 EUR
+
+TOTAL : 507.64 EUR
+
+Total in words: five hundred and s-
+even point six four
+
+Bank Name Central Bank of England
+Branch Name Raf CAMP
+
+Bank Account Number 12641296
+
+Bank Swift Code SBININBB250
+
+Terms & Conditions
+
+1. Please send payment within 8 days of receiving this invoice.
+There will be a 2.5% interest charge per month on late invoices.
+2. Please include the Invoice number in your payment notes.

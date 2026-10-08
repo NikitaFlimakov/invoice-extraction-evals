@@ -1,0 +1,28 @@
+INVOICE
+INVOICE # INV88375844
+Invoice Date: 24-Sep-2009
+Due Date : 08-Feb-2008
+Bill to:John Chavez
+017 Phillips Cove Suite 402
+North Rachelport, MI 08835 US
+Tel:+(338)222-8774
+Email:williamwilliams@example.com
+Site:http://www.greene.biz/
+Richardson-Davis
+Address:6479 Smith Causeway
+East Camerontown, AS 38212 US
+SUB_TOTAL : 302.92  USD
+Bank Name           Central Bank of Europe
+Branch Name          Raf CAMP
+Bank Account Number  18133498
+Bank Swift Code      SBININBB250
+DISCOUNT(2.08%): (-)  6.3
+TAX:VAT (5.25%):  15.91 USD
+TOTAL : 306.23 USD
+Total in words:  three hundred and -
+six point two three
+Thank you for your business!
+Terms & Conditions
+1. Please send payment within 8 days of receiving this invoice.
+There will be a 2.5% interest charge per month on late invoices.
+2. Please include the Invoice number in your payment notes.

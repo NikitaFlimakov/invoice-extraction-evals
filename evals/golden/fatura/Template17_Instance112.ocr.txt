@@ -1,0 +1,40 @@
+INVOICE
+
+Kantech Solubons Private Limited
+
+Address:5776 Whitney Meadow
+West Adriennebury, ID 40049 US
+
+GSTIN O4AROP098743125,
+
+Bill to:Kristopher Moran
+
+06179 Patel Causeway
+
+West Stephaniefurt, MA 47041 US
+Tel:+(156)557-1236
+Email:mauricejohnson@example.net
+Site:http://baker.com/
+
+Due Date : 19-Mar-2002
+
+GSTINO4ARCPD98743125
+
+Invoice Date: 14-Apr-2022
+
+INVOICE # INV/78-64/532
+
+Description QUANTITY PRICE
+Word serve. 6.00 $69.76
+Commercial decade agent amount. 3.00 $99.67
+Town whole. 1.00 $15.23
+Act table along. 5.00 $30.49
+
+Total in words: eight hundred and sev-
+enty point seven four
+
+SUB_TOTAL : 885.25 USD
+
+TAX:VAT (3.22%): 28.51 USD
+
+TOTAL : 870.74 USD

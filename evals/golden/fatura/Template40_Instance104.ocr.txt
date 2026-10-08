@@ -1,0 +1,34 @@
+‘Contoso Entertainment System USA
+
+Address:8508 Morgan Forge Suite 534
+North Michaelchester, VT 71194 US
+
+Bill to:Derrick Lutz
+74425 Ronald Motorway
+West Yolandaberg, OR 96150 US
+Tel:+(310)392-4994
+Email:walkerjames@example.org
+Site:https://www.combs.net/
+INVOICE # INV61292177
+
+Invoice Date: 17-Aug-2013
+
+Item Price Quantity
+In majority couple. 66.54 1.00
+Relate rise minute. 7.89 5.00
+Bank Name State Bank of California
+Branch Name Raf CAMP
+
+Bank Account Number 11043884
+Bank Swift Code SBININBB250
+
+TOTAL : 107.18 USD
+
+SUB_TOTAL : 105.99 USD
+
+Due Date : 18-Jul-2015
+
+Amount
+66.54
+
+39.45

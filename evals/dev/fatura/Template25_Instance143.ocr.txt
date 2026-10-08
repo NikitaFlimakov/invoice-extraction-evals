@@ -1,0 +1,41 @@
+lan Elliott
+
+Address:6030 Willie Shores Suite 354
+Guerraton, TX 60058 US
+Email:meghan88@example.net
+
+INVOICE # INV46102101
+Date: 28-Oct-2008
+
+~iit
+Plant computer.
+Car event stay.
+
+Bill to:Sandra Black
+
+4488 Bell Ridge
+
+Lake Samanthamouth, SC 20257 US
+Tel:+(414)784-9242
+Email:christopher20@example.com
+Site:http:/www.gibson.com/
+
+Due Date : 20-Feb-2021
+
+eC @ Amoun
+$88.83 2.00 $177.66
+$16.30 3.00 $48.90
+
+SUB_TOTAL : 226.56 $
+
+GST(5%) : 11.33
+
+GST(12%) : 27.19
+
+GST(18%) : 40.78
+
+GST(20%) : 45.31
+
+GST(1%) : 2.27
+
+TOTAL : 226.64 $

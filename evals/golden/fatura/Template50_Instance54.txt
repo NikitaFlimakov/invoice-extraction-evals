@@ -1,0 +1,28 @@
+COMMERCIAL INVOICE
+Stein-Fernandez
+BILL_TO:
+Justin Vazquez
+01958 Nielsen Centers
+North Alexfort, CT 75455 US
+Tel:+(153)231-0024
+Email:george40@example.net
+Site:https://quinn-kim.net/
+Invoice Date: 10-Jul-2008
+Address:0344 Jonathan Club
+Port Patriciashire, PW 72063 US
+Due Date : 18-May-2002
+Terms and Conditions
+will be charged if payment is not made within the due date.
+SUB_TOTAL : 980.08  USD
+DISCOUNT(2.24%): (-)  21.95
+TAX:VAT (4.53%):  44.38 USD
+TOTAL : 983.98 USD
+Note:
+This order is shipped through blue dart courier
+Total in words:  nine hundred and eighty-
+-three point nine eight
+Bank Name           Central Bank of California
+Branch Name          Raf CAMP
+Bank Account Number  17886978
+Bank Swift Code      SBININBB250
+Email:houstonjoyce@example.net

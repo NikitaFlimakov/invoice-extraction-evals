@@ -1,0 +1,23 @@
+TAX INVOICE
+Invoice number 4Y4M1d-085
+Address:61959 Fernando Island Apt. 694
+South Jessica, CT 86255 US
+Date: 23-Jul-2013
+GSTIN: 20QX0C0C9424D1Z5
+Buyer :Tyler Hamilton
+49822 Kiara Trafficway
+Spencehaven, KS 03146 US
+Tel:+(198)317-6968
+Email:dianebaker@example.org
+Site:http://kennedy.com/
+SHIP_TO:
+Cody Tyler
+3298 Johns Roads
+Lake Samanthaside, WY 02204 US
+Tel:+(635)074-5635
+Email:btorres@example.org
+Site:http://www.stanley-bell.biz/
+TOTAL : 974.52 USD
+Total in words:  nine hundred and seven-
+ty-four point five two
+Thank you for your business!

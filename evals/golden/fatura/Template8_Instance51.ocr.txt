@@ -1,0 +1,52 @@
+GUJARAT FREIGHT TOOLS
+
+Address:8110 Lee Haven
+West Michele, IN 23979 US Web: wwwugftools.com
+
+Email:ghodges@example.org
+GSTIN : 24HDE7487RESRT4
+
+Invoice number 0702-946 Invoice Date: 13-May-1995
+Bill to: Mary Walters
+928 Carr Island
+West Rachelhaven, ME 81567 US
+Tel:+(594)158-0900 Due Date : 24-Jul-2006
+Email: kirkdevon@example.org
+Site:https://baker.com/
+
+SHIP_TO:
+
+Seth Thomas
+
+5820 Macias Prairie
+
+South Kyle, PA 59886 US
+Tel:+(991)972-4395
+Email:reedkelly@example.com
+Site:https://www.beck.com/
+
+ITEMS QUANTITY PRICE
+50007
+
+Se 7
+Especially focus fly. | 00s $23.15
+
+SUB_TOTAL : 894.05 EUR
+
+TOTAL : 910.54 EUR
+
+Total in words: nine hundred and t-
+en point five four
+
+Bank Name Central Bank of Europe
+Branch Name Raf CAMP
+
+Bank Account Number 15234553
+
+Bank Swift Code SBININBB250
+
+Terms & Conditions
+
+1. Please send payment within 8 days of receiving this invoice.
+There will be a 2.5% interest charge per month on late invoices.
+2. Please include the Invoice number in your payment notes.

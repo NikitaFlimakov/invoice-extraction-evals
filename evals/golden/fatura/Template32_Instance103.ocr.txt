@@ -1,0 +1,40 @@
+Date: 04-Jan-1997
+
+Luke Bowers
+
+Address:5190 Perry Passage
+Kellyburgh, RI 60615 US
+
+Email:marymoore@example.org
+
+ITEMS
+Set.
+
+Reflect include.
+
+Thank you for your business!
+
+QUANTITY
+
+6.00
+
+3.00
+
+INVOICE ID 8923-595
+
+Buyer :Larry Henderson
+
+304 Donald Summit Apt. 021
+
+North Amber, NV 07146 US
+Tel:+(874)327-2578
+Email:prestonmarie@example.com
+Site:https://aguilar-blevins.net/
+
+PRICE TAX AMOUNT
+$74.35 $0.00 $446.10
+$38.07 $0.00 $114.21
+
+SUB_TOTAL : 560.31 $
+
+TOTAL : 559.94 $

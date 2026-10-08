@@ -1,0 +1,14 @@
+TAX INVOICE
+INVOICE # 4Y5M2d-296
+Invoice Date: 01-Jan-2012
+Buyer :Brian Garcia
+800 Jackson Turnpike Apt. 618
+South Davidfort, CT 75483 US
+Tel:+(762)167-8740
+Email:robert40@example.net
+Site:http://morris-larsen.com/
+Address:785 Kaiser Circles Suite 840
+West Johnny, KS 33272 US
+SUB_TOTAL : 442.55  $
+TAX:VAT (3.72%):  16.45 $
+TOTAL : 441.17 $

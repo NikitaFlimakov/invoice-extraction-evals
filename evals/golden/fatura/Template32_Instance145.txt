@@ -1,0 +1,15 @@
+INVOICE # INV/21-13/610
+Date: 29-Mar-2010
+Bill to:Thomas Woods
+62671 Cummings Landing
+Johnview, MA 54591 US
+Tel:+(197)482-3411
+Email:sanchezscott@example.com
+Site:http://www.taylor.com/
+Miller Inc
+Address:5190 Perry Passage
+Kellyburgh, RI 60615 US
+Email:marymoore@example.org
+Thank you for your business!
+SUB_TOTAL : 774.93  EUR
+TOTAL : 816.58 EUR

@@ -1,0 +1,31 @@
+INVOICE
+
+Michael Greene
+
+Address:841 Marshall Knolls
+Timothystad, SC 63653 US
+INVOICE ID INV/11-55/633
+
+Invoice Date: 13-Jul-1999
+Due Date : 14-Aug-2002
+
+Buyer :Jessica Bass
+
+07703 Robert Terrace
+Barbaraberg, AK 82029 US
+Tel:+(596)645-9574
+Email:nicole38@example.com
+Site:https://robinson-fowler.com/
+
+em Price @ Amoun
+Attack however onto. $80.52 3.00 $241.56
+Forget. $99.39 1.00 $99.39
+Consider write care. $51.49 4.00 $205.96
+Several amount. $38.62 2.00 $77.24
+
+DISCOUNT(3.72%): (-) 23.22
+
+TOTAL : 629.84 $
+
+Terms and Conditions
+will be charged if payment is not made within the due date.

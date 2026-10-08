@@ -1,0 +1,18 @@
+Parker, Phillips and Thomas
+Address:8508 Morgan Forge Suite 534
+North Michaelchester, VT 71194 US
+Bill to:Lawrence Taylor
+707 Elizabeth Brook
+Thomasview, DC 18500 US
+Tel:+(629)033-1868
+Email:masonronald@example.com
+Site:http://perry.com/
+INVOICE # 7Y2M5d-213
+Invoice Date: 18-Mar-2016
+Bank Name           Central Bank of USA
+Branch Name          Raf CAMP
+Bank Account Number  10925836
+Bank Swift Code      SBININBB250
+TOTAL : 832.46 $
+SUB_TOTAL : 827.50  $
+Due Date : 14-Apr-2018

@@ -1,0 +1,46 @@
+TAX INVOICE
+
+Date: 20-May-2004
+Due Date : 26-Nov-2014
+PO Number :34
+
+Address:16424 Timothy Mission Buyer :Amanda Gray
+
+Markville, AK 58294 US 33385 Kelly Plains Apt. 412
+Lake Angelaport, RI 13091 US
+
+Email:melvind0@example.net Tel:+(084)931-9306
+
+sleekbill in Email:leslierice@example.net
+
+(GSTIN: 12345670 00070007 Site:https://wright.com/
+
+GSTIN: OG@AAMFCO376K124
+
+ITEMS QUANTITY
+
+Spring material. 4.00
+
+Yes despite. 3.00
+
+During ahead. 2.00
+
+Total in words: three hundred and twent-
+y-four point eight four
+
+Bank Name Central Bank of Europe
+Branch Name Raf CAMP
+
+Bank Account Number 13752864
+
+Bank Swift Code SBININBB250
+
+Note: All payments to be made in cash.
+Contact us for queries on these quotations.
+
+SUB_TOTAL : 319.73 EUR
+
+DISCOUNT(2.27%): (-) 7.26
+TAX:VAT (4.70%): 15.02 EUR
+
+TOTAL : 324.84 EUR

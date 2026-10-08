@@ -1,0 +1,15 @@
+TAX INVOICE
+Woods-Gibbs
+INVOICE # INV94928516
+Address:696 Thompson Forest
+Ashleybury, AR 73994 US
+Invoice Date: 22-Apr-2006
+Email:amanda25@example.org
+Bill to:Melissa Nichols
+31693 Diane Mission Apt. 760
+Karenfort, GA 97198 US
+Tel:+(326)694-5927
+Email:johncunningham@example.org
+Site:http://www.maddox.net/
+SUB_TOTAL : 132.14  EUR
+TOTAL : 138.30 EUR

@@ -1,0 +1,28 @@
+INVOICE # INV/40-17/640
+Invoice Date: 12-Apr-2011
+
+INVOICE
+
+SHIP_TO:
+Ryan Wall
+
+57249 Jasmine Hills Apt. 522
+
+West Derek, FM 52300 US
+Tel:+(717)727-3473
+
+Email:jjordan@example.com
+
+Site:http://www.forbes.com/
+
+Qty Description Unit Price Amount
+1.00 Mrs hear. 26.81 26.81
+1.00 Strong data those. 64.92 64.92
+
+Total in words: ninety-four p-
+oint two seven
+
+Terms and Conditions
+will be charged if payment is not made within the due date.
+
+SUB_TOTAL : 91.73 USD

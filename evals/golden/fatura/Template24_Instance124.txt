@@ -1,0 +1,15 @@
+COMMERCIAL INVOICE
+INVOICE ID 8802-135
+Patel-Reid
+Address:223 Kristen Mission Suite 986
+Hernandezport, DE 40016 US
+Note:Total payment due in 14 days.
+Date: 29-Apr-2011
+Email:rivassarah@example.org
+Buyer :Michael Ruiz
+32021 Mandy Points Suite 781
+Comptonbury, MN 09779 US
+Tel:+(237)156-2803
+Email:jbrown@example.org
+Site:https://wilcox-johnson.net/
+SUB_TOTAL : 1051.84  $

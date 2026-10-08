@@ -1,0 +1,49 @@
+EVOL ATIS
+
+Address:840 Anderson Locks
+Mariatown, AL 01838 US
+
+ITEMS
+
+COMMERCIAL INV
+
+INVOICE # INV/94-07/781
+
+Invoice Date: 31-Dec-1996
+Due Date : 23-Nov-2019
+BALANCE_DUE : 345.46 EUR
+
+SHIP_TO:
+
+Amy Perry
+
+383 White Heights
+
+Sosaburgh, TN 54047 US
+Tel:+(163)092-7466
+Email:fernandezgary@example.com
+Site:http://navarro.com/
+
+QUANTITY
+
+Environment glass source.
+
+6.00
+
+Card they central.
+
+1.00
+
+Turn drive unit.
+
+2.00
+
+5.00
+
+Stop mother machine.
+
+SUB_TOTAL : 349.28 EUR
+DISCOUNT(3.61%): (-) 12.64
+TAX:VAT (3.35%): 11.69 EUR
+
+TOTAL : 345.46 EUR

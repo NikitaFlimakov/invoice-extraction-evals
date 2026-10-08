@@ -1,0 +1,16 @@
+INVOICE # 4Y2M3d-140
+Navarro, Ford and Bryan
+Date: 23-May-2004
+GSTIN/UIN: 09AABCS142961ZS
+Email:rclark@example.org
+Bill to:Janet Peters
+237 Michelle Path Apt. 941
+East Dawn, OH 65362 US
+Tel:+(317)636-0375
+Email:portershelly@example.com
+Site:https://rodriguez.net/
+Total in words:  one thousand, one hundred and-
+ninety-nine point three eight
+TOTAL : 1199.38 USD
+Note: All payments to be made in cash.
+Contact us for queries on these quotations.

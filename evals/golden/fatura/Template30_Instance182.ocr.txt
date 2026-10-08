@@ -1,0 +1,30 @@
+COMMERCIAL INVOICE
+
+Invoice number INV/25-03/251
+Invoice Date: 04-Aug-2001
+
+SHIP_TO:
+
+Ryan Wiley DDS
+
+5817 Sonia Stravenue
+Joneschester, RI 62411 US
+Tel:+(138)960-0397
+Email:ibrown@example.net
+Site:https://www.grant.com/
+
+Qty Description Unit Price Amount
+
+5.00 Enjoy because glass. 23.57 117.85
+
+3.00 If of. 75.05 225.15
+
+1.00 Drive style. 47.32 47.32
+
+1.00 Conference. 18.21 18.21
+Total in words: four hundred and twent- SUB_TOTAL : 408.53 USD
+
+y-four point zero eight
+
+Terms and Conditions
+will be charged if payment is not made within the due date.

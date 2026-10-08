@@ -1,0 +1,31 @@
+TAX INVOICE
+
+Address:03449 Andrade Hill Suite 722
+Campbellville, PW 02320 US
+
+Email:choieric@example.net
+Bill to: Joshua Perez Date: 31-Mar-2016
+
+4298 Micheal Hill INVOICE ID INV/14-77/821
+Port Michael, PR 29143 US
+
+Tel:+(770)083-4936
+Email:travisellen@example.org
+Site:https://west.org/
+
+13.00 | 417253 _| Party public. 11.42 34.26
+
+[5.00 | 443274 53.17 265.85
+
+Bank Name State Bank of England SUB_TOTAL : 300.11 EUR
+Branch Name Raf CAMP GST(18%) : 54.02
+Bank Account Number 17677482
+
+Bank Swift Code SBININBB250 TAX:VAT (4.96%): 14.89 EUR
+
+TOTAL : 311.19 EUR
+
+Total in words: three hundred and e-
+leven point one nine
+
+Thank you for choosing us!

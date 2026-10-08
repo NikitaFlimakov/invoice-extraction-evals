@@ -1,0 +1,27 @@
+TAX INVOICE
+
+Date: 15-Mar-1999 Bill to: James Taylor
+817 Betty Route
+Vasquezburgh, MO 47613 US
+Tel:+(895)055-8289
+Email:johnbarajas@example.org
+Site:https://silva.org/
+
+Bank Name State Bank of Texas
+Branch Name Raf CAMP
+
+Bank Account Number 17787351
+Bank Swift Code SBININBB250
+
+Description QUANTITY PRICE
+Field each. 4.00 $59.70
+Compare field scientist. 4.00 $41.55
+Success inside. 3.00 $46.22
+
+SUB_TOTAL : 543.66 USD
+TAX:VAT (3.09%): 16.78 USD
+
+TOTAL : 541.03 USD
+
+Address:86143 Ruth Isle Apt. 608
+Ashleyshire, TN 12593 US

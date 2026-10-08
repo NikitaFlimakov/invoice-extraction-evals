@@ -1,0 +1,27 @@
+Demo Customer
+
+Demo Road
+
+Address:116 Smith Loop Apt. 882
+East David, AL 55672 US
+
+INVOICE
+
+Invoice number 8976-449
+PO Number :80
+
+Invoice Date: 24-Mar-2016
+Due Date : 30-Mar-2011
+
+Qty ID Description
+
+1.00 904628 Contain own.
+
+1.00 439113 | Raise open week.
+
+89.88
+40.25
+
+Note:Total payment due in 14 days.
+
+TOTAL : 131.53 USD

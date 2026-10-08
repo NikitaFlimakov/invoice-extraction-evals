@@ -1,0 +1,40 @@
+INVOICE
+
+INVOICE # INV88375844
+Invoice Date: 24-Sep-2009
+Due Date : 08-Feb-2008
+
+Bill to:John Chavez
+
+Alexander Williams 017 Phillips Cove Suite 402
+Address:6479 Smith Causeway North Rachelport, MI 08835 US
+East Camerontown, AS 38212 US Tel:+(338)222-8774
+
+Email: williamwilliams@example.com
+Site:http://www.greene.biz/
+
+a
+296485 Stock network. 50.40 50.40
+014742 Everybody where. 50.56 50.56
+
+897959 Thousand more plant. 60.15 180.45
+106420 Beautiful defense. 21.51 21.51
+
+Bank Name Central Bank of Europe SUB_TOTAL 22.82 Us
+Branch Name Raf CAMP DISCOUNT(2.08%): (-) 6.3
+Bank Account Number 18133498 2 aN:
+
+Bank Swift Code SBININBB250 TREN (taeay “lead Vee
+
+TOTAL : 306.23 USD
+
+Total in words: three hundred and -
+
+Thank you for your business! .
+six point two three
+
+Terms & Conditions
+
+1. Please send payment within 8 days of receiving this invoice.
+There will be a 2.5% interest charge per month on late invoices.
+2. Please include the Invoice number in your payment notes.

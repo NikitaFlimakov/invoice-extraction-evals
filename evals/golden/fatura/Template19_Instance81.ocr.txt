@@ -1,0 +1,47 @@
+Invoice number INV77870152
+
+Date: 20-May-2010
+Due Date : 17-Aug-2007
+
+Buyer : Tiffany Wagner
+
+41153 Natasha Loaf Suite 464
+South Courtney, AZ 79124 US
+Tel:+(046)510-9835
+Email:jvillanueva@example.com
+Site:http://santiago.com/
+
+Item
+Evening piece trade deal.
+
+Amount its instead.
+Thus black professional.
+Sit degree level.
+
+Thank you for your business!
+
+WHMCS GLOBAL SERVICES
+
+Price
+86.06
+34.54
+25.70
+29.55
+
+GSTIN: GSTIN4321AAD22
+
+Address:010 Jeffrey Glens
+Port Toddport, DC 16594 US
+
+Quantity
+3.00
+5.00
+6.00
+4.00
+
+Amount
+258.18
+
+172.70
+154.20
+118.20

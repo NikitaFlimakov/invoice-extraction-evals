@@ -1,0 +1,28 @@
+COMMERCIAL INVOICE
+Stein-Fernandez
+BILL_TO:
+Brandi Hernandez
+3011 Taylor Extensions
+Christineton, CA 94174 US
+Tel:+(133)599-6030
+Email:ydeleon@example.net
+Site:http://www.castro.com/
+Invoice Date: 07-Sep-2001
+Address:0344 Jonathan Club
+Port Patriciashire, PW 72063 US
+Due Date : 20-Feb-1995
+Terms and Conditions
+will be charged if payment is not made within the due date.
+SUB_TOTAL : 380.89  $
+DISCOUNT(1.54%): (-)  5.87
+TAX:VAT (5.76%):  21.95 $
+TOTAL : 390.80 $
+Note:
+This order is shipped through blue dart courier
+Total in words:  three hundred and -
+ninety point eight
+Bank Name           Central Bank of England
+Branch Name          Raf CAMP
+Bank Account Number  12876697
+Bank Swift Code      SBININBB250
+Email:houstonjoyce@example.net

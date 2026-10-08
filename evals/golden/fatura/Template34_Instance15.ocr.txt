@@ -1,0 +1,28 @@
+INVOICE
+
+Address:66636 Hernandez Loaf Suite 714
+Lisafurt, LA 33980 US INVOICE ID 9Y2M7d-437
+
+Invoice Date: 03-Oct-2014
+
+SHIP_TO:
+
+Justin Taylor
+
+4409 Jennifer Tunnel
+
+West Davidton, WI 57018 US
+Tel:+(920)987-2474
+Email:emartinez@example.org
+Site:https://moreno.info/
+
+em Price @ Amoun
+Our than deal. $17.78 2.00 $35.56
+Threat from figure. $5.60 4.00 $22.40
+
+TOTAL : 59.42 USD
+
+Total in words: fifty-nine p-
+oint four two
+
+Note:Total payment due in 14 days.

@@ -1,0 +1,36 @@
+TAX INVOICE
+
+INVOICE # INV/16-40/298
+
+Date: 11-Aug-2019
+Due Date : 22-Dec-2022
+
+EVOL ATIS DUE_AMOUNT : 1024.48 USD
+
+Address:840 Anderson Locks
+Mariatown, AL 01838 US
+
+SHIP_TO:
+
+Laura Li
+
+144 Jessica Hill Apt. 593
+Travisfort, PW 25618 US
+Tel:+(658)137-7121
+Email:dana12@example.net
+Site:http://phillips.biz/
+
+ITEMS QUANTITY
+Attack role. 5.00
+Popular. 3.00
+
+Exactly Republican. 5.00
+
+So. 6.00
+May one. 6.00
+
+SUB_TOTAL : 1008.50 USD
+DISCOUNT(4.51%): (-) 45.48
+TAX:VAT (3.87%): 39.07 USD
+
+TOTAL : 1024.48 USD
