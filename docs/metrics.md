@@ -25,7 +25,7 @@ One 0/1 metric per field: `invoice_number`, `invoice_date`, `due_date`, `currenc
 | dates | `DateOnly` equality |
 | currency | equal ISO 4217 code after trimming and upper-casing |
 | amounts | within **0.01 inclusive** |
-| vendor / customer name | equal after normalization: lower-case, `&` → `and`, punctuation removed, trailing legal-form suffixes removed (`Inc`, `LLC`, `Ltd`, `GmbH & Co. KG`, `S.à r.l.`, `K.K.`, ...). Abbreviations (`Intl.` vs `International`) are **not** equated; that is the Phase 3 LLM judge's job (extension point: the `vendorNameMatch` constructor argument). Diacritics are kept. |
+| vendor / customer name | equal after normalization: lower-case, `&` → `and`, punctuation removed, trailing legal-form suffixes removed (`Inc`, `LLC`, `Ltd`, `GmbH & Co. KG`, `S.à r.l.`, `K.K.`, ...). Abbreviations (`Intl.` vs `International`) are **not** equated here; the judged variant below handles them. Diacritics are kept. |
 
 Golden `null` means "not printed". Each metric carries an outcome in `Metadata["outcome"]`:
 
@@ -41,6 +41,39 @@ Golden `null` means "not printed". Each metric carries an outcome in `Metadata["
 Reported per field: **accuracy** (mean score), **false-positive rate** (`false_positive` / documents with golden null)
 and **miss rate** (`miss` / documents with golden value). "Dates" in the README is the mean of `invoice_date` and
 `due_date` accuracy.
+
+## Judged names (`field.vendor_name_judged`, `field.customer_name_judged`)
+
+The strict name metrics above stay as they are. Next to them, `evals run` emits a judged variant that differs only in
+the **gray zone**: strict comparison says `mismatch` and both names are non-null. Only there an LLM judge decides
+whether the extracted name denotes the same party. Every other outcome (correct, miss, false positive, unparsed) is
+copied from the strict metric without a model call. Summary columns: `vendor_name_judged_accuracy`,
+`customer_name_judged_accuracy`.
+
+- Judge: [`NameJudge`](../src/InvoiceEvals.Evaluation/NameJudge.cs), `claude-haiku-4-5`, temperature 0, one
+  structured-output call returning `{reason, equivalent}`. Prompt: [`evals/judge/judge_prompt.md`](../evals/judge/judge_prompt.md),
+  versioned in its header.
+- Input: the field, the annotated name, the extracted name, and up to 7 lines (≤ 1,500 characters) of the document's
+  **text layer** around the annotated name, so the judge sees the printed form and the other parties on the page.
+- Judge calls go through the same Reporting response cache as extractions, so replays (and CI) never call the API.
+- An unparseable judge response scores as a mismatch, with a warning diagnostic.
+- **OCR mode on FATURA:** the OCR layer never contains the vendor name (see
+  [annotation-guidelines.md](annotation-guidelines.md#model-input-text-layers)). The judge is not asked about the vendor
+  there; the judged vendor score stays a mismatch (`judge = not_in_model_input`). The caveat is the dataset's, not
+  the judge's.
+- Metadata `judge` on each judged metric: `not_needed`, `equivalent`, `not_equivalent`, `unparsed`, `not_in_model_input`.
+- The composite uses the **strict** name metrics, so it stays deterministic and comparable with earlier runs.
+
+### Calibration
+
+`evals judge pairs` writes [`evals/judge/calibration_pairs.jsonl`](../evals/judge/): every distinct real gray-zone
+mismatch from the latest run of each config, topped up to 60 with seeded synthetic perturbations of golden names (legal
+suffix added, abbreviation, 1–3 OCR-style character errors, reordered words, a different company containing the
+golden name, a different party). Every pair is verified to be in the gray zone. `human_label` is filled in by hand;
+regenerating keeps labels by pair id. `evals judge calibrate` runs the judge on every labelled pair and writes
+`calibration_report_v<version>.md` with Cohen's κ, the confusion matrix, agreement per origin and every disagreement
+with the judge's reason. Target κ ≥ 0.75. The prompt is revised on this set **at most once**; a revision bumps the
+version and gets its own report, and the earlier report is kept.
 
 ## Recomputed total (`recomputed_total_rate`)
 
@@ -78,3 +111,21 @@ FATURA document with reconciling amounts scores `(0.1·schema + 0.6·fields) / 0
 Ratings: 1 Exceptional, ≥ 0.9 Good, ≥ 0.7 Average, ≥ 0.5 Poor, below Unacceptable; not applicable is Inconclusive.
 
 No evaluator checks date ordering: FATURA dates are random and the `due-before-invoice` family is printed that way.
+
+## Comparing configurations (`evals compare`)
+
+Paired bootstrap on per-document deltas (candidate − baseline), with documents paired by id across the latest
+execution of each config. 10,000 resamples of n documents with replacement, seed 42, SplitMix64 generator (not
+`System.Random`, whose sequence is not guaranteed across runtimes). The 95% interval is the percentile interval
+(nearest rank of 2.5% and 97.5% of the sorted resample means). **Significant** means the interval excludes 0. It is
+computed for the composite, schema validity, every field accuracy, both judged names and line-items F1. A metric is
+split into FATURA and synthetic rows when the two subsets' mean deltas have opposite signs. Rows with n < 30 are
+flagged: with 30 synthetic documents a 0/1 metric moves in steps of 0.033, and the interval is too coarse to conclude
+from. Implementation: [`PairedBootstrap`](../src/InvoiceEvals.Evaluation/Statistics.cs).
+
+## Regression gate (`evals gate`)
+
+Compares the latest execution of every config in `evals/results/summary.csv` with `evals/results/baseline.csv`, cell
+by cell for the (metric, subset) pairs in [`evals/thresholds.json`](../evals/thresholds.json). A cell fails when it
+dropped by more than its absolute `maxDrop`, became n/a, or its config was not run. A config without a baseline is
+reported, not failed. Exit 1 on any failure, 2 on a configuration error (unknown column, missing file).

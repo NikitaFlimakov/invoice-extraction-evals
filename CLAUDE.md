@@ -11,7 +11,11 @@
 
 - `src/InvoiceEvals.Core`: `InvoiceDto`, `GoldenDocument`, `GoldenSet` (JSONL I/O), `Fatura/FaturaConverter`, `StratifiedSampler`
 - `src/InvoiceEvals.Cli`: System.CommandLine entry point, assembly name `evals`
-- `src/InvoiceEvals.Extraction`, `src/InvoiceEvals.Evaluation`: empty until Phase 2
+- `src/InvoiceEvals.Extraction`: `ChatInvoiceExtractor`, `TracingChatClient` (GenAI spans, above the cache), `OfflineChatClient` (below the cache, `--offline`)
+- `src/InvoiceEvals.Evaluation`: evaluators, `NameJudge` (gray-zone names), `CalibrationPairs`, `PairedBootstrap`/`CohenKappa`/`SplitMix64`
+- `evals/judge/`: judge prompt (versioned header), calibration pairs (hand-labelled), `calibration_report_v<version>.md`. Revise the judge prompt on the calibration set at most once.
+- `evals/thresholds.json` + `evals/results/baseline.csv`: `evals gate`. Only `evals gate --update-baseline` writes the baseline, in a PR that explains it.
+- Reporting's `ScenarioRun` swallows evaluator exceptions into value-less metrics; check `CompositeScoreEvaluator.FailureOf` after `EvaluateAsync`.
 - `evals/annotations.jsonl`: ground truth, one `GoldenDocument` per line, sorted by id. Generated; never hand-edit FATURA rows.
 - `docs/annotation-guidelines.md`: normalization rules. **Change it together with `FaturaConverter`.**
 
