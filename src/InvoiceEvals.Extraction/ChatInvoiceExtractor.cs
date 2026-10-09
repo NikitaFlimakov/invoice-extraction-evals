@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Text.Json;
 
 using Anthropic.Models.Messages;
 
@@ -13,18 +14,20 @@ public sealed class ChatInvoiceExtractor(IChatClient chat, RunConfig config, Pro
 {
     private const int MaxOutputTokens = 8192;
 
-    private static readonly ChatResponseFormat Schema = ChatResponseFormat.ForJsonSchema(
-        AIJsonUtilities.CreateJsonSchema(typeof(InvoiceDto), serializerOptions: GoldenSet.JsonOptions), "invoice", "Invoice fields as printed.");
+    /// <summary>JSON schema of <see cref="InvoiceDto"/> with the golden set's JSON conventions. Declared before <see cref="Schema"/>, which reads it.</summary>
+    public static JsonElement InvoiceSchema { get; } = AIJsonUtilities.CreateJsonSchema(typeof(InvoiceDto), serializerOptions: GoldenSet.JsonOptions);
 
-    public async Task<ExtractionResult> ExtractAsync(EvalDocument doc, CancellationToken ct)
+    private static readonly ChatResponseFormat Schema = ChatResponseFormat.ForJsonSchema(InvoiceSchema, "invoice", "Invoice fields as printed.");
+
+    /// <summary>Model, temperature, output limit, response format and thinking setting of <paramref name="config"/>; shared with the agent extractor.</summary>
+    public static ChatOptions CreateOptions(RunConfig config, ChatResponseFormat responseFormat)
     {
-        List<ChatMessage> messages = [new(ChatRole.System, prompt.Body), new(ChatRole.User, doc.Text)];
         var options = new ChatOptions
         {
             ModelId = config.Model,
             Temperature = (float?)config.Temperature,
             MaxOutputTokens = MaxOutputTokens,
-            ResponseFormat = Schema,
+            ResponseFormat = responseFormat,
         };
         if (config.DisableThinking)
         {
@@ -36,6 +39,13 @@ public sealed class ChatInvoiceExtractor(IChatClient chat, RunConfig config, Pro
                 Thinking = new ThinkingConfigBetweenTools(),
             };
         }
+        return options;
+    }
+
+    public async Task<ExtractionResult> ExtractAsync(EvalDocument doc, CancellationToken ct)
+    {
+        List<ChatMessage> messages = [new(ChatRole.System, prompt.Body), new(ChatRole.User, doc.Text)];
+        var options = CreateOptions(config, Schema);
 
         var stopwatch = Stopwatch.StartNew();
         var response = await chat.GetResponseAsync(messages, options, ct);

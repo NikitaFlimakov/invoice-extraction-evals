@@ -24,4 +24,8 @@ public sealed record ExtractionResult(
     long? ThinkingTokens,
     TimeSpan Latency,
     IReadOnlyList<ChatMessage> Messages,
-    ChatResponse Response);
+    ChatResponse Response)
+{
+    /// <summary>Warnings the extractor reports next to the invoice (agent only: totals inconsistencies, tool-round limit).</summary>
+    public IReadOnlyList<string> Warnings { get; init; } = [];
+}

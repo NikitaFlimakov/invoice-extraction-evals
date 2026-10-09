@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Agents.AI" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InvoiceEvals.Core\InvoiceEvals.Core.csproj" />
+    <ProjectReference Include="..\InvoiceEvals.Extraction\InvoiceEvals.Extraction.csproj" />
+  </ItemGroup>
+</Project>

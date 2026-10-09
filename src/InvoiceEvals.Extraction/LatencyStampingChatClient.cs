@@ -24,9 +24,12 @@ public sealed class LatencyStampingChatClient(IChatClient inner) : DelegatingCha
         Activity.Current?.SetTag(EvalsTelemetry.CacheHitTag, false); // The TracingChatClient span above the cache.
         var stopwatch = Stopwatch.StartNew();
         var response = await base.GetResponseAsync(messages, options, cancellationToken);
-        (response.AdditionalProperties ??= [])[Key] = stopwatch.Elapsed.TotalMilliseconds;
+        Stamp(response, stopwatch.Elapsed);
         return response;
     }
+
+    /// <summary>Records <paramref name="latency"/> as the response's original latency (an agent stamps the sum over its turns).</summary>
+    public static void Stamp(ChatResponse response, TimeSpan latency) => (response.AdditionalProperties ??= [])[Key] = latency.TotalMilliseconds;
 
     public static TimeSpan? ReadLatency(ChatResponse response) =>
         response.AdditionalProperties?.TryGetValue(Key, out var value) == true

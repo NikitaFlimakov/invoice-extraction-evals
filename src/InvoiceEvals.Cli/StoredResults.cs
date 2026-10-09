@@ -72,6 +72,6 @@ internal static class StoredResults
             (LatencyStampingChatClient.ReadLatency(r.ModelResponse) ?? turn?.Latency ?? TimeSpan.Zero).TotalMilliseconds,
             usage?.InputTokenCount ?? 0, usage?.OutputTokenCount ?? 0, usage?.ReasoningTokenCount ?? 0,
             turn?.CacheHit == true,
-            r.ModelResponse.Text);
+            ExtractionAnswer.Text(r.ModelResponse));
     }
 }

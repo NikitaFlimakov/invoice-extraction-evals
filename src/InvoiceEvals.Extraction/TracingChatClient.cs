@@ -48,6 +48,13 @@ public sealed class TracingChatClient(IChatClient inner, string providerName = "
         }
     }
 
+    /// <summary>
+    /// Exposes the evals <see cref="ActivitySource"/>, so a <see cref="FunctionInvokingChatClient"/> above this client emits
+    /// its <c>execute_tool</c> spans on it, nested under the agent's span and exported with everything else.
+    /// </summary>
+    public override object? GetService(Type serviceType, object? serviceKey = null) =>
+        serviceKey is null && serviceType == typeof(ActivitySource) ? EvalsTelemetry.Source : base.GetService(serviceType, serviceKey);
+
     private static readonly JsonSerializerOptions TurnJson = new(JsonSerializerDefaults.Web);
 
     private sealed record Turn(string Role, string Content);
