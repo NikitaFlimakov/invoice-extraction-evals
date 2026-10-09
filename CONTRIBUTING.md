@@ -9,14 +9,26 @@ Conventions are in [CLAUDE.md](CLAUDE.md). One logical change per commit, impera
    `inputMode` (`text` or `ocr`), `temperature` (null for models that reject it), optionally `disableThinking`, and
    `extractor` (`direct`, the default, or `agent`).
 2. If the model is new, add its price to [`evals/pricing.json`](evals/pricing.json).
-3. Estimate first: `evals run --config <name> --dry-run`.
-4. Run it with `EVALS_API_KEY` set: `evals run --config <name>`. Every model response lands in `evals/cache/`.
-5. `evals report`, then commit `evals/cache/`, `evals/results/` and `docs/` together. CI replays the cache with
-   `--offline`; a missing response fails the PR with the command to run.
-6. Add the config to `ReportCommand.ConfigOrder` so tables list it in a stable place.
+3. Add the config to `ReportCommand.ConfigOrder` so tables list it in a stable place.
+4. Estimate first: `evals run --config <name> --dry-run`.
+5. Run it with `EVALS_API_KEY` set: `evals run --config <name>`. Every model response lands in `evals/cache/`.
+6. Re-commit the cache as below. Until then CI skips the config ("evals/cache has no entries for it"), so a config
+   without a committed cache is not gated.
 
-A changed prompt, model, judge prompt or tool definition is a cache miss by design: re-run the affected configs and
-commit the refreshed cache in the same PR.
+## Re-commit the cache
+
+A changed prompt, model, judge prompt, tool definition, config or input text is a cache miss by design, and CI fails
+the PR with the command to run. Re-run every affected config online, then:
+
+```sh
+evals run --config <name> --offline   # must report 0 network calls and 0 cache misses
+evals report                          # rewrites evals/results/ and docs/
+git add evals/cache evals/results docs
+git commit -m "Refresh response cache for <name>"
+```
+
+Commit the cache, the results and the docs in the same PR as the change that caused the miss. `evals/results/store/`
+is gitignored; CI rebuilds it from the cache. If the numbers moved, move the baseline in the same PR (below).
 
 ## Add an evaluator
 
@@ -33,5 +45,6 @@ config re-scores from the cache at no cost (an LLM evaluator's own calls need on
 
 ## Move the baseline
 
-`evals gate` compares against [`evals/results/baseline.csv`](evals/results/). Only
-`evals gate --update-baseline` writes it, in a PR whose description explains why the numbers moved.
+`evals gate` compares against `evals/results/baseline.csv`. Only `evals gate --update-baseline` writes it, in a PR
+whose description explains why the numbers moved. No baseline is committed yet; the CI gate is inactive until the
+first one is. v1.0.0 is tagged only after that.
