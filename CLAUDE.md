@@ -32,4 +32,5 @@
 - Ground truth is what is printed on the document, not what is arithmetically correct (FATURA totals don't reconcile).
 - Test names use `Subject_Condition_Result` (CA1707 is suppressed in the test project).
 - Commit messages: imperative, short, one logical step per commit.
-- Every phase ends with real numbers in the README results table or an explicit "pending".
+- Never write a number this code did not produce. Until a run is committed, the README describes how to produce
+  results ("Producing results"); it has no placeholder tables.
