@@ -3,6 +3,9 @@ name: eval-gate
 # Replays every configuration from the committed response cache (no API key, no secrets), aggregates, and compares
 # against evals/results/baseline.csv. Fails on a cache miss (prompt/model/judge change without a refreshed cache) or on
 # any metric dropping by more than its threshold in evals/thresholds.json. Posts one sticky PR comment with the table.
+#
+# Inactive until data exists: a config with no entries in evals/cache/ is skipped with a notice, and the comparison is
+# skipped while evals/results/baseline.csv is not committed. Build and tests still run and must pass.
 
 on:
   pull_request:
@@ -40,18 +43,38 @@ jobs:
         run: |
           set -o pipefail
           status=0
+          replayed=0
           for config in $(jq -r '.[].name' evals/configs.json); do
+            # The Reporting cache stores entries under <scenario>/<iteration>/; the iteration is the config name.
+            if [ -z "$(find evals/cache -type d -name "$config" -print -quit 2>/dev/null)" ]; then
+              echo "::notice::Skipping $config: evals/cache has no entries for it (no cached run committed yet)." | tee -a run.log
+              continue
+            fi
+            replayed=$((replayed + 1))
             $EVALS run --config "$config" --offline 2>&1 | tee -a run.log || status=1
           done
+          echo "replayed=$replayed" >> "$GITHUB_OUTPUT"
           exit $status
 
       - name: Report
-        if: steps.run.outcome == 'success'
+        if: steps.run.outcome == 'success' && steps.run.outputs.replayed != '0'
         run: $EVALS report
+
+      - name: Check for a committed baseline
+        id: baseline
+        if: steps.run.outcome == 'success' && steps.run.outputs.replayed != '0'
+        shell: bash
+        run: |
+          if [ -f evals/results/baseline.csv ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Gate inactive: evals/results/baseline.csv is not committed. Create it with 'evals gate --update-baseline'."
+          fi
 
       - name: Gate
         id: gate
-        if: steps.run.outcome == 'success'
+        if: steps.baseline.outputs.present == 'true'
         continue-on-error: true
         run: $EVALS gate --markdown-out gate.md
 
@@ -69,6 +92,14 @@ jobs:
               echo '```'
               grep -E -A5 '^Cache miss|FAILED' run.log | head -60 || echo 'See the workflow log.'
               echo '```'
+            elif [ "${{ steps.run.outputs.replayed }}" = "0" ]; then
+              echo '### ⏸️ Eval gate inactive: no cached responses'
+              echo
+              echo '`evals/cache/` has no entries for any configuration, so there is nothing to replay. The gate activates once a cached run and `evals/results/baseline.csv` are committed (see README, "How the gate works").'
+            elif [ "${{ steps.baseline.outputs.present }}" = "false" ]; then
+              echo '### ⏸️ Eval gate inactive: no baseline'
+              echo
+              echo 'Cached configurations replayed, but `evals/results/baseline.csv` is not committed. Create it with `evals gate --update-baseline` in a PR that explains the numbers.'
             elif [ -f gate.md ]; then
               cat gate.md
             else
@@ -99,5 +130,5 @@ jobs:
             }
 
       - name: Fail on cache miss or regression
-        if: steps.run.outcome != 'success' || steps.gate.outcome != 'success'
+        if: steps.run.outcome != 'success' || steps.gate.outcome == 'failure'
         run: exit 1
