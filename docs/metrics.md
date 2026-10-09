@@ -1,15 +1,17 @@
 # Metrics
 
-All metrics are deterministic and computed per document by the evaluators in
+Every metric is computed per document by the evaluators in
 [`src/InvoiceEvals.Evaluation`](../src/InvoiceEvals.Evaluation/), always against the golden `InvoiceDto`
-(see [annotation-guidelines.md](annotation-guidelines.md) for how ground truth is produced). `evals report`
-aggregates them per run, configuration and subset (FATURA, synthetic, combined).
+(see [annotation-guidelines.md](annotation-guidelines.md) for how ground truth is produced). All of them are
+deterministic except the judged names and the two secondary agent-quality metrics, which call an LLM through the
+response cache. `evals report` aggregates them per run, configuration and subset (FATURA, synthetic, combined).
 
 ## Schema validity (`schema_validity`)
 
 1 if **all** of the following hold, else 0. Each violation is recorded as an error diagnostic on the metric.
 
-1. The response parses into `InvoiceDto` (JSON, camelCase, dates as `yyyy-MM-dd` so they parse as `DateOnly`, amounts as numbers).
+1. The response parses into `InvoiceDto` with System.Text.Json web defaults (camelCase, case-insensitive property
+   names, numbers also accepted as numeric strings); dates must be `yyyy-MM-dd` so they parse as `DateOnly`.
 2. At least one of `invoiceNumber`, `invoiceDate`, `total` is non-null.
 3. `currency`, when present, is a 3-letter upper-case code (`^[A-Z]{3}$`).
 4. Every line item has a non-empty `description`.
@@ -38,8 +40,9 @@ Golden `null` means "not printed". Each metric carries an outcome in `Metadata["
 | value | different | `mismatch` | 0 |
 | any | response did not parse | `unparsed` | 0 |
 
-Reported per field: **accuracy** (mean score), **false-positive rate** (`false_positive` / documents with golden null)
-and **miss rate** (`miss` / documents with golden value). "Dates" in the README is the mean of `invoice_date` and
+Reported per field: **accuracy** (mean score), **false-positive rate** (`false_positive` / parsed responses with
+golden null) and **miss rate** (`miss` / parsed responses with golden value). Unparsed responses count in accuracy
+but in neither rate. "Dates" in the README is the mean of `invoice_date` and
 `due_date` accuracy.
 
 ## Judged names (`field.vendor_name_judged`, `field.customer_name_judged`)
@@ -53,8 +56,9 @@ copied from the strict metric without a model call. Summary columns: `vendor_nam
 - Judge: [`NameJudge`](../src/InvoiceEvals.Evaluation/NameJudge.cs), `claude-haiku-4-5`, temperature 0, one
   structured-output call returning `{reason, equivalent}`. Prompt: [`evals/judge/judge_prompt.md`](../evals/judge/judge_prompt.md),
   versioned in its header.
-- Input: the field, the annotated name, the extracted name, and up to 7 lines (≤ 1,500 characters) of the document's
-  **text layer** around the annotated name, so the judge sees the printed form and the other parties on the page.
+- Input: the field, the annotated name, the extracted name, and an excerpt of the document's **text layer**: the
+  first line containing the annotated name (else the extracted name) with 3 lines either side, or the top 7 lines
+  when neither is found, cut at 1,500 characters. The judge sees the printed form and the other parties on the page.
 - Judge calls go through the same Reporting response cache as extractions, so replays (and CI) never call the API.
 - An unparseable judge response scores as a mismatch, with a warning diagnostic.
 - **OCR mode on FATURA:** the OCR layer never contains the vendor name (see
@@ -66,14 +70,21 @@ copied from the strict metric without a model call. Summary columns: `vendor_nam
 
 ### Calibration
 
-`evals judge pairs` writes [`evals/judge/calibration_pairs.jsonl`](../evals/judge/): every distinct real gray-zone
-mismatch from the latest run of each config, topped up to 60 with seeded synthetic perturbations of golden names (legal
-suffix added, abbreviation, 1–3 OCR-style character errors, reordered words, a different company containing the
-golden name, a different party). Every pair is verified to be in the gray zone. `human_label` is filled in by hand;
-regenerating keeps labels by pair id. `evals judge calibrate` runs the judge on every labelled pair and writes
-`calibration_report_v<version>.md` with Cohen's κ, the confusion matrix, agreement per origin and every disagreement
-with the judge's reason. Target κ ≥ 0.75. The prompt is revised on this set **at most once**; a revision bumps the
-version and gets its own report, and the earlier report is kept.
+`evals judge pairs` writes `evals/judge/calibration_pairs.jsonl`: every distinct real gray-zone mismatch from the
+latest run of each config (all of them, even beyond 60), topped up to 60 (`--count`) with seeded synthetic
+perturbations of golden names (legal suffix added, abbreviation expanded or shortened, 1–3 OCR-style character
+errors, reordered words, a different company containing the golden name, a different party). Every pair is verified
+to be in the gray zone; a perturbation that falls outside it is discarded, so the set can end slightly short of the
+target. Without stored runs the set is synthetic only. `human_label` is filled in by hand; regenerating keeps labels
+by pair id.
+
+`evals judge calibrate` requires every pair to be labelled (exit 2 otherwise), runs the judge on all of them through
+the response cache and writes `calibration_report_v<version>.md` with Cohen's κ, the confusion matrix, agreement per
+origin and every disagreement with the judge's reason. An unparseable verdict counts as "not equivalent".
+
+**Acceptance rule: κ ≥ 0.75.** The prompt is revised on this set **at most once**; a revision bumps the version and
+gets its own report, and the earlier report is kept. A prompt version below 0.75 is not accepted, and judged-name
+columns produced with it must not be presented as validated.
 
 ## Recomputed total (`recomputed_total_rate`)
 
@@ -89,7 +100,8 @@ Only for documents whose golden `lineItems` is not null (synthetic). FATURA rows
 coverage (documents scored). Golden lines are visited in order; each is matched to the unused predicted line with
 amount within 0.01 and the highest description overlap, provided overlap ≥ 0.5 (Jaccard of lower-case alphanumeric
 tokens). Precision = matched / predicted, recall = matched / golden. Empty vs empty scores 1; an empty side scores 0
-on the ratio that divides by it.
+on the ratio that divides by it. A line whose amount is null on either side never matches. An unparsed response
+counts as no predicted lines, so it scores 0.
 
 ## Composite (`composite`)
 
@@ -110,9 +122,10 @@ FATURA document with reconciling amounts scores `(0.1·schema + 0.6·fields) / 0
 `agent-mini` and `agent-strong` run [`AgentInvoiceExtractor`](../src/InvoiceEvals.Agent/AgentInvoiceExtractor.cs): a
 Microsoft Agent Framework `ChatClientAgent` with two deterministic tools, at most 6 tool-call rounds, then the same
 `InvoiceDto` schema with one extra top-level `warnings` array. Every metric above is computed on the agent's final
-answer exactly as for the direct extractor. The answer is the last assistant text that parses as `InvoiceDto`; tool
-turns are not scored. When the round limit is hit, the agent is asked for a final answer with tools disabled; if nothing
-parses, schema validity is 0 like any unparseable response.
+answer exactly as for the direct extractor. The answer is the last assistant text that parses as `InvoiceDto`
+(else the last assistant text, so a parse error shows what the model said); tool turns are not scored. When the round
+limit is hit, the agent is asked for a final answer with tool calls disabled (`ToolMode.None`) and a `round_limit:`
+warning is added; if nothing parses, schema validity is 0 like any unparseable response.
 
 Tools ([`InvoiceTools`](../src/InvoiceEvals.Agent/InvoiceTools.cs)), both pure functions:
 
@@ -133,7 +146,7 @@ Read from the function calls and results in the transcript and the answer's `war
 | `tool_call_count_mean` | number of tool calls | every document |
 | `validate_totals_called_rate` | 1 if `validate_totals` was called (expected 100%) | every document |
 | `normalize_currency_called_rate_symbol` | 1 if `normalize_currency` was called | text layer shows a currency sign (`$ € £ ¥ ₹`) but no ISO code |
-| `normalize_currency_called_rate_code` | 1 if `normalize_currency` was called | text layer shows an ISO code |
+| `normalize_currency_called_rate_code` | 1 if `normalize_currency` was called | text layer shows one of the 13 ISO codes the evaluator knows (USD, EUR, GBP, JPY, CHF, CAD, AUD, CNY, INR, SEK, NOK, DKK, PLN), so `CA$` counts as a sign |
 | `tool_override_rate` | 1 if the final total differs from the printed total **and** equals a `reconciledTotal` that `validate_totals` reported with `consistent: false` | golden total printed, response parsed, and `validate_totals` reported an inconsistency at least once |
 | `warning_precision` | 1 if the golden amounts really do not reconcile | answer has a warning starting with `totals_inconsistent:` |
 
@@ -172,4 +185,7 @@ from. Implementation: [`PairedBootstrap`](../src/InvoiceEvals.Evaluation/Statist
 Compares the latest execution of every config in `evals/results/summary.csv` with `evals/results/baseline.csv`, cell
 by cell for the (metric, subset) pairs in [`evals/thresholds.json`](../evals/thresholds.json). A cell fails when it
 dropped by more than its absolute `maxDrop`, became n/a, or its config was not run. A config without a baseline is
-reported, not failed. Exit 1 on any failure, 2 on a configuration error (unknown column, missing file).
+reported, not failed. Exit 1 on any failure, 2 on a configuration error (unknown column, missing file). In CI the
+[`eval-gate`](../.github/workflows/eval-gate.yml) workflow skips configs that have no entries in `evals/cache/` and
+skips the comparison while `evals/results/baseline.csv` is not committed, so the gate is inactive until a baseline
+exists.
