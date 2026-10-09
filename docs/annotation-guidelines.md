@@ -61,7 +61,7 @@ Measured over all 10,000 annotations:
   subtotal and total. Line-item currency symbols can differ from the totals currency.
 - **Dates are random.** The due date precedes the invoice date in 2,885 of 5,798 documents that print both.
 - **Low vendor diversity.** Seller name and address are fixed per template: 34 distinct vendor names in total.
-- **US-only addresses**, three currencies (USD, EUR, `$`), English only.
+- **US-only addresses**, two currencies printed three ways (`USD`, `$`, `EUR`; `$` maps to USD), English only.
 
 The synthetic edge cases (credit notes, multi-currency, multi-page, discounts) are meant to cover what FATURA cannot.
 
@@ -69,7 +69,8 @@ The synthetic edge cases (credit notes, multi-currency, multi-page, discounts) a
 
 `evals download` holds out 5 of the 50 layouts (ranked first by `SHA-256("<seed>:holdout:<layout>")`; with seed 42:
 Template2, Template25, Template28, Template29, Template48). From those it samples 20 documents into `evals/dev/`;
-the golden set (`evals/annotations.jsonl`, 150 documents) is sampled from the other 45 layouts. Prompt writing and
+the golden set (`evals/annotations.jsonl`, 150 documents) is sampled from the other 45 layouts (3 each, plus one
+more for the 15 layouts ranked first by hash). Prompt writing and
 few-shot examples use the dev pool only. Template25, the one layout with five GST lines, is therefore dev-only;
 the synthetic set covers that case.
 
@@ -96,15 +97,16 @@ they cannot disagree. Unlike FATURA, synthetic ground truth includes line items,
 | Family | Cases | What it tests |
 |---|---|---|
 | `multi-currency` | 4 | GBP (`£`), JPY (0 decimals, code after amount), CHF (`'` group separator), CAD (`CA$`); a "for reference" EUR total as a distractor |
-| `discount` | 4 | printed as a negative line `Discount (n%) -x`; golden `discount` is the positive magnitude |
+| `discount` | 4 | printed as a negative line `Discount (n%) -x`; golden `discount` is the positive magnitude. A quarter of other non-credit-note invoices also get one (9 of 30 documents in total) |
 | `credit-note` | 4 | title `CREDIT NOTE`; unit prices, line amounts, subtotal, tax and total printed and annotated **negative** |
 | `multi-page` | 4 | 48–61 line items over two pages; totals on the last page |
 | `many-tax-lines` | 5 | 5–6 tax lines; golden `tax` is their sum |
 | `due-before-invoice` | 4 | due date earlier than invoice date; must be extracted as printed |
-| `legal-suffix` | 5 | always has a ship-to block (to be ignored) |
+| `legal-suffix` | 5 | always has a ship-to block (to be ignored); about a third of other invoices have one too |
 
-All 30 vendors are distinct and carry legal suffixes or abbreviations (`GmbH & Co. KG`, `S.à r.l.`, `Intl. Ltd.`,
-`K.K.`, `Pty Ltd`, ...). Dates use four printed formats (`2024-03-15`, `15 Mar 2024`, `March 15, 2024`, `15.03.2024`).
+All 30 vendors are distinct, assigned in sequence across families, and 28 of them carry legal suffixes or
+abbreviations (`GmbH & Co. KG`, `S.à r.l.`, `Intl. Ltd.`, `K.K.`, `Pty Ltd`, ...); `Old Mill Bakery` and
+`Greenfield Agri Co-op` do not. Dates use four printed formats (`2024-03-15`, `15 Mar 2024`, `March 15, 2024`, `15.03.2024`).
 Multi-page images are `<id>-p1.png`, `<id>-p2.png`; `documentPath` points to page 1. The text layer is generated from
 the record in reading order (no OCR); synthetic documents have no separate OCR layer, so "ocr" mode uses the same text.
 

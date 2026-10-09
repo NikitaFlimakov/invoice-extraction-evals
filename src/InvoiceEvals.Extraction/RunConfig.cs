@@ -9,8 +9,14 @@ namespace InvoiceEvals.Extraction;
 /// <param name="InputMode">"text" or "ocr", see <see cref="EvalSet"/>.</param>
 /// <param name="Temperature">Null leaves the provider default (required for models that reject sampling parameters).</param>
 /// <param name="DisableThinking">Sends Anthropic <c>thinking: between_tools</c>, the lowest thinking setting on Claude Sonnet 5.5.</param>
-public sealed record RunConfig(string Name, string Model, string Prompt, string InputMode, double? Temperature, bool DisableThinking = false)
+/// <param name="Extractor"><see cref="Direct"/> (one structured-output call) or <see cref="Agent"/> (Agent Framework loop with tools).</param>
+public sealed record RunConfig(string Name, string Model, string Prompt, string InputMode, double? Temperature, bool DisableThinking = false, string Extractor = RunConfig.Direct)
 {
+    public const string Direct = "direct";
+    public const string Agent = "agent";
+
+    public bool IsAgent => Extractor == Agent;
+
     public static async Task<IReadOnlyList<RunConfig>> LoadAllAsync(string path, CancellationToken ct)
     {
         await using var stream = File.OpenRead(path);

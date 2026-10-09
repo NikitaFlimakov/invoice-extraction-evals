@@ -87,7 +87,9 @@ internal static class ReportCommand
             Mean(docs.Select(d => d[CompositeScoreEvaluator.MetricName])),
             latencies.Average(), Percentile(latencies, 0.50), Percentile(latencies, 0.95),
             meanIn, meanOut, docs.Average(d => (double)d.ThinkingTokens),
-            price is null ? null : (double)price.Cost(meanIn, meanOut) * 1000);
+            price is null ? null : (double)price.Cost(meanIn, meanOut) * 1000,
+            [.. AgentColumns.Select(c => Mean(docs.Select(d => d[c.Metric])))],
+            [.. AgentColumns.Select(c => docs.Count(d => d[c.Metric] is not null))]);
     }
 
     /// <summary>Nearest-rank percentile on a sorted list.</summary>
@@ -99,7 +101,8 @@ internal static class ReportCommand
         double? RecomputedTotalRate, int RecomputedTotalN,
         double? LineItemsPrecision, double? LineItemsRecall, double? LineItemsF1, int LineItemsCoverage,
         double? Composite, double LatencyMeanMs, double LatencyP50Ms, double LatencyP95Ms,
-        double InputTokensMean, double OutputTokensMean, double ThinkingTokensMean, double? UsdPer1kDocs)
+        double InputTokensMean, double OutputTokensMean, double ThinkingTokensMean, double? UsdPer1kDocs,
+        double?[] Agent, int[] AgentN)
     {
         public static readonly string[] Header =
         [
@@ -112,6 +115,7 @@ internal static class ReportCommand
             "line_items_precision", "line_items_recall", "line_items_f1", "line_items_coverage",
             "composite", "latency_mean_ms", "latency_p50_ms", "latency_p95_ms",
             "input_tokens_mean", "output_tokens_mean", "thinking_tokens_mean", "usd_per_1k_docs",
+            .. AgentColumns.SelectMany(c => new[] { c.Column, $"{c.Column}_n" }),
         ];
 
         public IEnumerable<string> Cells() =>
@@ -122,6 +126,7 @@ internal static class ReportCommand
             F(LineItemsPrecision), F(LineItemsRecall), F(LineItemsF1), LineItemsCoverage.ToString(CultureInfo.InvariantCulture),
             F(Composite), F(LatencyMeanMs, "0"), F(LatencyP50Ms, "0"), F(LatencyP95Ms, "0"),
             F(InputTokensMean, "0.0"), F(OutputTokensMean, "0.0"), F(ThinkingTokensMean, "0.0"), F(UsdPer1kDocs, "0.00"),
+            .. Agent.Zip(AgentN).SelectMany(a => new[] { F(a.First), a.Second.ToString(CultureInfo.InvariantCulture) }),
         ];
 
         public double? Field(string name) => FieldAccuracy[FieldAccuracyEvaluator.FieldNames.ToList().IndexOf(name)];
@@ -129,13 +134,26 @@ internal static class ReportCommand
         public double? Judged(string name) => JudgedAccuracy[FieldAccuracyEvaluator.JudgedFieldNames.ToList().IndexOf(name)];
     }
 
+    /// <summary>Agent metrics: summary.csv column (mean over the documents where the metric applies, plus its n) and per-document metric.</summary>
+    private static readonly (string Column, string Metric)[] AgentColumns =
+    [
+        ("tool_call_count_mean", AgentBehaviorEvaluator.ToolCallCount),
+        ("validate_totals_called_rate", AgentBehaviorEvaluator.ValidateTotalsCalled),
+        ("normalize_currency_called_rate_symbol", AgentBehaviorEvaluator.NormalizeCurrencyCalledSymbol),
+        ("normalize_currency_called_rate_code", AgentBehaviorEvaluator.NormalizeCurrencyCalledCode),
+        ("tool_override_rate", AgentBehaviorEvaluator.ToolOverride),
+        ("warning_precision", AgentBehaviorEvaluator.TotalsWarningCorrect),
+        ("tool_call_accuracy", AgentQualityEvaluator.ToolCallAccuracy),
+        ("task_adherence", AgentQualityEvaluator.TaskAdherence),
+    ];
+
     private static readonly string[] DocumentHeader =
     [
         "execution", "config", "doc_id", "source", "layout", "composite", "schema_validity",
         .. FieldAccuracyEvaluator.FieldNames,
         .. FieldAccuracyEvaluator.JudgedFieldNames.Select(f => $"{f}_judged"),
         "recomputed_total", "line_items_precision", "line_items_recall", "line_items_f1",
-        "latency_ms", "input_tokens", "output_tokens", "thinking_tokens", "cache_hit", "errors",
+        "latency_ms", "input_tokens", "output_tokens", "thinking_tokens", "cache_hit", .. AgentColumns.Select(c => c.Metric), "errors",
     ];
 
     private static IEnumerable<string> DocumentCells(DocResult d) =>
@@ -144,7 +162,7 @@ internal static class ReportCommand
         .. FieldAccuracyEvaluator.FieldNames.Select(f => d.Outcomes.GetValueOrDefault(FieldAccuracyEvaluator.MetricName(f)) ?? ""),
         .. FieldAccuracyEvaluator.JudgedFieldNames.Select(f => d.Outcomes.GetValueOrDefault(FieldAccuracyEvaluator.JudgedMetricName(f)) ?? ""),
         F(d[RecomputedTotalEvaluator.MetricName]), F(d[LineItemsF1Evaluator.Precision]), F(d[LineItemsF1Evaluator.Recall]), F(d[LineItemsF1Evaluator.F1]),
-        F(d.LatencyMs, "0"), I(d.InputTokens), I(d.OutputTokens), I(d.ThinkingTokens), d.CacheHit ? "true" : "false", d.Diagnostics,
+        F(d.LatencyMs, "0"), I(d.InputTokens), I(d.OutputTokens), I(d.ThinkingTokens), d.CacheHit ? "true" : "false", .. AgentColumns.Select(c => F(d[c.Metric])), d.Diagnostics,
     ];
 
     private static string BaselineMarkdown(List<SummaryRow> rows)
@@ -164,6 +182,17 @@ internal static class ReportCommand
             sb.Append(CultureInfo.InvariantCulture, $"| `{r.Config}` | {subset} | {r.Docs} | {P(r.SchemaValidity)} | {P(r.Field("invoice_number"))} | {P(dates)} | {P(r.Field("total"))} | {P(r.Field("currency"))} | {P(r.Field("vendor_name"))} | {P(r.Judged("vendor_name"))} | ");
             sb.Append(CultureInfo.InvariantCulture, $"{(r.RecomputedTotalN == 0 ? "n/a" : $"{P(r.RecomputedTotalRate)} (n={r.RecomputedTotalN})")} | {(r.LineItemsCoverage == 0 ? "n/a" : $"{r.LineItemsF1:0.00} (n={r.LineItemsCoverage})")} | ");
             sb.Append(CultureInfo.InvariantCulture, $"{r.Composite:0.000} | {r.ThinkingTokensMean:0} | {r.UsdPer1kDocs:0.00} | {r.LatencyP50Ms:0} / {r.LatencyP95Ms:0} |\n");
+        }
+
+        var agents = rows.Where(r => r.Subset == "combined" && r.AgentN[1] > 0).OrderBy(r => ConfigOrder(r.Config)).ToList();
+        if (agents.Count == 0) return sb.ToString();
+        static string Rate(SummaryRow r, int i) => r.AgentN[i] == 0 ? "n/a" : $"{P(r.Agent[i])} (n={r.AgentN[i]})";
+        sb.Append("\n| Agent configuration (combined) | Tool calls/doc | validate_totals called | normalize_currency called: symbol only | normalize_currency called: code | Tool override | Totals-warning precision | Tool-call accuracy | Task adherence (1–5) |\n");
+        sb.Append("|---|---|---|---|---|---|---|---|---|\n");
+        foreach (var r in agents)
+        {
+            sb.Append(CultureInfo.InvariantCulture, $"| `{r.Config}` | {r.Agent[0]:0.00} | {Rate(r, 1)} | {Rate(r, 2)} | {Rate(r, 3)} | {Rate(r, 4)} | {Rate(r, 5)} | {Rate(r, 6)} | ");
+            sb.Append(CultureInfo.InvariantCulture, $"{(r.AgentN[7] == 0 ? "n/a" : $"{r.Agent[7]:0.00} (n={r.AgentN[7]})")} |\n");
         }
         return sb.ToString();
     }
@@ -213,7 +242,7 @@ internal static class ReportCommand
     private static string Csv(string cell) =>
         cell.IndexOfAny([',', '"', '\n', '\r']) < 0 ? cell : $"\"{cell.Replace("\"", "\"\"", StringComparison.Ordinal).ReplaceLineEndings(" ")}\"";
 
-    internal static int ConfigOrder(string config) => Array.IndexOf(["mini-plain", "mini-fewshot", "mini-plain-ocr", "strong-plain"], config) is var i and >= 0 ? i : 99;
+    internal static int ConfigOrder(string config) => Array.IndexOf(["mini-plain", "mini-fewshot", "mini-plain-ocr", "strong-plain", "agent-mini", "agent-strong"], config) is var i and >= 0 ? i : 99;
 
     private static (int, string) LayoutOrder(string layout) =>
         layout.StartsWith("Template", StringComparison.Ordinal) && int.TryParse(layout.AsSpan(8), CultureInfo.InvariantCulture, out var n) ? (n, "") : (0, layout);

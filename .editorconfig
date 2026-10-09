@@ -3,9 +3,17 @@ root = true
 # All files
 [*]
 indent_style = space
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
 
-# Xml files
-[*.xml]
+# Markdown: trailing double spaces can be line breaks
+[*.md]
+trim_trailing_whitespace = false
+
+# Xml, MSBuild, JSON and YAML files
+[*.{xml,csproj,props,targets,slnx,json,yml,yaml}]
 indent_size = 2
 
 # C# files
@@ -18,7 +26,7 @@ indent_size = 4
 tab_width = 4
 
 # New line preferences
-insert_final_newline = false
+insert_final_newline = true
 
 #### .NET Coding Conventions ####
 [*.{cs,vb}]

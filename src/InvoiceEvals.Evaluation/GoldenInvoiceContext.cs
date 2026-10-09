@@ -1,6 +1,7 @@
 using System.Text.Json;
 
 using InvoiceEvals.Core;
+using InvoiceEvals.Extraction;
 
 using Microsoft.Extensions.AI;
 using Microsoft.Extensions.AI.Evaluation;
@@ -23,7 +24,7 @@ internal sealed record EvaluationInputs(InvoiceDto Golden, InvoiceDto? Predicted
     {
         var golden = additionalContext?.OfType<GoldenInvoiceContext>().SingleOrDefault()
             ?? throw new InvalidOperationException($"Evaluation requires a {nameof(GoldenInvoiceContext)}.");
-        _ = InvoiceJson.TryParse(response.Text, out var predicted, out var error);
+        _ = InvoiceJson.TryParse(ExtractionAnswer.Text(response), out var predicted, out var error);
         return new EvaluationInputs(golden.Expected, predicted, error);
     }
 }

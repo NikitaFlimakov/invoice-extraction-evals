@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Text.Json;
 
+using InvoiceEvals.Agent;
 using InvoiceEvals.Cli.Langfuse;
 using InvoiceEvals.Core;
 using InvoiceEvals.Evaluation;
@@ -60,7 +61,8 @@ internal static class RunCommand
 
         if (dryRun)
         {
-            PrintEstimate(docs, prompt, price);
+            if (config.IsAgent) PrintAgentEstimate(docs, prompt, price, prices.GetValueOrDefault(NameJudge.DefaultModel));
+            else PrintEstimate(docs, prompt, price);
             PrintJudgeEstimate(docs, judge, prices.GetValueOrDefault(judge.Model));
             return 0;
         }
@@ -79,10 +81,12 @@ internal static class RunCommand
         var gitSha = GitShortSha();
         var executionName = $"{DateTime.UtcNow:yyyyMMdd'T'HHmmss'Z'}-{gitSha}";
         var reporting = new ReportingConfiguration(
-            [new CompositeScoreEvaluator(judge)],
+            config.IsAgent ? [new CompositeScoreEvaluator(judge), new AgentBehaviorEvaluator(), new AgentQualityEvaluator()] : [new CompositeScoreEvaluator(judge)],
             new DiskBasedResultStore(Path.Combine(evalsDir, "results", "store")),
             new ChatConfiguration(provider),
             new DiskBasedResponseCacheProvider(Path.Combine(evalsDir, "cache"), timeToLiveForCacheEntries: TimeSpan.FromDays(3650)),
+            // The cache key ignores ChatOptions.Tools; the fingerprint makes an edited tool definition a cache miss.
+            cachingKeys: config.IsAgent ? [InvoiceTools.Fingerprint(InvoiceTools.All)] : null,
             executionName: executionName,
             tags:
             [
@@ -108,19 +112,20 @@ internal static class RunCommand
                 await using var run = await reporting.CreateScenarioRunAsync(
                     doc.ScenarioName, config.Name, additionalTags: [$"{StoredResults.SourceTag}{doc.Golden.Source}", $"{StoredResults.LayoutTag}{doc.Golden.Layout}"], cancellationToken: token);
                 var chat = new TracingChatClient(run.ChatConfiguration!.ChatClient);
-                var result = await new ChatInvoiceExtractor(chat, config, prompt).ExtractAsync(doc, token);
+                IInvoiceExtractor extractor = config.IsAgent ? new AgentInvoiceExtractor(chat, config, prompt) : new ChatInvoiceExtractor(chat, config, prompt);
+                var result = await extractor.ExtractAsync(doc, token);
                 // FATURA's OCR layer never contains the vendor name, so the judge must not be asked about it in ocr mode.
                 var vendorNameInInput = !(config.InputMode == EvalSet.OcrMode && doc.Golden.OcrTextPath is not null);
                 var evaluation = await run.EvaluateAsync(result.Messages, result.Response,
                     [new GoldenInvoiceContext(doc.Golden.Expected), new DocumentTextContext(doc.TextLayer, vendorNameInInput)], token);
-                if (CompositeScoreEvaluator.FailureOf(evaluation) is { } error)
+                if ((CompositeScoreEvaluator.FailureOf(evaluation) ?? CacheMissIn(evaluation)) is { } error)
                 {
-                    // ScenarioRun swallowed a judge exception; its text starts with the exception's type name.
-                    var miss = error.StartsWith(typeof(CacheMissException).FullName!, StringComparison.Ordinal);
+                    // ScenarioRun swallowed an evaluator exception (name judge or agent quality judge); its text names the exception type.
+                    var miss = error.Contains(typeof(CacheMissException).FullName!, StringComparison.Ordinal);
                     var firstLine = error.Split('\n', 2)[0].Trim();
                     trace?.Activity?.SetStatus(ActivityStatusCode.Error, firstLine);
                     lock (miss ? misses : failures) (miss ? misses : failures).Add(miss ? doc.Id : $"{doc.Id}: evaluation failed: {firstLine}");
-                    Console.WriteLine($"[{Interlocked.Increment(ref done),3}/{docs.Count}] {doc.Id,-42} {(miss ? "CACHE MISS (judge)" : $"EVALUATION FAILED: {firstLine}")}");
+                    Console.WriteLine($"[{Interlocked.Increment(ref done),3}/{docs.Count}] {doc.Id,-42} {(miss ? "CACHE MISS (evaluator)" : $"EVALUATION FAILED: {firstLine}")}");
                     return;
                 }
                 if (trace is not null) experiment!.Complete(trace, result, evaluation);
@@ -156,11 +161,16 @@ internal static class RunCommand
         return failures.Count == 0 ? 0 : 1;
     }
 
+    /// <summary>An evaluator's swallowed cache miss on any metric (the composite check covers only the deterministic evaluators and the name judge).</summary>
+    internal static string? CacheMissIn(EvaluationResult evaluation) =>
+        evaluation.Metrics.Values.SelectMany(m => m.Diagnostics ?? [])
+            .FirstOrDefault(d => d.Severity == EvaluationDiagnosticSeverity.Error && d.Message.Contains(typeof(CacheMissException).FullName!, StringComparison.Ordinal))?.Message;
+
     /// <summary>The CI failure text: names the documents and config, and tells the author what to do.</summary>
     internal static string CacheMissMessage(string config, IReadOnlyList<string> docIds) =>
         $"""
         Cache miss (offline) for config '{config}' on {docIds.Count} document(s): {string.Join(", ", docIds.Take(MaxListedFailures))}{(docIds.Count > MaxListedFailures ? ", …" : "")}
-        A prompt, model, judge prompt, config or input changed, so the committed responses in evals/cache/ no longer apply.
+        A prompt, model, judge prompt, tool definition, config or input changed, so the committed responses in evals/cache/ no longer apply.
         Run it locally with an API key and commit the cache:
           EVALS_API_KEY=... dotnet run --project src/InvoiceEvals.Cli -- run --config {config}
           git add evals/cache && git commit -m "Refresh response cache for {config}"
@@ -175,6 +185,40 @@ internal static class RunCommand
             $"Estimated tokens: {input:N0} input, {output:N0} output ({input / Math.Max(1, docs.Count):N0} / {output / Math.Max(1, docs.Count):N0} per document, +{EstimateMargin - 1:P0} margin)"));
         Console.WriteLine(string.Create(CultureInfo.InvariantCulture,
             $"Estimated cost: ${cost:0.000} at ${price.InputPerMTok}/${price.OutputPerMTok} per MTok (${cost / Math.Max(1, docs.Count) * 1000:0.00} per 1k documents). Cached documents cost nothing."));
+    }
+
+    // Agent heuristics: Anthropic's tool-use system prompt plus our tool definitions; a tool-call turn's output and the
+    // history it adds (call + result); a quality-judge call's template and output.
+    private const int ToolUseOverheadTokens = 350;
+    private const int ToolTurnOutputTokens = 120;
+    private const int ToolRoundHistoryTokens = 200;
+    private const int ExpectedAgentTurns = 3;
+    private const int QualityJudgeTemplateTokens = 1200;
+    private const int QualityJudgeOutputTokens = 300;
+
+    /// <summary>
+    /// Every turn resends the instructions, document, schema and tools, plus the history so far. Expected: 3 turns (one
+    /// or two tool rounds, then the answer). Upper bound: <see cref="AgentInvoiceExtractor.MaxToolRounds"/> rounds plus
+    /// the forced answer turn. Plus two quality-judge calls per document on the evaluation model.
+    /// </summary>
+    private static void PrintAgentEstimate(List<EvalDocument> docs, PromptTemplate prompt, ModelPrice price, ModelPrice? judgePrice)
+    {
+        var tools = InvoiceTools.All.OfType<AIFunctionDeclaration>().Sum(t => t.Name.Length + (t.Description?.Length ?? 0) + t.JsonSchema.GetRawText().Length) / CharsPerToken + ToolUseOverheadTokens;
+        (double In, double Out) Turns(int turns) => (
+            docs.Sum(d => (turns * (((prompt.Body.Length + d.Text.Length) / CharsPerToken) + SchemaOverheadTokens + tools)) + (ToolRoundHistoryTokens * turns * (turns - 1) / 2.0)) * EstimateMargin,
+            docs.Sum(d => ((turns - 1) * ToolTurnOutputTokens) + (JsonSerializer.Serialize(d.Golden.Expected, GoldenSet.JsonOptions).Length / CharsPerToken)) * EstimateMargin);
+        var expected = Turns(ExpectedAgentTurns);
+        var upper = Turns(AgentInvoiceExtractor.MaxToolRounds + 1);
+        var perDoc = 1000.0 / Math.Max(1, docs.Count);
+        Console.WriteLine(string.Create(CultureInfo.InvariantCulture,
+            $"Estimated agent tokens ({ExpectedAgentTurns} turns/doc): {expected.In:N0} input, {expected.Out:N0} output; cost ${price.Cost(expected.In, expected.Out):0.000} (${(double)price.Cost(expected.In, expected.Out) * perDoc:0.00} per 1k documents)"));
+        Console.WriteLine(string.Create(CultureInfo.InvariantCulture,
+            $"Upper bound ({AgentInvoiceExtractor.MaxToolRounds} tool rounds + answer on every document): {upper.In:N0} input, {upper.Out:N0} output; cost ${price.Cost(upper.In, upper.Out):0.000}. Thinking tokens, if any, are extra. Cached documents cost nothing."));
+        if (judgePrice is null) return;
+        var judgeIn = docs.Sum(d => QualityJudgeTemplateTokens + ((prompt.Body.Length + d.Text.Length) / CharsPerToken) + tools + (ExpectedAgentTurns * ToolRoundHistoryTokens)) * 2 * EstimateMargin;
+        var judgeOut = docs.Count * 2 * QualityJudgeOutputTokens * EstimateMargin;
+        Console.WriteLine(string.Create(CultureInfo.InvariantCulture,
+            $"Quality judges (tool_call_accuracy + task_adherence, {NameJudge.DefaultModel}): {docs.Count * 2} calls, {judgeIn:N0} input, {judgeOut:N0} output; cost ${judgePrice.Cost(judgeIn, judgeOut):0.000}."));
     }
 
     /// <summary>Upper bound: both name fields of every document in the gray zone. Real judge calls are a small fraction.</summary>
