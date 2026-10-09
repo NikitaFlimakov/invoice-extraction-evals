@@ -105,6 +105,50 @@ Weighted mean, weights in `CompositeScoreEvaluator.Weights`:
 A component that is not applicable to a document is dropped and the remaining weights are rescaled to sum to 1. So a
 FATURA document with reconciling amounts scores `(0.1·schema + 0.6·fields) / 0.7`.
 
+## Agent metrics (agent configs only)
+
+`agent-mini` and `agent-strong` run [`AgentInvoiceExtractor`](../src/InvoiceEvals.Agent/AgentInvoiceExtractor.cs): a
+Microsoft Agent Framework `ChatClientAgent` with two deterministic tools, at most 6 tool-call rounds, then the same
+`InvoiceDto` schema with one extra top-level `warnings` array. Every metric above is computed on the agent's final
+answer exactly as for the direct extractor. The answer is the last assistant text that parses as `InvoiceDto`; tool
+turns are not scored. When the round limit is hit, the agent is asked for a final answer with tools disabled; if nothing
+parses, schema validity is 0 like any unparseable response.
+
+Tools ([`InvoiceTools`](../src/InvoiceEvals.Agent/InvoiceTools.cs)), both pure functions:
+
+| Tool | Returns |
+|---|---|
+| `validate_totals(subtotal, discount, tax, total)` | `consistent` (subtotal − discount + tax = total within 0.01 inclusive; null if subtotal or total is not printed), `difference`, `reconciledTotal`, `reason`. Reports only. |
+| `normalize_currency(text)` | ISO 4217 `code`, or null with a `reason` when the text is ambiguous (`$`, `¥`, `kr`, `Rs`, "dollar") or unknown. |
+
+The prompt ([`prompts/agent.md`](../prompts/agent.md)) is `plain` verbatim plus the tool rules, including: *"Totals are
+extracted as printed. Use validate_totals to report an inconsistency in `warnings`, never to change a value."*
+
+### Deterministic ([`AgentBehaviorEvaluator`](../src/InvoiceEvals.Evaluation/AgentBehaviorEvaluator.cs))
+
+Read from the function calls and results in the transcript and the answer's `warnings`.
+
+| Summary column | Per document | Applies to |
+|---|---|---|
+| `tool_call_count_mean` | number of tool calls | every document |
+| `validate_totals_called_rate` | 1 if `validate_totals` was called (expected 100%) | every document |
+| `normalize_currency_called_rate_symbol` | 1 if `normalize_currency` was called | text layer shows a currency sign (`$ € £ ¥ ₹`) but no ISO code |
+| `normalize_currency_called_rate_code` | 1 if `normalize_currency` was called | text layer shows an ISO code |
+| `tool_override_rate` | 1 if the final total differs from the printed total **and** equals a `reconciledTotal` that `validate_totals` reported with `consistent: false` | golden total printed, response parsed, and `validate_totals` reported an inconsistency at least once |
+| `warning_precision` | 1 if the golden amounts really do not reconcile | answer has a warning starting with `totals_inconsistent:` |
+
+`tool_override_rate` is the agent counterpart of `recomputed_total_rate`: the conditional rate at which the agent,
+told by its own tool that the totals do not add up, replaces the printed total. It is conditioned on the tool's
+report, not on the golden amounts, because a misread subtotal can make the tool report an inconsistency the document
+does not have. Every rate column has an `_n` column with the number of documents it applies to.
+
+### LLM-judged ([`AgentQualityEvaluator`](../src/InvoiceEvals.Evaluation/AgentQualityEvaluator.cs)), secondary
+
+`ToolCallAccuracyEvaluator` (`tool_call_accuracy`, 0/1) and `TaskAdherenceEvaluator` (`task_adherence`, 1–5) from
+`Microsoft.Extensions.AI.Evaluation.Quality`, given the two tool definitions, on `claude-haiku-4-5` through the response
+cache. Both are marked experimental in the package. They are reported as separate columns and never enter the
+composite or the gate: the deterministic metrics decide.
+
 ## Pass/fail interpretation
 
 0/1 metrics pass at 1. `composite` and the line-item metrics pass at ≥ 0.9. `recomputed_total_rate` fails at 1.

@@ -1,45 +1,47 @@
 # invoice-extraction-evals
 
-A reproducible benchmark and evaluation harness for LLM-based structured extraction of invoices, in .NET 10.
+A reproducible benchmark for LLM invoice extraction in .NET 10. It scores six configurations (Claude Haiku 4.5 and
+Sonnet 5.5, plain and few-shot prompts, text and OCR input, one structured-output call and a Microsoft Agent
+Framework agent with tools) on 180 invoices. It uses deterministic field metrics, a calibrated LLM judge for vendor
+names, and paired bootstrap confidence intervals. Every model call is in a committed response cache, so anyone can
+replay the whole benchmark offline, with no API key, and CI fails a pull request that makes a number worse.
 
-## Problem
-
-"The extraction works" usually means someone looked at a few outputs. This repo answers **how do you know?** with
-numbers: a versioned golden set, deterministic field-level metrics, a calibrated LLM judge for the one fuzzy field,
-confidence intervals when comparing configurations, traces for every run, and a CI gate that fails a PR on regression.
-
-## What it measures
-
-| Metric | Scope | Type |
-|---|---|---|
-| Schema validity | whole response parses into `InvoiceDto` | deterministic |
-| Field accuracy | exact match after normalization: number, dates, currency, amounts, addresses | deterministic |
-| Line-items F1 | synthetic edge cases (FATURA has no line-item ground truth) | deterministic |
-| Vendor / customer name | strict normalized match, plus a judged variant where an LLM judge decides only the gray zone, calibrated against 60 hand labels (target Cohen's κ ≥ 0.75) | deterministic + LLM judge |
-| Cost & latency | $/1k documents, p50/p95 | measured |
-
-Configurations are compared with bootstrap 95% confidence intervals; a difference whose CI includes zero is reported as no difference.
+```mermaid
+flowchart LR
+    data["Eval set<br/>150 FATURA + 30 synthetic"] --> direct["Direct extractor<br/>1 structured-output call"]
+    data --> agent["Agent extractor<br/>Agent Framework + 2 tools"]
+    direct --> cache["Response cache<br/>evals/cache, committed"]
+    agent --> cache
+    cache --> api["Anthropic API"]
+    direct --> evals["Evaluators<br/>deterministic + LLM judges"]
+    agent --> evals
+    evals --> report["evals report<br/>summary.csv, HTML"]
+    evals -. OpenTelemetry .-> langfuse["Langfuse experiments"]
+    report --> gate["evals gate<br/>PR comment"]
+    report --> pages["GitHub Pages"]
+```
 
 ## Results
 
-> **Pending.** The four configurations in [`evals/configs.json`](evals/configs.json) have not yet been run and cached
-> in this repository. `evals report` writes the full table to `evals/results/summary.md`. The live HTML report is at
+> **Pending.** No configuration has been run and cached yet. `evals report` fills this table from
+> `evals/results/summary.md`; the live HTML report will be at
 > **[nikitaflimakov.github.io/invoice-extraction-evals](https://nikitaflimakov.github.io/invoice-extraction-evals/)**.
 
-| Configuration | Schema valid | Invoice no. | Total | Vendor (strict) | Vendor (judged) | Composite | $/1k docs | p50 / p95 |
+| Configuration | Schema valid | Invoice no. | Total | Vendor (judged) | Line-items F1 (synthetic) | Composite | $/1k docs | p50 / p95 ms |
 |---|---|---|---|---|---|---|---|---|
 | `mini-plain` | pending | pending | pending | pending | pending | pending | pending | pending |
 | `mini-fewshot` | pending | pending | pending | pending | pending | pending | pending | pending |
 | `mini-plain-ocr` | pending | pending | pending | pending | pending | pending | pending | pending |
 | `strong-plain` | pending | pending | pending | pending | pending | pending | pending | pending |
+| `agent-mini` | pending | pending | pending | pending | pending | pending | pending | pending |
+| `agent-strong` | pending | pending | pending | pending | pending | pending | pending | pending |
 
-Vendor (judged) differs from strict only where the LLM judge accepted a gray-zone mismatch. In `mini-plain-ocr` the
-FATURA OCR layer never contains the vendor name, so its vendor scores measure the dataset, and the judge is not asked.
+`mini` = `claude-haiku-4-5`, `strong` = `claude-sonnet-5-5` with thinking off (`between_tools`). In `mini-plain-ocr`
+the FATURA OCR layer never contains the vendor name, so that column measures the dataset there.
 
-## Is the difference real?
+### Is the difference real?
 
-Paired bootstrap with 10,000 resamples gives a 95% CI on the mean per-document delta. The method is in
-[docs/metrics.md](docs/metrics.md#comparing-configurations-evals-compare), and every metric is in
+Paired bootstrap, 10,000 resamples, 95% CI on the mean per-document Δ composite; every metric is in
 [`evals/results/comparisons.md`](evals/results/comparisons.md).
 
 | Comparison (Δ composite) | n | Mean Δ | 95% CI | Significant |
@@ -48,17 +50,61 @@ Paired bootstrap with 10,000 resamples gives a 95% CI on the mean per-document d
 | `mini-plain` → `strong-plain` | pending | pending | pending | pending |
 | `mini-plain` → `mini-plain-ocr` | pending | pending | pending | pending |
 
-Interpretation is pending until the first cached runs. Synthetic-only metrics (line-items F1) rest on 30 documents.
-Those rows are flagged n < 30 and are not used to draw conclusions.
+### Does an agent help?
+
+Pending: [docs/agent-vs-direct.md](docs/agent-vs-direct.md) compares `mini-plain` with `agent-mini` and `strong-plain`
+with `agent-strong` on accuracy, `tool_override_rate` (does the agent "fix" printed totals its tool says don't add
+up?), tokens, cost and latency, and gives a verdict.
+
+### Is the judge trustworthy?
+
+The vendor-name judge decides only the gray zone (strict mismatch, both names present). Cohen's κ against hand labels:
+pending (target ≥ 0.75), in [`evals/judge/`](evals/judge/).
+
+## What it measures
+
+| Metric | Type |
+|---|---|
+| Schema validity: the response parses into `InvoiceDto` | deterministic |
+| Field accuracy: 10 fields, exact after normalization, with false-positive and miss rates | deterministic |
+| Line-items F1 on the synthetic edge cases (FATURA has no line-item labels) | deterministic |
+| `recomputed_total_rate`: the model "fixed" a total that is printed wrong | deterministic |
+| Vendor / customer name, judged variant for the gray zone | LLM judge, calibrated |
+| Agent: tool calls, `validate_totals` / `normalize_currency` called, `tool_override_rate`, warning precision | deterministic |
+| Agent: tool-call accuracy, task adherence (`Microsoft.Extensions.AI.Evaluation.Quality`) | LLM, secondary |
+| Cost ($/1k documents) and latency (p50/p95, original network latency even on replay) | measured |
+
+Definitions: [docs/metrics.md](docs/metrics.md). All docs: [docs/](docs/README.md).
+
+## Quickstart
+
+Requires the [.NET 10 SDK](https://dotnet.microsoft.com/download). No API key is needed to replay.
+
+```sh
+git clone https://github.com/NikitaFlimakov/invoice-extraction-evals && cd invoice-extraction-evals
+dotnet tool restore && dotnet test
+evals() { dotnet run --project src/InvoiceEvals.Cli -- "$@"; }
+evals run --config mini-plain --offline    # replay from evals/cache/, zero network calls
+evals report                               # evals/results/summary.csv + summary.md, docs/report/index.html
+```
+
+To run new calls, export `EVALS_API_KEY` (an Anthropic key) and always estimate first:
+
+```sh
+evals run --config agent-mini --dry-run    # documents, tokens, cost (extraction + judges)
+evals run --config agent-mini              # responses cached in evals/cache/
+evals compare --a mini-plain --b agent-mini
+evals gate                                 # regression check against evals/results/baseline.csv
+```
 
 ## How the gate works
 
-Every pull request replays all four configurations from the committed response cache with `evals run --offline`, so
-CI needs no API key and costs nothing. A changed prompt, model or judge prompt misses the cache, and the run fails with
-a message telling the author to run it locally and commit `evals/cache/`. `evals gate` then compares the fresh summary
-with [`evals/results/baseline.csv`](evals/results/), fails the PR if any metric below drops by more than its threshold,
-and posts the before/after table as one sticky PR comment. The baseline only moves through `evals gate --update-baseline`,
-committed deliberately in a PR that explains why the numbers changed.
+Every pull request replays all six configurations from the committed cache with `evals run --offline`, so CI needs no
+key and costs nothing. A changed prompt, model, judge prompt or tool definition misses the cache, and the run fails
+with the command to run locally. `evals gate` then compares the fresh summary with
+[`evals/results/baseline.csv`](evals/results/), fails the PR if a metric drops by more than its threshold, and posts
+the before/after table as one sticky PR comment. The baseline moves only through `evals gate --update-baseline`, in a
+PR that explains why.
 
 | Metric | Subset | Max drop (absolute) |
 |---|---|---|
@@ -68,98 +114,42 @@ committed deliberately in a PR that explains why the numbers changed.
 | Total accuracy | combined | 0.02 |
 | Vendor name (judged) accuracy | combined | 0.03 |
 | Line-items F1 | synthetic | 0.03 |
+| `validate_totals` called (agent configs) | combined | 0.02 |
 
-Thresholds live in [`evals/thresholds.json`](evals/thresholds.json) and apply to every configuration.
+## Traces (Langfuse)
 
-## Traces and experiments (Langfuse)
+Optional. With `LANGFUSE_PUBLIC_KEY`, `LANGFUSE_SECRET_KEY` and `LANGFUSE_BASE_URL` set, every `evals run` (including
+an offline replay) is a Langfuse experiment: one trace per document linked to its dataset item. Model calls are
+GenAI spans with token usage and original latency. For agents, the `invoke_agent` span holds the chat and
+`execute_tool` spans. Every metric is posted as a score. Run `evals langfuse sync-dataset` once to link dataset items.
 
-Optional. With these variables set, every `evals run` is a Langfuse experiment, including a cached replay, which
-costs nothing. Without them it runs unchanged.
+> Screenshots pending: `docs/images/langfuse-experiment.png`, `docs/images/langfuse-agent-trace.png`.
 
-```sh
-export LANGFUSE_PUBLIC_KEY=pk-lf-...
-export LANGFUSE_SECRET_KEY=sk-lf-...
-export LANGFUSE_BASE_URL=https://cloud.langfuse.com
-dotnet run --project src/InvoiceEvals.Cli -- langfuse sync-dataset   # once: dataset items → evals/langfuse-items.json
-dotnet run --project src/InvoiceEvals.Cli -- run --config mini-plain
-```
+## Data and caveats
 
-Traces go over OpenTelemetry (OTLP/HTTP) and follow Langfuse's experiments-via-OpenTelemetry spec:
+150 invoices from [FATURA](https://zenodo.org/records/10371464), 3 from each of its 50 layouts, sampled with a fixed
+seed, plus 30 generated edge cases (credit notes, discounts, multi-currency, multi-page, many tax lines, legal
+suffixes, due date before invoice date). Read these before any score: FATURA's amounts do not reconcile (ground
+truth is what is printed), its dates are random, it has no line-item labels, and it has only 34 distinct vendors.
+Synthetic-only metrics rest on 30 documents and are flagged n < 30. See
+[known limitations](docs/annotation-guidelines.md#known-limitations-of-fatura-as-ground-truth).
 
-- one trace per document, linked to its dataset item
-- model calls (extraction and judge) as GenAI child spans, with token usage and the original latency
-- every metric posted as a score on the document's root observation
-
-> Screenshots pending: `docs/images/langfuse-experiment.png`, `docs/images/langfuse-trace.png`.
-
-## Golden set
-
-150 invoices from [FATURA](https://zenodo.org/records/10371464) (CC BY 4.0), 3 per layout across all 50 layouts,
-sampled with a fixed seed. Images are in [`evals/golden/`](evals/golden/); ground truth is one JSON line per document
-in [`evals/annotations.jsonl`](evals/annotations.jsonl). FATURA labels are converted and normalized per
-[docs/annotation-guidelines.md](docs/annotation-guidelines.md).
-
-Fields printed per document (of 150): invoice date 147, currency 138, invoice number 132, total 126, customer 114,
-subtotal 102, vendor name 102, due date 87, tax 72, discount 36.
-
-Caveats worth knowing before reading any score: FATURA's amounts do not reconcile, dates are random, it has no
-line-item labels, and it only has 34 distinct vendors. See [known limitations](docs/annotation-guidelines.md#known-limitations-of-fatura-as-ground-truth).
-
-## Quickstart
-
-Requires the [.NET 10 SDK](https://dotnet.microsoft.com/download).
-
-```sh
-dotnet test                                            # build + unit tests
-dotnet run --project src/InvoiceEvals.Cli -- download  # rebuild the golden set (downloads ~690 MB once)
-```
-
-Running and comparing configurations needs `EVALS_API_KEY` unless every response is already cached:
-
-```sh
-evals() { dotnet run --project src/InvoiceEvals.Cli -- "$@"; }
-evals run --config mini-plain --dry-run     # documents, tokens, cost estimate (extraction + judge upper bound)
-evals run --config mini-plain               # extract, judge the gray zone, score; responses cached in evals/cache/
-evals run --config mini-plain --offline     # replay from cache only; a miss fails (what CI does)
-evals report                                # evals/results/summary.csv, summary.md, docs/report/index.html
-evals compare --a mini-plain --b mini-fewshot --b strong-plain --b mini-plain-ocr --markdown evals/results/comparisons.md
-evals gate                                  # regression check against evals/results/baseline.csv
-evals judge pairs                           # calibration pairs for hand labelling
-evals judge calibrate --dry-run             # cost of the calibration run; drop --dry-run to write the κ report
-```
-
-`download` caches the archive in `.cache/fatura/`, verifies its SHA-256, and rewrites `evals/golden/fatura/` and
-`evals/annotations.jsonl`. Output is byte-identical across runs for the same `--count` and `--seed`.
-
-## Architecture
+## Layout
 
 ```
 src/InvoiceEvals.Core         InvoiceDto schema, golden set I/O, FATURA converter, stratified sampler
-src/InvoiceEvals.Extraction   IChatClient extractor, latency stamping, GenAI tracing, offline client
-src/InvoiceEvals.Evaluation   IEvaluators, name judge, calibration pairs, bootstrap and Cohen's κ
+src/InvoiceEvals.Extraction   direct IChatClient extractor, latency stamping, GenAI tracing, offline client
+src/InvoiceEvals.Agent        Agent Framework extractor and its two tools
+src/InvoiceEvals.Evaluation   evaluators, name judge, agent metrics, bootstrap and Cohen's κ
+src/InvoiceEvals.Synthetic    QuestPDF generator for the synthetic edge cases
 src/InvoiceEvals.Cli          evals download | synthesize | run | report | compare | judge | gate | langfuse
-tests/InvoiceEvals.Tests      unit tests (offline: fake chat clients and HTTP handlers)
-evals/                        golden set, configs, response cache, judge prompt and calibration, thresholds, results
+evals/                        golden set, configs, judge prompt and calibration, response cache, thresholds, results
 ```
 
-```
- eval set ─► extractor ─► TracingChatClient ─► Reporting response cache ─► Anthropic API
- (evals/)       │                              (evals/cache/, committed)    (OfflineChatClient in CI)
-                ▼
-           evaluators ─► gray-zone names ─► NameJudge ─► same cache
-                │
-                ├─► result store ─► evals report ─► summary.csv ─► evals gate ─► sticky PR comment
-                │                               └─► docs/report/ ─► GitHub Pages
-                └─► OpenTelemetry (OTLP/HTTP) + Scores API ─► Langfuse experiment (optional)
-```
-
-## Roadmap
-
-1. **Skeleton, schema, golden set** ✅
-2. Extractors (plain, few-shot), field-level evaluators, cached Reporting, first results (code ✅, results pending)
-3. Calibrated vendor-name judge, bootstrap CIs, Langfuse experiments, CI eval gate (code ✅, numbers pending)
-4. Agent Framework extractor with tools, head-to-head comparison
+Contributing (new configuration, new evaluator, refreshing the cache): [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-Code: [MIT](LICENSE). FATURA data: CC BY 4.0, see [evals/golden/README.md](evals/golden/README.md) for attribution.
+Code: [MIT](LICENSE). FATURA data: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), by M. Limam, M. Dhiaf
+and Y. Kessentini ([arXiv:2311.11856](https://arxiv.org/abs/2311.11856)), redistributed unmodified; attribution in
+[evals/golden/README.md](evals/golden/README.md).
