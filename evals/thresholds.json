@@ -1,11 +1,12 @@
 {
-  "_comment": "Gate thresholds for `evals gate`: largest allowed absolute drop of a summary.csv column vs evals/results/baseline.csv, per config and subset. Cached replays are deterministic, so any drop is a real change; on the 180-document combined set one document is 0.0056 of a 0/1 metric. See README 'How the gate works'.",
+  "_comment": "Gate thresholds for `evals gate`: largest allowed absolute drop of a summary.csv column vs evals/results/baseline.csv, per config and subset. Cached replays are deterministic, so any drop is a real change; on the 180-document combined set one document is 0.0056 of a 0/1 metric. Agent-only columns are n/a for direct configs and gate only the agent configs. See README 'How the gate works'.",
   "thresholds": [
     { "metric": "schema_validity", "subset": "combined", "maxDrop": 0.01 },
     { "metric": "composite", "subset": "combined", "maxDrop": 0.01 },
     { "metric": "invoice_number_accuracy", "subset": "combined", "maxDrop": 0.02 },
     { "metric": "total_accuracy", "subset": "combined", "maxDrop": 0.02 },
     { "metric": "vendor_name_judged_accuracy", "subset": "combined", "maxDrop": 0.03 },
-    { "metric": "line_items_f1", "subset": "synthetic", "maxDrop": 0.03 }
+    { "metric": "line_items_f1", "subset": "synthetic", "maxDrop": 0.03 },
+    { "metric": "validate_totals_called_rate", "subset": "combined", "maxDrop": 0.02 }
   ]
 }
